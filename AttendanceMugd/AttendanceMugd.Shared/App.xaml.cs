@@ -28,9 +28,9 @@ namespace AttendanceMugd
     public sealed partial class App : Application
     {
         public static MobileServiceClient MobileService = new MobileServiceClient(
-   "https://mugd.azure-mobile.net/",
-   "iARRlxkCfRjAcgQNPMbSKxFlHyTJeP38"
-       );  
+            "https://mugd-app.azure-mobile.net/",
+            "EEkrmAJgegNSaCsgIaRQDTAmbAqZRZ90"
+            );
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
