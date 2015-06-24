@@ -57,7 +57,7 @@ namespace AttendanceMugd
                 a.dateLastUpdated = int.Parse(DateTime.Now.Day.ToString());
                 await Table.UpdateAsync(a);
                 myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                string mess2 = "Attndance of " + a.FullName + " has been updated succesfully :)";
+                string mess2 = "Attndance of " + a.FullName + " has been updated succesfully";
                 myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                 MessageDialog msgbox2 = new MessageDialog(mess2);
                 await msgbox2.ShowAsync();
