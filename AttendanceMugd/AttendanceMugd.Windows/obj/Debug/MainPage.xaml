@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="AttendanceMugd.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AttendanceMugd"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <StackPanel Margin="19,25,-19,-25">
+            <Image HorizontalAlignment="Left" Height="160" 
+        		Margin="383,110,0,0" VerticalAlignment="Top" Width="539"
+        		x:Name="ImageBox" Source="Assets/MUGD.jpg"
+        		Stretch="UniformToFill"/>
+            <Button x:ConnectionId='1'                        Margin="530,50,0,0" x:Name="register" HorizontalAlignment="Left" Height="120" Width="300">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF03911" Offset="0"/>
+                        <GradientStop Color="#FFEEEE1F" Offset="1"/>
+                        <GradientStop Color="#FF13640A" Offset="0.307"/>
+                        <GradientStop Color="#FF121A6C" Offset="0.593"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+                <Grid Height="100" Width="300">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Width="80" Height="80" Source="Assets/BlueRegisterIcon.png" Stretch="Uniform"/>
+                    <TextBlock Text="Register" Margin="0,14,0,6" FontStyle="Normal" Grid.Column="1" 
+        				Width="200" Height="80"
+        				FontSize="34" TextWrapping="Wrap" Foreground="#FF0E0101"
+                                />
+                </Grid>
+            </Button>
+            <Button x:ConnectionId='2' Margin="530,50,0,0"                          x:Name="attendance" HorizontalAlignment="Left" Height="120" Width="300">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF03911" Offset="0"/>
+                        <GradientStop Color="#FFEEEE1F" Offset="1"/>
+                        <GradientStop Color="#FF13640A" Offset="0.307"/>
+                        <GradientStop Color="#FF121A6C" Offset="0.593"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+                <Grid Height="100" Width="300">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Width="80" Height="80" Source="Assets/fb5b958f.png" Stretch="Uniform"/>
+                    <TextBlock Text="Attendance" Margin="0,20,0,0" FontStyle="Normal" Grid.Column="1" 
+        				Width="200" Height="80"
+        				FontSize="30" TextWrapping="Wrap" Foreground="#FF0E0101"
+                                />
+                </Grid>
+
+            </Button>
+            <Button x:ConnectionId='3' Margin="530,50,0,0"                      x:Name="Update" HorizontalAlignment="Left" Height="120" Width="300">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF03911" Offset="0"/>
+                        <GradientStop Color="#FFEEEE1F" Offset="1"/>
+                        <GradientStop Color="#FF13640A" Offset="0.307"/>
+                        <GradientStop Color="#FF121A6C" Offset="0.593"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+                <Grid Height="100" Width="300">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <!--<Image Grid.Column="0" Width="80" Height="80" Source="Assets/fb5b958f.png" Stretch="Uniform"/>-->
+                    <TextBlock Text="Update" Margin="0,20,0,0" FontStyle="Normal" Grid.Column="1" 
+        				Width="200" Height="80"
+        				FontSize="30" TextWrapping="Wrap" Foreground="#FF0E0101"
+                                />
+                </Grid>
+
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
+    
+

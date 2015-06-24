@@ -1,0 +1,2089 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='C:\ProgramData\Windows App Certification Kit\results.xsl'?>
+<REPORT OVERALL_RESULT="PASS" VERSION="3.3" LATEST_VERSION="TRUE" UPDATE_DOWNLOAD_URL="" TOOLSET_ARCHITECTURE="X86" SecureBoot="FALSE" APP_TYPE="WindowsStore" PUBLISHER_DISPLAY_NAME="Axe Julius" OSVERSION="6.3.9600.0" OS="Microsoft Windows 8.1 with Bing" PER_USER_APPLICATION="" PARTIAL_RUN="FALSE" LCID="16393" VALIDATION_TYPE="UI" ReportGenerationTime="29-01-2015 11:11:30" ID="d7350fb9668bd04737c30fb03d5f1c2b">
+  <REQUIREMENTS>
+    <REQUIREMENT NUMBER="1" TITLE="Clean reversible install test" RATIONALE="A clean, reversible, installation allows users to successfully manage (deploy, and remove) applications on their system." />
+    <REQUIREMENT NUMBER="2" TITLE="Install to the correct folders test" RATIONALE="Windows provides specific locations in the file system to store programs and software components, shared application data, and application data specific to a user." />
+    <REQUIREMENT NUMBER="3" TITLE="Digitally signed file test" RATIONALE="An Authenticode digital signature allows users to be sure that the software is genuine. It also allows detection if a file has been tampered with e.g. infected by a virus." />
+    <REQUIREMENT NUMBER="4" TITLE="Support x64 Windows test" RATIONALE="To maintain compatibility with 64-bit versions of Windows, it is necessary that applications should natively support 64-bit or at minimum 32-bit Windows based applications to run seamlessly on 64-bit." />
+    <REQUIREMENT NUMBER="5" TITLE="OS version checking test" RATIONALE="Applications must not perform version checks for equality (== 5.1). If you need a specific feature, check whether the feature is available. If you need Windows XP, check for Windows XP or later (&gt;= 5.1), This way, your detection code will continue to work on future versions of Windows. Driver installers and uninstall modules should never check the OS version." />
+    <REQUIREMENT NUMBER="6" TITLE="User account control (UAC) test" RATIONALE="Most applications do not require administrator privileges at run time, and should be just fine running as a standard-user. Windows applications must have a manifest (embedded or external) to define its execution level that tells OS the privileges needed to run the application." />
+    <REQUIREMENT NUMBER="7" TITLE="Adhere to system restart manager messages" RATIONALE="In a critical shutdown, applications that return FALSE to WM_QUERYENDSESSION will be sent WM_ENDSESSION and closed, while those that time out in response to WM_QUERYENDSESSION will be terminated." />
+    <REQUIREMENT NUMBER="8" TITLE="Safe mode test" RATIONALE="By default, most drivers and services that did not come preinstalled with Windows are not started in Safe Mode. They should remain disabled unless they are needed for basic operations of the system or for diagnostic and recovery purposes." />
+    <REQUIREMENT NUMBER="9" TITLE="Multiuser session test" RATIONALE="Windows users should be able to run concurrent sessions without conflict or disruption.  Applications must ensure that when running in multiple sessions either locally or remotely, the normal functionality of the application should not be impacted. Application settings and data files should not be persisted across users. A user’s privacy and preferences should be isolated to the user’s session." />
+    <REQUIREMENT NUMBER="10" TITLE="Crashes and hangs test" RATIONALE="Application failures such as crashes and hangs are a major disruption to users and cause frustration. Eliminating such failures improves application stability and reliability, and overall, provides users with a better application experience.">
+      <TEST INDEX="47" NAME="App launch tests" DESCRIPTION="App launch tests." EXECUTIONTIME="00h:00m:25s.23ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="21" NAME="Crashes and hangs" DESCRIPTION="Do not crash or hang during the testing process." EXECUTIONTIME="00h:00m:06s.32ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="11" TITLE="Compatibility and resiliency test" RATIONALE="When Windows detects that an application has operated in an incompatible manner, it applies a compatibility fix that causes the application to behave correctly, ensuring a positive user experience. Applications should not rely on this behavior since it is only provided to allow legacy applications to work correctly on Windows." />
+    <REQUIREMENT NUMBER="12" TITLE="Package compliance test" RATIONALE="The package manifest was missing one or more required attributes.">
+      <TEST INDEX="31" NAME="App manifest" DESCRIPTION="App manifest must include valid entries for all required fields." EXECUTIONTIME="00h:00m:04s.64ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="13" TITLE="Windows security best practices test" RATIONALE="An application should not change the default Windows security settings." />
+    <REQUIREMENT NUMBER="14" TITLE="Windows security features test" RATIONALE="Applications must opt-into Windows security features.">
+      <TEST INDEX="33" NAME="Binary analyzer" DESCRIPTION="Analysis of security features enabled on binaries" EXECUTIONTIME="00h:00m:04s.09ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="70" NAME="Banned file analyzer" DESCRIPTION="Analysis of application to detect known insecure files" EXECUTIONTIME="00h:00m:02s.51ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="62" NAME="Private code signing" DESCRIPTION="App should not package private code signing key files." EXECUTIONTIME="00h:00m:02s.50ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="15" TITLE="Supported API test" RATIONALE="The application should only refer to the APIs allowed by the Windows SDK for Windows Store Apps.">
+      <TEST INDEX="38" NAME="Supported APIs" DESCRIPTION="Windows Store App must only use supported platform APIs." EXECUTIONTIME="00h:00m:05s.56ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="17" TITLE="Performance test" RATIONALE="The application should have a fast and responsive launch and suspend experience while consuming a reasonable amount of system resources (CPU, File IO, Memory etc.) to enable fast switching and multitasking between previously unopened applications.">
+      <TEST INDEX="50" NAME="Bytecode generation" DESCRIPTION="Byte code generation should be able to complete successfully for packages containing an HTML5 Windows Store app." EXECUTIONTIME="00h:00m:02s.66ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="60" NAME="Optimized binding references" DESCRIPTION="When using bindings, WinJS.Binding.optimizeBindingReferences should be set to true to optimize the memory usage." EXECUTIONTIME="00h:00m:03s.52ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="19" TITLE="App manifest resources test" RATIONALE="The App Package Manifest should have valid resources defined in the resources.pri file, as per the App Packaging Specification and App Manifest Schema.">
+      <TEST INDEX="45" NAME="App resources validation" DESCRIPTION="The package should have valid resources defined in the resources.pri file." EXECUTIONTIME="00h:00m:01s.10ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="61" NAME="Branding validation" DESCRIPTION="App should not use the default images packed by windows SDK samples or Visual Studio." EXECUTIONTIME="00h:00m:04s.84ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="20" TITLE="Debug configuration test" RATIONALE="The App should not install any debug binaries.">
+      <TEST INDEX="46" NAME="Debug configuration" DESCRIPTION="The App should not install any debug binaries." EXECUTIONTIME="00h:00m:03s.90ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="21" TITLE="File encoding test" RATIONALE="Packages containing an HTML5 Windows Store app must have correct file encoding.">
+      <TEST INDEX="49" NAME="UTF-8 file encoding" DESCRIPTION="Packages containing an HTML5 Windows Store app must have correct file encoding." EXECUTIONTIME="00h:00m:03s.74ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="22" TITLE="Direct3D Feature Test" RATIONALE="App should use the Direct3D capability correctly.">
+      <TEST INDEX="51" NAME="Direct3D feature level support" DESCRIPTION="Applications must render content on Direct3D feature level 9.1 hardware." EXECUTIONTIME="00h:00m:18s.25ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="71" NAME="Direct3D Trim after Suspend" DESCRIPTION="Applications must call IDXGIDevice3::Trim() on the Direct3D devices they create when handling a Suspend notification." EXECUTIONTIME="00h:00m:38s.78ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="23" TITLE="App Capabilities test" RATIONALE="Packages declaring special-use capabilities will have to provide justifications during the onboarding process.">
+      <TEST INDEX="52" NAME="Special use capabilities" DESCRIPTION="Packages declaring special-use capabilities will have to provide justifications during the onboarding process." EXECUTIONTIME="00h:00m:01s.81ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="24" TITLE="Windows Runtime metadata validation" RATIONALE="Metadata needs to be conformant and consistent across all generation sources.">
+      <TEST INDEX="56" NAME="ExclusiveTo attribute test" DESCRIPTION="A class must not implement an interface that is marked ExclusiveTo another class." EXECUTIONTIME="00h:00m:04s.88ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="57" NAME="Type location test" DESCRIPTION="Types must be defined in the metadata file with the longest matching namespace." EXECUTIONTIME="00h:00m:00s.85ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="55" NAME="Type name case-sensitivity test" DESCRIPTION="Namespace and type names must not vary only by casing." EXECUTIONTIME="00h:00m:00s.77ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="54" NAME="Type name correctness test" DESCRIPTION="Only system types can be in the Windows namespace and no types can be in the global namespace." EXECUTIONTIME="00h:00m:01s.05ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="58" NAME="General metadata correctness test" DESCRIPTION="Metadata files must meet various requirements in order to be valid and correct." EXECUTIONTIME="00h:00m:05s.31ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="53" NAME="Properties test" DESCRIPTION="Write-only and indexer properties may not be used. Corresponding getter and setter methods must match in type." EXECUTIONTIME="00h:00m:00s.78ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="25" TITLE="Package sanity test" RATIONALE="Validation of the app package contents to ensure correctness.">
+      <TEST INDEX="63" NAME="Platform appropriate files" DESCRIPTION="App should not install files that do not match the target processor architecture." EXECUTIONTIME="00h:00m:03s.75ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="66" NAME="Supported directory structure check" DESCRIPTION="Validate each file in the package for that the file name length should be less than MAX_PATH." EXECUTIONTIME="00h:00m:01s.71ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="26" TITLE="High-DPI support" RATIONALE="The application needs to set DPI-aware to make the UI look consistently good across a wide variety of high-DPI display settings." />
+    <REQUIREMENT NUMBER="27" TITLE="Resource Usage Test" RATIONALE="WinJS background tasks need to call close() to free resource.">
+      <TEST INDEX="68" NAME="WinJS background task test" DESCRIPTION="WinJS background tasks need to call close() to free resource." EXECUTIONTIME="00h:00m:02s.69ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+  </REQUIREMENTS>
+  <APPLICATIONS>
+    <Installed_Programs>
+      <Program Name="49444AxeJulius.MUGDAttendance" Type="Application" Source="AppxPackage" Publisher="CN=EE61FA12-8AB0-48AE-AB5C-1AEEF089B9B9" Version="1.1.0.3" Language="1033" OnSystemDrive="true" RootDirPath="C:\Program Files\WindowsApps\49444AxeJulius.MUGDAttendance_1.1.0.3_neutral__2nh7c0d2m2w4p" PathEvidenceId="0xa" RNP="0x1" DNP="0xd" EvidenceId="0xa" Id="00004e388370da52440623f9da1e21a1250400000904">
+        <Indicators>
+          <DirectoryIndicators>
+            <Directory Name="js" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\js" RNP="0x9" DNP="0xb" UniqueId="0x15" Id="0000ed830a2cad918e620bb3cae846c3985ea8ddae26" />
+            <Directory Name="49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p" RNP="0x9" DNP="0xb" UniqueId="0xb" Id="0000ac2c0d343c024e4f9a7812db7f61273cffa78e14" />
+          </DirectoryIndicators>
+          <WindowsStoreAppManifestIndicators>
+            <PackageManifest PackageFullName="49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p">
+              <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:build="http://schemas.microsoft.com/developer/appx/2012/build" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+                <Identity Name="49444AxeJulius.MUGDAttendance" Publisher="CN=EE61FA12-8AB0-48AE-AB5C-1AEEF089B9B9" Version="1.1.0.3" ProcessorArchitecture="neutral" />
+                <Properties>
+                  <DisplayName>MUGDAttendance</DisplayName>
+                  <PublisherDisplayName>Axe Julius</PublisherDisplayName>
+                  <Logo>Assets\50.png</Logo>
+                </Properties>
+                <Prerequisites>
+                  <OSMinVersion>6.3.0</OSMinVersion>
+                  <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+                </Prerequisites>
+                <Resources>
+                  <Resource Language="EN-US" />
+                </Resources>
+                <Applications>
+                  <Application Id="App" Executable="AttendanceMugd.Windows.exe" EntryPoint="AttendanceMugd.Windows.App">
+                    <m2:VisualElements DisplayName="MUGDAttendance" Square150x150Logo="Assets\150x150.png" Square30x30Logo="Assets\30.png" Description="AttendanceMugd.Windows" ForegroundText="light" BackgroundColor="#464646">
+                      <m2:SplashScreen Image="Assets\splash.jpg" />
+                    </m2:VisualElements>
+                  </Application>
+                </Applications>
+                <Capabilities>
+                  <Capability Name="internetClient" />
+                  <DeviceCapability Name="webcam" />
+                </Capabilities>
+              </Package>
+            </PackageManifest>
+          </WindowsStoreAppManifestIndicators>
+        </Indicators>
+        <StaticProperties>
+          <Files Id="0000b0ad8fa962ca6a77f46de48912ce06eca664c0d5">
+            <File Name="Microsoft.WindowsAzure.Mobile.dll" Id="000013f7810a7f80d9138819b762ec1679e05a23c817" ProductName="Microsoft Azure Mobile Services SDK" CompanyName="Microsoft Corporation" ProductVersion="1.3.21121.0" VerLanguage="0" ShortName="MICROS~1.DLL" SwitchBackContext="0x0100000000000400" FileVersion="1.3.21121.0" Size="0x4ee00" SizeOfImage="0x52000" PeHeaderHash="01012c6e4350d03627f40f431a5b8d0454792fd23f67" PeChecksum="0x599b4" PeImageType="0x14c" PeSubsystem="3" BinProductVersion="1.3.21121.0" BinFileVersion="1.3.21121.0" FileDescription="Microsoft.WindowsAzure.Mobile" InternalName="Microsoft.WindowsAzure.Mobile.dll" LegalCopyright="© Microsoft Corporation. All rights reserved." LinkerVersion="11.0" LinkDate="11/22/2014 00:04:17" BinaryType="DOTNETIL" Created="01/29/2015 05:38:40" Modified="01/29/2015 05:38:40" OriginalFilename="Microsoft.WindowsAzure.Mobile.dll" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p" RNP="0x4" DNP="0x5" LowerCaseLongPath="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\microsoft.windowsazure.mobile.dll" LongPathHash="000068a77ce54524a74b74a3502adf3809a16e46797a" UniqueId="0xd" />
+            <File Name="System.Net.Http.Extensions.dll" Id="00000dc661a49aa6a3ec69f95973a62fbc2379d35dee" ProductName="System.Net.Http.Extensions" CompanyName="Microsoft Corporation" ProductVersion="2.2.28.0" VerLanguage="0" ShortName="SYSTEM~1.DLL" SwitchBackContext="0x0100000000000400" FileVersion="2.2.28.0" Size="0x56d0" SizeOfImage="0x8000" PeHeaderHash="01019654b331524cd02604a9273f5a211cbfdc36a917" PeChecksum="0x8202" PeImageType="0x14c" PeSubsystem="3" BinProductVersion="2.2.28.0" BinFileVersion="2.2.28.0" FileDescription="System.Net.Http.Extensions" InternalName="System.Net.Http.Extensions.dll" LegalCopyright="© Microsoft Corporation.  All rights reserved." LinkerVersion="11.0" LinkDate="07/21/2014 20:50:11" BinaryType="DOTNETIL" Created="01/29/2015 05:38:40" Modified="01/29/2015 05:38:41" OriginalFilename="System.Net.Http.Extensions.dll" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p" RNP="0x4" DNP="0x5" LowerCaseLongPath="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\system.net.http.extensions.dll" LongPathHash="000064561bca605e09720514d9e2edad465d7d353b04" UniqueId="0x11" />
+            <File Name="MobileServices.min.js" Id="0000a46fb95f64dda4a1d957b37e8c587b0885356e16" ShortName="MOBILE~3.JS" Size="0x22836" BinaryType="UNKNOWN" Created="01/29/2015 05:38:40" Modified="01/29/2015 05:38:40" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\js\mobileservices.min.js" LongPathHash="0000f2fd5343d5a5806d8000f5627f4a7d72d6d52a8f" UniqueId="0x18" />
+            <File Name="Newtonsoft.Json.dll" Id="00005c14352b04c84f0bde414972f77dfe2f9af96f81" ProductName="Json.NET" CompanyName="Newtonsoft" ProductVersion="6.0.8.18111" VerLanguage="0" ShortName="NEWTON~1.DLL" SwitchBackContext="0x0100000000000600" FileVersion="6.0.8.18111" Size="0x6fa00" SizeOfImage="0x76000" PeHeaderHash="0101d9a92d8462ad728fd77a0317f2ea1a477bc32709" PeChecksum="0x7c5f4" PeImageType="0x14c" PeSubsystem="3" BinProductVersion="6.0.8.18111" BinFileVersion="6.0.8.18111" FileDescription="Json.NET WinRT" InternalName="Newtonsoft.Json.dll" LegalCopyright="Copyright © James Newton-King 2008" LinkerVersion="11.0" LinkDate="01/11/2015 06:52:42" BinaryType="DOTNETIL" Created="01/29/2015 05:38:40" Modified="01/29/2015 05:38:41" OriginalFilename="Newtonsoft.Json.dll" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p" RNP="0x4" DNP="0x5" LowerCaseLongPath="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\newtonsoft.json.dll" LongPathHash="0000b8c884f96fcc0c2d39e3b11c240eec52ed1a0ec7" UniqueId="0xf" />
+            <File Name="AttendanceMugd.Windows.exe" Id="0000aa22c9dd5c281aaafecea69fc8c0833b3aff57a5" ProductName="AttendanceMugd.Windows" ProductVersion="1.0.0.0" VerLanguage="0" ShortName="ATTEND~1.EXE" SwitchBackContext="0x0100000000000602" FileVersion="1.0.0.0" Size="0x6e00" SizeOfImage="0xe000" PeHeaderHash="0101d604d21339b31a1754af1a54f93d037ad1cc7492" PeChecksum="0x0" PeImageType="0x14c" PeSubsystem="2" BinProductVersion="1.0.0.0" BinFileVersion="1.0.0.0" FileDescription="AttendanceMugd.Windows" InternalName="AttendanceMugd.Windows.exe" LegalCopyright="Copyright ©  2015" LinkerVersion="11.0" LinkDate="01/29/2015 05:21:43" BinaryType="DOTNETIL" Created="01/29/2015 05:38:40" Modified="01/29/2015 05:38:40" OriginalFilename="AttendanceMugd.Windows.exe" RunLevel="AsInvoker" UiAccess="false" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p" RNP="0x4" DNP="0x5" LowerCaseLongPath="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\attendancemugd.windows.exe" LongPathHash="0000ea579e5084abc669051b9742b6de9bb31d934359" UniqueId="0xc" />
+            <File Name="System.Net.Http.Primitives.dll" Id="0000e98c9b6c59aa2a58611679a6c220b9edece9199c" ProductName="System.Net.Http.Primitives" CompanyName="Microsoft Corporation" ProductVersion="4.2.28.0" VerLanguage="0" ShortName="SYSTEM~2.DLL" SwitchBackContext="0x0100000000000400" FileVersion="4.2.28.0" Size="0x54d8" SizeOfImage="0x8000" PeHeaderHash="01010b14fe20c2cb5e40942b8682cf3083deb9d8a32b" PeChecksum="0x613f" PeImageType="0x14c" PeSubsystem="3" BinProductVersion="4.2.28.0" BinFileVersion="4.2.28.0" FileDescription="System.Net.Http.Primitives" InternalName="System.Net.Http.Primitives.dll" LegalCopyright="© Microsoft Corporation.  All rights reserved." LinkerVersion="11.0" LinkDate="07/21/2014 20:50:10" BinaryType="DOTNETIL" Created="01/29/2015 05:38:40" Modified="01/29/2015 05:38:41" OriginalFilename="System.Net.Http.Primitives.dll" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p" RNP="0x4" DNP="0x5" LowerCaseLongPath="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\system.net.http.primitives.dll" LongPathHash="0000ffd346f35d1f269146dfa4e863303057956b1b2a" UniqueId="0x12" />
+            <File Name="Microsoft.WindowsAzure.Mobile.Ext.dll" Id="0000429ff49ef7079829ff80154dc6b5ad8a149614d4" ProductName="Microsoft Azure Mobile Services SDK" CompanyName="Microsoft Corporation" ProductVersion="1.3.21121.0" VerLanguage="0" ShortName="MICROS~2.DLL" SwitchBackContext="0x0100000000000600" FileVersion="1.3.21121.0" Size="0x9600" SizeOfImage="0xe000" PeHeaderHash="01014078354bfb3031b660f12dfc6f6f16decdfd8bab" PeChecksum="0x10280" PeImageType="0x14c" PeSubsystem="3" BinProductVersion="1.3.21121.0" BinFileVersion="1.3.21121.0" FileDescription="Microsoft.WindowsAzure.Mobile.Ext" InternalName="Microsoft.WindowsAzure.Mobile.Ext.dll" LegalCopyright="© Microsoft Corporation. All rights reserved." LinkerVersion="11.0" LinkDate="11/22/2014 00:04:19" BinaryType="DOTNETIL" Created="01/29/2015 05:38:40" Modified="01/29/2015 05:38:41" OriginalFilename="Microsoft.WindowsAzure.Mobile.Ext.dll" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p" RNP="0x4" DNP="0x5" LowerCaseLongPath="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\microsoft.windowsazure.mobile.ext.dll" LongPathHash="00003614edc8f984020fad55e9e696bd6a062175db80" UniqueId="0xe" />
+            <File Name="MobileServices.intellisense.js" Id="00000a8452da6105d3dee2d0c13b1bb52bcf5ae7ddec" ShortName="MOBILE~1.JS" Size="0x3d28" BinaryType="UNKNOWN" Created="01/29/2015 05:38:40" Modified="01/29/2015 05:38:40" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\js\mobileservices.intellisense.js" LongPathHash="0000ec85720b3e38d8c54873d02b342e09add301ca0d" UniqueId="0x16" />
+            <File Name="MobileServices.js" Id="00008f1884f72a452a6b4965db5cfaa6e57897a52f6e" ShortName="MOBILE~2.JS" Size="0x7162e" BinaryType="UNKNOWN" Created="01/29/2015 05:38:40" Modified="01/29/2015 05:38:40" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\js\mobileservices.js" LongPathHash="00006a15f38a3e339fb5870b16901cc57396d99f3cc3" UniqueId="0x17" />
+            <File Name="resources.pri" Id="0000064e6655f9bd5b38c579729311790355e04fe297" ShortName="RESOUR~1.PRI" Size="0x1da38" BinaryType="UNKNOWN" Created="01/29/2015 05:38:40" Modified="01/29/2015 05:38:41" Path="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\49444axejulius.mugdattendance_1.1.0.3_neutral__2nh7c0d2m2w4p\resources.pri" LongPathHash="00006d4d2a6fd2b2efd5b4791933bdb10d99d4a94636" UniqueId="0x10" />
+          </Files>
+        </StaticProperties>
+      </Program>
+    </Installed_Programs>
+  </APPLICATIONS>
+  <DEPENDENCY_INFORMATION>
+    <AitStaticAnalysis ProgramId="00004e388370da52440623f9da1e21a1250400000904" AnalysisVersion="1.60" DictionaryVersion="2.16" Type="Package" Id="49444AxeJulius.MUGDAttendance_1.1.0.3_neutral__2nh7c0d2m2w4p">
+      <AitFile ErrorCode="0" Name="MobileServices.intellisense.js" Id="00000a8452da6105d3dee2d0c13b1bb52bcf5ae7ddec" />
+      <AitFile ErrorCode="0" Name="System.Net.Http.Extensions.dll" Id="00000dc661a49aa6a3ec69f95973a62fbc2379d35dee">
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="mscoree.dll!_CorDllMain" />
+        </AitCategory>
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Attribute" />
+          <AitFeature Name="System.Attribute..ctor" />
+          <AitFeature Name="System.AttributeTargets" />
+          <AitFeature Name="System.AttributeUsageAttribute" />
+          <AitFeature Name="System.AttributeUsageAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Net.Http.HttpClientHandler" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyInformationalVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyInformationalVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.ExtensionAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.ExtensionAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.GuidAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.GuidAttribute..ctor" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Microsoft.WindowsAzure.Mobile.dll" Id="000013f7810a7f80d9138819b762ec1679e05a23c817">
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="mscoree.dll!_CorDllMain" />
+        </AitCategory>
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Action" />
+          <AitFeature Name="System.Action..ctor" />
+          <AitFeature Name="System.Action.Invoke" />
+          <AitFeature Name="System.Activator" />
+          <AitFeature Name="System.Activator.CreateInstance" />
+          <AitFeature Name="System.AggregateException" />
+          <AitFeature Name="System.AggregateException..ctor" />
+          <AitFeature Name="System.ArgumentException" />
+          <AitFeature Name="System.ArgumentException..ctor" />
+          <AitFeature Name="System.ArgumentNullException" />
+          <AitFeature Name="System.ArgumentNullException..ctor" />
+          <AitFeature Name="System.ArgumentOutOfRangeException" />
+          <AitFeature Name="System.ArgumentOutOfRangeException..ctor" />
+          <AitFeature Name="System.Array" />
+          <AitFeature Name="System.Array.IndexOf" />
+          <AitFeature Name="System.Attribute" />
+          <AitFeature Name="System.Attribute..ctor" />
+          <AitFeature Name="System.AttributeTargets" />
+          <AitFeature Name="System.AttributeUsageAttribute" />
+          <AitFeature Name="System.AttributeUsageAttribute..ctor" />
+          <AitFeature Name="System.Boolean" />
+          <AitFeature Name="System.Boolean.ToString" />
+          <AitFeature Name="System.Byte" />
+          <AitFeature Name="System.Byte.ToString" />
+          <AitFeature Name="System.Char" />
+          <AitFeature Name="System.Char.IsDigit" />
+          <AitFeature Name="System.Char.IsLetter" />
+          <AitFeature Name="System.Char.IsUpper" />
+          <AitFeature Name="System.Char.IsWhiteSpace" />
+          <AitFeature Name="System.Char.ToLower" />
+          <AitFeature Name="System.Char.ToLowerInvariant" />
+          <AitFeature Name="System.Char.ToString" />
+          <AitFeature Name="System.Char.ToUpper" />
+          <AitFeature Name="System.CodeDom.Compiler.GeneratedCodeAttribute" />
+          <AitFeature Name="System.CodeDom.Compiler.GeneratedCodeAttribute..ctor" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2" />
+          <AitFeature Name="System.Collections.Generic.HashSet`1" />
+          <AitFeature Name="System.Collections.Generic.ICollection`1" />
+          <AitFeature Name="System.Collections.Generic.IDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IEnumerable`1" />
+          <AitFeature Name="System.Collections.Generic.IEnumerator`1" />
+          <AitFeature Name="System.Collections.Generic.IEqualityComparer`1" />
+          <AitFeature Name="System.Collections.Generic.IList`1" />
+          <AitFeature Name="System.Collections.Generic.KeyValuePair`2" />
+          <AitFeature Name="System.Collections.Generic.List`1" />
+          <AitFeature Name="System.Collections.Generic.Queue`1" />
+          <AitFeature Name="System.Collections.Generic.Stack`1" />
+          <AitFeature Name="System.Collections.IEnumerable" />
+          <AitFeature Name="System.Collections.IEnumerable.GetEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerator.MoveNext" />
+          <AitFeature Name="System.Collections.ObjectModel.Collection`1" />
+          <AitFeature Name="System.Collections.ObjectModel.ObservableCollection`1" />
+          <AitFeature Name="System.Collections.ObjectModel.ReadOnlyCollection`1" />
+          <AitFeature Name="System.ComponentModel.EditorBrowsableAttribute" />
+          <AitFeature Name="System.ComponentModel.EditorBrowsableAttribute..ctor" />
+          <AitFeature Name="System.ComponentModel.EditorBrowsableState" />
+          <AitFeature Name="System.ComponentModel.PropertyChangedEventArgs" />
+          <AitFeature Name="System.ComponentModel.PropertyChangedEventArgs..ctor" />
+          <AitFeature Name="System.Convert" />
+          <AitFeature Name="System.Convert.ToInt64" />
+          <AitFeature Name="System.DateTime" />
+          <AitFeature Name="System.DateTime.Parse" />
+          <AitFeature Name="System.DateTime.ToLocalTime" />
+          <AitFeature Name="System.DateTime.ToString" />
+          <AitFeature Name="System.DateTime.ToUniversalTime" />
+          <AitFeature Name="System.DateTime.get_Now" />
+          <AitFeature Name="System.DateTimeOffset" />
+          <AitFeature Name="System.DateTimeOffset..ctor" />
+          <AitFeature Name="System.DateTimeOffset.Parse" />
+          <AitFeature Name="System.DateTimeOffset.ToLocalTime" />
+          <AitFeature Name="System.DateTimeOffset.ToString" />
+          <AitFeature Name="System.DateTimeOffset.ToUniversalTime" />
+          <AitFeature Name="System.DateTimeOffset.get_UtcDateTime" />
+          <AitFeature Name="System.DateTimeOffset.op_GreaterThan" />
+          <AitFeature Name="System.Decimal" />
+          <AitFeature Name="System.Decimal..ctor" />
+          <AitFeature Name="System.Decimal.GetBits" />
+          <AitFeature Name="System.Decimal.TryParse" />
+          <AitFeature Name="System.Decimal.op_Equality" />
+          <AitFeature Name="System.Decimal.op_GreaterThan" />
+          <AitFeature Name="System.Decimal.op_Implicit" />
+          <AitFeature Name="System.Decimal.op_Modulus" />
+          <AitFeature Name="System.Delegate" />
+          <AitFeature Name="System.Delegate.Combine" />
+          <AitFeature Name="System.Delegate.DynamicInvoke" />
+          <AitFeature Name="System.Delegate.Remove" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerNonUserCodeAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerNonUserCodeAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute..ctor" />
+          <AitFeature Name="System.Double" />
+          <AitFeature Name="System.Double.TryParse" />
+          <AitFeature Name="System.Enum" />
+          <AitFeature Name="System.Enum.GetValues" />
+          <AitFeature Name="System.Enum.HasFlag" />
+          <AitFeature Name="System.Enum.IsDefined" />
+          <AitFeature Name="System.Enum.ToObject" />
+          <AitFeature Name="System.Environment" />
+          <AitFeature Name="System.Environment.get_NewLine" />
+          <AitFeature Name="System.EventArgs" />
+          <AitFeature Name="System.EventArgs..ctor" />
+          <AitFeature Name="System.EventHandler" />
+          <AitFeature Name="System.EventHandler.Invoke" />
+          <AitFeature Name="System.EventHandler`1" />
+          <AitFeature Name="System.Exception" />
+          <AitFeature Name="System.Exception..ctor" />
+          <AitFeature Name="System.Exception.get_Message" />
+          <AitFeature Name="System.FlagsAttribute" />
+          <AitFeature Name="System.FlagsAttribute..ctor" />
+          <AitFeature Name="System.Func`1" />
+          <AitFeature Name="System.Func`2" />
+          <AitFeature Name="System.Func`3" />
+          <AitFeature Name="System.GC" />
+          <AitFeature Name="System.GC.SuppressFinalize" />
+          <AitFeature Name="System.Globalization.CultureInfo" />
+          <AitFeature Name="System.Globalization.CultureInfo.get_InvariantCulture" />
+          <AitFeature Name="System.Guid" />
+          <AitFeature Name="System.Guid.NewGuid" />
+          <AitFeature Name="System.Guid.Parse" />
+          <AitFeature Name="System.IDisposable" />
+          <AitFeature Name="System.IDisposable.Dispose" />
+          <AitFeature Name="System.IEquatable`1" />
+          <AitFeature Name="System.IFormatProvider" />
+          <AitFeature Name="System.Int16" />
+          <AitFeature Name="System.Int32" />
+          <AitFeature Name="System.Int32.Parse" />
+          <AitFeature Name="System.Int32.ToString" />
+          <AitFeature Name="System.Int64" />
+          <AitFeature Name="System.Int64.TryParse" />
+          <AitFeature Name="System.InvalidOperationException" />
+          <AitFeature Name="System.InvalidOperationException..ctor" />
+          <AitFeature Name="System.Linq.Enumerable" />
+          <AitFeature Name="System.Linq.Enumerable.Aggregate" />
+          <AitFeature Name="System.Linq.Enumerable.Any" />
+          <AitFeature Name="System.Linq.Enumerable.Cast" />
+          <AitFeature Name="System.Linq.Enumerable.Concat" />
+          <AitFeature Name="System.Linq.Enumerable.Contains" />
+          <AitFeature Name="System.Linq.Enumerable.Count" />
+          <AitFeature Name="System.Linq.Enumerable.Empty" />
+          <AitFeature Name="System.Linq.Enumerable.FirstOrDefault" />
+          <AitFeature Name="System.Linq.Enumerable.LastOrDefault" />
+          <AitFeature Name="System.Linq.Enumerable.OfType" />
+          <AitFeature Name="System.Linq.Enumerable.Reverse" />
+          <AitFeature Name="System.Linq.Enumerable.Select" />
+          <AitFeature Name="System.Linq.Enumerable.SequenceEqual" />
+          <AitFeature Name="System.Linq.Enumerable.Skip" />
+          <AitFeature Name="System.Linq.Enumerable.Take" />
+          <AitFeature Name="System.Linq.Enumerable.ToArray" />
+          <AitFeature Name="System.Linq.Enumerable.ToDictionary" />
+          <AitFeature Name="System.Linq.Enumerable.ToList" />
+          <AitFeature Name="System.Linq.Enumerable.Where" />
+          <AitFeature Name="System.Linq.Expressions.BinaryExpression" />
+          <AitFeature Name="System.Linq.Expressions.BinaryExpression.get_Left" />
+          <AitFeature Name="System.Linq.Expressions.BinaryExpression.get_Right" />
+          <AitFeature Name="System.Linq.Expressions.ConstantExpression" />
+          <AitFeature Name="System.Linq.Expressions.ConstantExpression.get_Value" />
+          <AitFeature Name="System.Linq.Expressions.Expression" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Call" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Constant" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Equal" />
+          <AitFeature Name="System.Linq.Expressions.Expression.GreaterThan" />
+          <AitFeature Name="System.Linq.Expressions.Expression.GreaterThanOrEqual" />
+          <AitFeature Name="System.Linq.Expressions.Expression.LessThan" />
+          <AitFeature Name="System.Linq.Expressions.Expression.LessThanOrEqual" />
+          <AitFeature Name="System.Linq.Expressions.Expression.MakeBinary" />
+          <AitFeature Name="System.Linq.Expressions.Expression.NotEqual" />
+          <AitFeature Name="System.Linq.Expressions.Expression.OrElse" />
+          <AitFeature Name="System.Linq.Expressions.Expression.get_NodeType" />
+          <AitFeature Name="System.Linq.Expressions.Expression.get_Type" />
+          <AitFeature Name="System.Linq.Expressions.ExpressionType" />
+          <AitFeature Name="System.Linq.Expressions.Expression`1" />
+          <AitFeature Name="System.Linq.Expressions.LambdaExpression" />
+          <AitFeature Name="System.Linq.Expressions.LambdaExpression.Compile" />
+          <AitFeature Name="System.Linq.Expressions.LambdaExpression.get_Body" />
+          <AitFeature Name="System.Linq.Expressions.LambdaExpression.get_Parameters" />
+          <AitFeature Name="System.Linq.Expressions.MemberExpression" />
+          <AitFeature Name="System.Linq.Expressions.MemberExpression.get_Expression" />
+          <AitFeature Name="System.Linq.Expressions.MemberExpression.get_Member" />
+          <AitFeature Name="System.Linq.Expressions.MethodCallExpression" />
+          <AitFeature Name="System.Linq.Expressions.MethodCallExpression.get_Arguments" />
+          <AitFeature Name="System.Linq.Expressions.MethodCallExpression.get_Method" />
+          <AitFeature Name="System.Linq.Expressions.MethodCallExpression.get_Object" />
+          <AitFeature Name="System.Linq.Expressions.ParameterExpression" />
+          <AitFeature Name="System.Linq.Expressions.UnaryExpression" />
+          <AitFeature Name="System.Linq.Expressions.UnaryExpression.get_Operand" />
+          <AitFeature Name="System.Linq.IOrderedQueryable`1" />
+          <AitFeature Name="System.Linq.IQueryable" />
+          <AitFeature Name="System.Linq.IQueryable.get_Expression" />
+          <AitFeature Name="System.Linq.IQueryable`1" />
+          <AitFeature Name="System.Linq.Queryable" />
+          <AitFeature Name="System.Linq.Queryable.AsQueryable" />
+          <AitFeature Name="System.Linq.Queryable.OrderBy" />
+          <AitFeature Name="System.Linq.Queryable.OrderByDescending" />
+          <AitFeature Name="System.Linq.Queryable.Select" />
+          <AitFeature Name="System.Linq.Queryable.Skip" />
+          <AitFeature Name="System.Linq.Queryable.Take" />
+          <AitFeature Name="System.Linq.Queryable.ThenBy" />
+          <AitFeature Name="System.Linq.Queryable.ThenByDescending" />
+          <AitFeature Name="System.Linq.Queryable.Where" />
+          <AitFeature Name="System.Math" />
+          <AitFeature Name="System.Math.Min" />
+          <AitFeature Name="System.Net.DecompressionMethods" />
+          <AitFeature Name="System.Net.Http.DelegatingHandler" />
+          <AitFeature Name="System.Net.Http.DelegatingHandler.set_InnerHandler" />
+          <AitFeature Name="System.Net.Http.Headers.EntityTagHeaderValue" />
+          <AitFeature Name="System.Net.Http.Headers.EntityTagHeaderValue.get_Tag" />
+          <AitFeature Name="System.Net.Http.Headers.HttpContentHeaders" />
+          <AitFeature Name="System.Net.Http.Headers.HttpContentHeaders.get_ContentLength" />
+          <AitFeature Name="System.Net.Http.Headers.HttpContentHeaders.get_ContentType" />
+          <AitFeature Name="System.Net.Http.Headers.HttpHeaderValueCollection`1" />
+          <AitFeature Name="System.Net.Http.Headers.HttpHeaders" />
+          <AitFeature Name="System.Net.Http.Headers.HttpHeaders.Add" />
+          <AitFeature Name="System.Net.Http.Headers.HttpHeaders.Contains" />
+          <AitFeature Name="System.Net.Http.Headers.HttpHeaders.GetValues" />
+          <AitFeature Name="System.Net.Http.Headers.HttpHeaders.TryAddWithoutValidation" />
+          <AitFeature Name="System.Net.Http.Headers.HttpRequestHeaders" />
+          <AitFeature Name="System.Net.Http.Headers.HttpRequestHeaders.get_Accept" />
+          <AitFeature Name="System.Net.Http.Headers.HttpResponseHeaders" />
+          <AitFeature Name="System.Net.Http.Headers.HttpResponseHeaders.get_ETag" />
+          <AitFeature Name="System.Net.Http.Headers.HttpResponseHeaders.get_Location" />
+          <AitFeature Name="System.Net.Http.Headers.MediaTypeHeaderValue" />
+          <AitFeature Name="System.Net.Http.Headers.MediaTypeHeaderValue.get_MediaType" />
+          <AitFeature Name="System.Net.Http.Headers.MediaTypeWithQualityHeaderValue" />
+          <AitFeature Name="System.Net.Http.Headers.MediaTypeWithQualityHeaderValue..ctor" />
+          <AitFeature Name="System.Net.Http.HttpClient" />
+          <AitFeature Name="System.Net.Http.HttpClient..ctor" />
+          <AitFeature Name="System.Net.Http.HttpClient.SendAsync" />
+          <AitFeature Name="System.Net.Http.HttpClient.get_DefaultRequestHeaders" />
+          <AitFeature Name="System.Net.Http.HttpClientHandler" />
+          <AitFeature Name="System.Net.Http.HttpClientHandler..ctor" />
+          <AitFeature Name="System.Net.Http.HttpClientHandler.get_SupportsAutomaticDecompression" />
+          <AitFeature Name="System.Net.Http.HttpClientHandler.set_AutomaticDecompression" />
+          <AitFeature Name="System.Net.Http.HttpContent" />
+          <AitFeature Name="System.Net.Http.HttpContent.ReadAsStringAsync" />
+          <AitFeature Name="System.Net.Http.HttpContent.get_Headers" />
+          <AitFeature Name="System.Net.Http.HttpMessageHandler" />
+          <AitFeature Name="System.Net.Http.HttpMessageHandler.Dispose" />
+          <AitFeature Name="System.Net.Http.HttpMessageInvoker" />
+          <AitFeature Name="System.Net.Http.HttpMessageInvoker.Dispose" />
+          <AitFeature Name="System.Net.Http.HttpMethod" />
+          <AitFeature Name="System.Net.Http.HttpMethod..ctor" />
+          <AitFeature Name="System.Net.Http.HttpMethod.get_Delete" />
+          <AitFeature Name="System.Net.Http.HttpMethod.get_Get" />
+          <AitFeature Name="System.Net.Http.HttpMethod.get_Post" />
+          <AitFeature Name="System.Net.Http.HttpMethod.get_Put" />
+          <AitFeature Name="System.Net.Http.HttpRequestException" />
+          <AitFeature Name="System.Net.Http.HttpRequestMessage" />
+          <AitFeature Name="System.Net.Http.HttpRequestMessage..ctor" />
+          <AitFeature Name="System.Net.Http.HttpRequestMessage.Dispose" />
+          <AitFeature Name="System.Net.Http.HttpRequestMessage.get_Headers" />
+          <AitFeature Name="System.Net.Http.HttpRequestMessage.set_Content" />
+          <AitFeature Name="System.Net.Http.HttpRequestMessage.set_Method" />
+          <AitFeature Name="System.Net.Http.HttpRequestMessage.set_RequestUri" />
+          <AitFeature Name="System.Net.Http.HttpResponseMessage" />
+          <AitFeature Name="System.Net.Http.HttpResponseMessage.Dispose" />
+          <AitFeature Name="System.Net.Http.HttpResponseMessage.get_Content" />
+          <AitFeature Name="System.Net.Http.HttpResponseMessage.get_Headers" />
+          <AitFeature Name="System.Net.Http.HttpResponseMessage.get_IsSuccessStatusCode" />
+          <AitFeature Name="System.Net.Http.HttpResponseMessage.get_ReasonPhrase" />
+          <AitFeature Name="System.Net.Http.HttpResponseMessage.get_StatusCode" />
+          <AitFeature Name="System.Net.Http.StringContent" />
+          <AitFeature Name="System.Net.Http.StringContent..ctor" />
+          <AitFeature Name="System.Net.HttpStatusCode" />
+          <AitFeature Name="System.NotImplementedException" />
+          <AitFeature Name="System.NotImplementedException..ctor" />
+          <AitFeature Name="System.NotSupportedException" />
+          <AitFeature Name="System.NotSupportedException..ctor" />
+          <AitFeature Name="System.Nullable" />
+          <AitFeature Name="System.Nullable.GetUnderlyingType" />
+          <AitFeature Name="System.Nullable`1" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Object..ctor" />
+          <AitFeature Name="System.Object.Equals" />
+          <AitFeature Name="System.Object.GetHashCode" />
+          <AitFeature Name="System.Object.GetType" />
+          <AitFeature Name="System.Object.ReferenceEquals" />
+          <AitFeature Name="System.Object.ToString" />
+          <AitFeature Name="System.ObsoleteAttribute" />
+          <AitFeature Name="System.ObsoleteAttribute..ctor" />
+          <AitFeature Name="System.OperationCanceledException" />
+          <AitFeature Name="System.OperationCanceledException..ctor" />
+          <AitFeature Name="System.ParamArrayAttribute" />
+          <AitFeature Name="System.ParamArrayAttribute..ctor" />
+          <AitFeature Name="System.Reflection.Assembly" />
+          <AitFeature Name="System.Reflection.Assembly.get_FullName" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute.get_Version" />
+          <AitFeature Name="System.Reflection.AssemblyName" />
+          <AitFeature Name="System.Reflection.AssemblyName..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyName.get_FullName" />
+          <AitFeature Name="System.Reflection.AssemblyName.get_Name" />
+          <AitFeature Name="System.Reflection.AssemblyName.set_Name" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.CustomAttributeExtensions" />
+          <AitFeature Name="System.Reflection.CustomAttributeExtensions.GetCustomAttribute" />
+          <AitFeature Name="System.Reflection.CustomAttributeExtensions.GetCustomAttributes" />
+          <AitFeature Name="System.Reflection.FieldInfo" />
+          <AitFeature Name="System.Reflection.IntrospectionExtensions" />
+          <AitFeature Name="System.Reflection.IntrospectionExtensions.GetTypeInfo" />
+          <AitFeature Name="System.Reflection.MemberInfo" />
+          <AitFeature Name="System.Reflection.MemberInfo.get_DeclaringType" />
+          <AitFeature Name="System.Reflection.MemberInfo.get_Name" />
+          <AitFeature Name="System.Reflection.MethodBase" />
+          <AitFeature Name="System.Reflection.MethodBase.GetParameters" />
+          <AitFeature Name="System.Reflection.MethodBase.get_IsGenericMethod" />
+          <AitFeature Name="System.Reflection.MethodBase.get_IsStatic" />
+          <AitFeature Name="System.Reflection.MethodInfo" />
+          <AitFeature Name="System.Reflection.ParameterInfo" />
+          <AitFeature Name="System.Reflection.ParameterInfo.get_ParameterType" />
+          <AitFeature Name="System.Reflection.PropertyInfo" />
+          <AitFeature Name="System.Reflection.RuntimeReflectionExtensions" />
+          <AitFeature Name="System.Reflection.RuntimeReflectionExtensions.GetRuntimeBaseDefinition" />
+          <AitFeature Name="System.Reflection.RuntimeReflectionExtensions.GetRuntimeMethod" />
+          <AitFeature Name="System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties" />
+          <AitFeature Name="System.Reflection.TypeInfo" />
+          <AitFeature Name="System.Reflection.TypeInfo.GetDeclaredField" />
+          <AitFeature Name="System.Reflection.TypeInfo.GetDeclaredMethod" />
+          <AitFeature Name="System.Reflection.TypeInfo.IsAssignableFrom" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_Assembly" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_BaseType" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsEnum" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsGenericType" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsValueType" />
+          <AitFeature Name="System.Resources.NeutralResourcesLanguageAttribute" />
+          <AitFeature Name="System.Resources.NeutralResourcesLanguageAttribute..ctor" />
+          <AitFeature Name="System.Resources.ResourceManager" />
+          <AitFeature Name="System.Resources.ResourceManager..ctor" />
+          <AitFeature Name="System.Resources.ResourceManager.GetString" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Create" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetException" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.get_Task" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1" />
+          <AitFeature Name="System.Runtime.CompilerServices.CallerMemberNameAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CallerMemberNameAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.ConfiguredTaskAwaitable" />
+          <AitFeature Name="System.Runtime.CompilerServices.ConfiguredTaskAwaitable.GetAwaiter" />
+          <AitFeature Name="System.Runtime.CompilerServices.ExtensionAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.ExtensionAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.InternalsVisibleToAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.InternalsVisibleToAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter.GetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter.get_IsCompleted" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter`1" />
+          <AitFeature Name="System.Runtime.InteropServices.LayoutKind" />
+          <AitFeature Name="System.Runtime.InteropServices.OutAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.OutAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.StructLayoutAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.StructLayoutAttribute..ctor" />
+          <AitFeature Name="System.Runtime.Serialization.DataContractAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.DataContractAttribute.get_Name" />
+          <AitFeature Name="System.Runtime.Serialization.DataMemberAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.StreamingContext" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+          <AitFeature Name="System.RuntimeTypeHandle" />
+          <AitFeature Name="System.RuntimeTypeHandle.Equals" />
+          <AitFeature Name="System.SByte" />
+          <AitFeature Name="System.Single" />
+          <AitFeature Name="System.Single.TryParse" />
+          <AitFeature Name="System.String" />
+          <AitFeature Name="System.String.Concat" />
+          <AitFeature Name="System.String.Contains" />
+          <AitFeature Name="System.String.Empty" />
+          <AitFeature Name="System.String.Equals" />
+          <AitFeature Name="System.String.Format" />
+          <AitFeature Name="System.String.IndexOf" />
+          <AitFeature Name="System.String.Insert" />
+          <AitFeature Name="System.String.IsNullOrEmpty" />
+          <AitFeature Name="System.String.IsNullOrWhiteSpace" />
+          <AitFeature Name="System.String.Join" />
+          <AitFeature Name="System.String.LastIndexOf" />
+          <AitFeature Name="System.String.Replace" />
+          <AitFeature Name="System.String.Split" />
+          <AitFeature Name="System.String.StartsWith" />
+          <AitFeature Name="System.String.Substring" />
+          <AitFeature Name="System.String.ToLower" />
+          <AitFeature Name="System.String.ToLowerInvariant" />
+          <AitFeature Name="System.String.ToUpper" />
+          <AitFeature Name="System.String.Trim" />
+          <AitFeature Name="System.String.TrimEnd" />
+          <AitFeature Name="System.String.TrimStart" />
+          <AitFeature Name="System.String.get_Chars" />
+          <AitFeature Name="System.String.get_Length" />
+          <AitFeature Name="System.String.op_Equality" />
+          <AitFeature Name="System.String.op_Inequality" />
+          <AitFeature Name="System.StringComparer" />
+          <AitFeature Name="System.StringComparer.get_OrdinalIgnoreCase" />
+          <AitFeature Name="System.StringComparison" />
+          <AitFeature Name="System.Text.Encoding" />
+          <AitFeature Name="System.Text.Encoding.get_UTF8" />
+          <AitFeature Name="System.Text.RegularExpressions.Capture" />
+          <AitFeature Name="System.Text.RegularExpressions.Capture.get_Value" />
+          <AitFeature Name="System.Text.RegularExpressions.Group" />
+          <AitFeature Name="System.Text.RegularExpressions.GroupCollection" />
+          <AitFeature Name="System.Text.RegularExpressions.GroupCollection.get_Item" />
+          <AitFeature Name="System.Text.RegularExpressions.Match" />
+          <AitFeature Name="System.Text.RegularExpressions.Match.get_Groups" />
+          <AitFeature Name="System.Text.RegularExpressions.Regex" />
+          <AitFeature Name="System.Text.RegularExpressions.Regex..ctor" />
+          <AitFeature Name="System.Text.RegularExpressions.Regex.IsMatch" />
+          <AitFeature Name="System.Text.RegularExpressions.Regex.Match" />
+          <AitFeature Name="System.Text.StringBuilder" />
+          <AitFeature Name="System.Text.StringBuilder..ctor" />
+          <AitFeature Name="System.Text.StringBuilder.Append" />
+          <AitFeature Name="System.Text.StringBuilder.AppendFormat" />
+          <AitFeature Name="System.Threading.CancellationToken" />
+          <AitFeature Name="System.Threading.CancellationToken.Register" />
+          <AitFeature Name="System.Threading.CancellationToken.ThrowIfCancellationRequested" />
+          <AitFeature Name="System.Threading.CancellationToken.get_IsCancellationRequested" />
+          <AitFeature Name="System.Threading.CancellationToken.get_None" />
+          <AitFeature Name="System.Threading.CancellationTokenRegistration" />
+          <AitFeature Name="System.Threading.Interlocked" />
+          <AitFeature Name="System.Threading.Interlocked.CompareExchange" />
+          <AitFeature Name="System.Threading.Interlocked.Decrement" />
+          <AitFeature Name="System.Threading.Interlocked.Increment" />
+          <AitFeature Name="System.Threading.Monitor" />
+          <AitFeature Name="System.Threading.Monitor.Enter" />
+          <AitFeature Name="System.Threading.Monitor.Exit" />
+          <AitFeature Name="System.Threading.SemaphoreSlim" />
+          <AitFeature Name="System.Threading.SemaphoreSlim..ctor" />
+          <AitFeature Name="System.Threading.SemaphoreSlim.Dispose" />
+          <AitFeature Name="System.Threading.SemaphoreSlim.Release" />
+          <AitFeature Name="System.Threading.SemaphoreSlim.WaitAsync" />
+          <AitFeature Name="System.Threading.Tasks.Task" />
+          <AitFeature Name="System.Threading.Tasks.Task.ConfigureAwait" />
+          <AitFeature Name="System.Threading.Tasks.Task.FromResult" />
+          <AitFeature Name="System.Threading.Tasks.Task.GetAwaiter" />
+          <AitFeature Name="System.Threading.Tasks.Task.get_Status" />
+          <AitFeature Name="System.Threading.Tasks.TaskCompletionSource`1" />
+          <AitFeature Name="System.Threading.Tasks.TaskStatus" />
+          <AitFeature Name="System.Threading.Tasks.Task`1" />
+          <AitFeature Name="System.TimeSpan" />
+          <AitFeature Name="System.TimeSpan.Zero" />
+          <AitFeature Name="System.Tuple" />
+          <AitFeature Name="System.Tuple.Create" />
+          <AitFeature Name="System.Tuple`2" />
+          <AitFeature Name="System.Type" />
+          <AitFeature Name="System.Type.GetGenericTypeDefinition" />
+          <AitFeature Name="System.Type.GetType" />
+          <AitFeature Name="System.Type.GetTypeFromHandle" />
+          <AitFeature Name="System.Type.get_FullName" />
+          <AitFeature Name="System.Type.get_Name" />
+          <AitFeature Name="System.Type.get_TypeHandle" />
+          <AitFeature Name="System.UInt16" />
+          <AitFeature Name="System.UInt32" />
+          <AitFeature Name="System.UInt64" />
+          <AitFeature Name="System.Uri" />
+          <AitFeature Name="System.Uri..ctor" />
+          <AitFeature Name="System.Uri.EscapeDataString" />
+          <AitFeature Name="System.Uri.EscapeUriString" />
+          <AitFeature Name="System.Uri.GetComponents" />
+          <AitFeature Name="System.Uri.TryCreate" />
+          <AitFeature Name="System.Uri.UnescapeDataString" />
+          <AitFeature Name="System.Uri.get_AbsolutePath" />
+          <AitFeature Name="System.Uri.get_Host" />
+          <AitFeature Name="System.Uri.get_Query" />
+          <AitFeature Name="System.Uri.op_Equality" />
+          <AitFeature Name="System.Uri.op_Inequality" />
+          <AitFeature Name="System.UriComponents" />
+          <AitFeature Name="System.UriFormat" />
+          <AitFeature Name="System.UriKind" />
+          <AitFeature Name="System.ValueType" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Microsoft.WindowsAzure.Mobile.Ext.dll" Id="0000429ff49ef7079829ff80154dc6b5ad8a149614d4">
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="mscoree.dll!_CorDllMain" />
+        </AitCategory>
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.ArgumentException" />
+          <AitFeature Name="System.ArgumentException..ctor" />
+          <AitFeature Name="System.ArgumentNullException" />
+          <AitFeature Name="System.ArgumentNullException..ctor" />
+          <AitFeature Name="System.Collections.Concurrent.ConcurrentDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2" />
+          <AitFeature Name="System.Collections.Generic.ICollection`1" />
+          <AitFeature Name="System.Collections.Generic.IDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IEnumerable`1" />
+          <AitFeature Name="System.Collections.Generic.IEnumerator`1" />
+          <AitFeature Name="System.Collections.Generic.IEqualityComparer`1" />
+          <AitFeature Name="System.Collections.Generic.KeyValuePair`2" />
+          <AitFeature Name="System.Collections.Generic.List`1" />
+          <AitFeature Name="System.Collections.IEnumerable" />
+          <AitFeature Name="System.Collections.IEnumerable.GetEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerator.MoveNext" />
+          <AitFeature Name="System.Collections.ObjectModel.ReadOnlyDictionary`2" />
+          <AitFeature Name="System.Delegate" />
+          <AitFeature Name="System.Delegate.DynamicInvoke" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute..ctor" />
+          <AitFeature Name="System.Enum" />
+          <AitFeature Name="System.Enum.TryParse" />
+          <AitFeature Name="System.Exception" />
+          <AitFeature Name="System.Func`2" />
+          <AitFeature Name="System.Func`3" />
+          <AitFeature Name="System.Globalization.CultureInfo" />
+          <AitFeature Name="System.Globalization.CultureInfo.get_InvariantCulture" />
+          <AitFeature Name="System.IDisposable" />
+          <AitFeature Name="System.IDisposable.Dispose" />
+          <AitFeature Name="System.IFormatProvider" />
+          <AitFeature Name="System.InvalidOperationException" />
+          <AitFeature Name="System.InvalidOperationException..ctor" />
+          <AitFeature Name="System.Linq.Enumerable" />
+          <AitFeature Name="System.Linq.Enumerable.Cast" />
+          <AitFeature Name="System.Linq.Enumerable.Contains" />
+          <AitFeature Name="System.Linq.Enumerable.Select" />
+          <AitFeature Name="System.Linq.Expressions.ConstantExpression" />
+          <AitFeature Name="System.Linq.Expressions.ConstantExpression.get_Value" />
+          <AitFeature Name="System.Linq.Expressions.Expression" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Constant" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Lambda" />
+          <AitFeature Name="System.Linq.Expressions.Expression.get_NodeType" />
+          <AitFeature Name="System.Linq.Expressions.Expression.get_Type" />
+          <AitFeature Name="System.Linq.Expressions.ExpressionType" />
+          <AitFeature Name="System.Linq.Expressions.ExpressionVisitor" />
+          <AitFeature Name="System.Linq.Expressions.ExpressionVisitor..ctor" />
+          <AitFeature Name="System.Linq.Expressions.ExpressionVisitor.Visit" />
+          <AitFeature Name="System.Linq.Expressions.ExpressionVisitor.VisitMember" />
+          <AitFeature Name="System.Linq.Expressions.LambdaExpression" />
+          <AitFeature Name="System.Linq.Expressions.LambdaExpression.Compile" />
+          <AitFeature Name="System.Linq.Expressions.MemberExpression" />
+          <AitFeature Name="System.Linq.Expressions.MemberInitExpression" />
+          <AitFeature Name="System.Linq.Expressions.NewExpression" />
+          <AitFeature Name="System.Linq.Expressions.ParameterExpression" />
+          <AitFeature Name="System.Linq.IQueryable" />
+          <AitFeature Name="System.NotSupportedException" />
+          <AitFeature Name="System.NotSupportedException..ctor" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Object..ctor" />
+          <AitFeature Name="System.Object.ToString" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.DefaultMemberAttribute" />
+          <AitFeature Name="System.Reflection.DefaultMemberAttribute..ctor" />
+          <AitFeature Name="System.Resources.NeutralResourcesLanguageAttribute" />
+          <AitFeature Name="System.Resources.NeutralResourcesLanguageAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.ExtensionAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.ExtensionAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.InternalsVisibleToAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.InternalsVisibleToAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter`1" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.OutAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.OutAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.AsyncInfo" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.AsyncInfo.Run" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+          <AitFeature Name="System.String" />
+          <AitFeature Name="System.String.Concat" />
+          <AitFeature Name="System.String.Contains" />
+          <AitFeature Name="System.String.Empty" />
+          <AitFeature Name="System.String.Equals" />
+          <AitFeature Name="System.String.Format" />
+          <AitFeature Name="System.String.IndexOf" />
+          <AitFeature Name="System.String.IsNullOrEmpty" />
+          <AitFeature Name="System.String.IsNullOrWhiteSpace" />
+          <AitFeature Name="System.String.Substring" />
+          <AitFeature Name="System.String.ToLowerInvariant" />
+          <AitFeature Name="System.String.get_Length" />
+          <AitFeature Name="System.StringComparer" />
+          <AitFeature Name="System.StringComparer.get_OrdinalIgnoreCase" />
+          <AitFeature Name="System.Threading.CancellationToken" />
+          <AitFeature Name="System.Threading.Tasks.Task" />
+          <AitFeature Name="System.Threading.Tasks.Task`1" />
+          <AitFeature Name="System.Type" />
+          <AitFeature Name="System.UInt32" />
+          <AitFeature Name="System.Uri" />
+          <AitFeature Name="System.Uri.EscapeDataString" />
+          <AitFeature Name="System.Uri.UnescapeDataString" />
+          <AitFeature Name="System.Uri.get_AbsoluteUri" />
+          <AitFeature Name="System.Uri.get_Host" />
+          <AitFeature Name="System.UriBuilder" />
+          <AitFeature Name="System.UriBuilder..ctor" />
+          <AitFeature Name="System.UriBuilder.get_Query" />
+          <AitFeature Name="System.UriBuilder.get_Uri" />
+          <AitFeature Name="System.UriBuilder.set_Query" />
+          <AitFeature Name="System.ValueType" />
+          <AitFeature Name="System.WindowsRuntimeSystemExtensions" />
+          <AitFeature Name="System.WindowsRuntimeSystemExtensions.GetAwaiter" />
+        </AitCategory>
+        <AitCategory Id="DotNetWinRt">
+          <AitFeature Name="Windows.ApplicationModel.Package" />
+          <AitFeature Name="Windows.ApplicationModel.Package.get_Current" />
+          <AitFeature Name="Windows.ApplicationModel.Package.get_Id" />
+          <AitFeature Name="Windows.ApplicationModel.PackageId" />
+          <AitFeature Name="Windows.ApplicationModel.PackageId.get_Architecture" />
+          <AitFeature Name="Windows.ApplicationModel.PackageId.get_Name" />
+          <AitFeature Name="Windows.Data.Xml.Dom.IXmlNode" />
+          <AitFeature Name="Windows.Data.Xml.Dom.IXmlNode.get_NodeName" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument..ctor" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument.GetXml" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument.LoadXml" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument.get_FirstChild" />
+          <AitFeature Name="Windows.Foundation.Collections.IPropertySet" />
+          <AitFeature Name="Windows.Foundation.IAsyncOperation`1" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationBroker" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationBroker.AuthenticateAsync" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationOptions" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationResult" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationResult.get_ResponseData" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationResult.get_ResponseErrorDetail" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationResult.get_ResponseStatus" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationStatus" />
+          <AitFeature Name="Windows.Storage.ApplicationData" />
+          <AitFeature Name="Windows.Storage.ApplicationData.get_Current" />
+          <AitFeature Name="Windows.Storage.ApplicationData.get_LocalSettings" />
+          <AitFeature Name="Windows.Storage.ApplicationDataContainer" />
+          <AitFeature Name="Windows.Storage.ApplicationDataContainer.CreateContainer" />
+          <AitFeature Name="Windows.Storage.ApplicationDataContainer.get_Values" />
+          <AitFeature Name="Windows.Storage.ApplicationDataCreateDisposition" />
+          <AitFeature Name="Windows.System.ProcessorArchitecture" />
+          <AitFeature Name="Windows.UI.Xaml.Data.ISupportIncrementalLoading" />
+          <AitFeature Name="Windows.UI.Xaml.Data.ISupportIncrementalLoading.LoadMoreItemsAsync" />
+          <AitFeature Name="Windows.UI.Xaml.Data.ISupportIncrementalLoading.get_HasMoreItems" />
+          <AitFeature Name="Windows.UI.Xaml.Data.LoadMoreItemsResult" />
+          <AitFeature Name="Windows.UI.Xaml.Data.LoadMoreItemsResult.Count" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Newtonsoft.Json.dll" Id="00005c14352b04c84f0bde414972f77dfe2f9af96f81">
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="mscoree.dll!_CorDllMain" />
+        </AitCategory>
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Action" />
+          <AitFeature Name="System.Action..ctor" />
+          <AitFeature Name="System.Action`2" />
+          <AitFeature Name="System.Activator" />
+          <AitFeature Name="System.Activator.CreateInstance" />
+          <AitFeature Name="System.ArgumentException" />
+          <AitFeature Name="System.ArgumentException..ctor" />
+          <AitFeature Name="System.ArgumentNullException" />
+          <AitFeature Name="System.ArgumentNullException..ctor" />
+          <AitFeature Name="System.ArgumentOutOfRangeException" />
+          <AitFeature Name="System.ArgumentOutOfRangeException..ctor" />
+          <AitFeature Name="System.Array" />
+          <AitFeature Name="System.Array.Copy" />
+          <AitFeature Name="System.Array.CreateInstance" />
+          <AitFeature Name="System.Array.GetLength" />
+          <AitFeature Name="System.Array.GetValue" />
+          <AitFeature Name="System.Array.IndexOf" />
+          <AitFeature Name="System.Array.Resize" />
+          <AitFeature Name="System.Array.SetValue" />
+          <AitFeature Name="System.Array.get_Length" />
+          <AitFeature Name="System.Array.get_Rank" />
+          <AitFeature Name="System.AsyncCallback" />
+          <AitFeature Name="System.Attribute" />
+          <AitFeature Name="System.Attribute..ctor" />
+          <AitFeature Name="System.AttributeTargets" />
+          <AitFeature Name="System.AttributeUsageAttribute" />
+          <AitFeature Name="System.AttributeUsageAttribute..ctor" />
+          <AitFeature Name="System.Boolean" />
+          <AitFeature Name="System.Boolean.CompareTo" />
+          <AitFeature Name="System.Buffer" />
+          <AitFeature Name="System.Buffer.BlockCopy" />
+          <AitFeature Name="System.Byte" />
+          <AitFeature Name="System.Byte.CompareTo" />
+          <AitFeature Name="System.Byte.ToString" />
+          <AitFeature Name="System.CLSCompliantAttribute" />
+          <AitFeature Name="System.CLSCompliantAttribute..ctor" />
+          <AitFeature Name="System.Char" />
+          <AitFeature Name="System.Char.IsDigit" />
+          <AitFeature Name="System.Char.IsHighSurrogate" />
+          <AitFeature Name="System.Char.IsLetterOrDigit" />
+          <AitFeature Name="System.Char.IsLowSurrogate" />
+          <AitFeature Name="System.Char.IsNumber" />
+          <AitFeature Name="System.Char.IsUpper" />
+          <AitFeature Name="System.Char.IsWhiteSpace" />
+          <AitFeature Name="System.Char.ToLowerInvariant" />
+          <AitFeature Name="System.Char.ToString" />
+          <AitFeature Name="System.Collections.Concurrent.ConcurrentDictionary`2" />
+          <AitFeature Name="System.Collections.DictionaryEntry" />
+          <AitFeature Name="System.Collections.DictionaryEntry..ctor" />
+          <AitFeature Name="System.Collections.DictionaryEntry.get_Key" />
+          <AitFeature Name="System.Collections.DictionaryEntry.get_Value" />
+          <AitFeature Name="System.Collections.Generic.Comparer`1" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2" />
+          <AitFeature Name="System.Collections.Generic.EqualityComparer`1" />
+          <AitFeature Name="System.Collections.Generic.HashSet`1" />
+          <AitFeature Name="System.Collections.Generic.ICollection`1" />
+          <AitFeature Name="System.Collections.Generic.IComparer`1" />
+          <AitFeature Name="System.Collections.Generic.IDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IEnumerable`1" />
+          <AitFeature Name="System.Collections.Generic.IEnumerator`1" />
+          <AitFeature Name="System.Collections.Generic.IEqualityComparer`1" />
+          <AitFeature Name="System.Collections.Generic.IList`1" />
+          <AitFeature Name="System.Collections.Generic.IReadOnlyCollection`1" />
+          <AitFeature Name="System.Collections.Generic.IReadOnlyDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IReadOnlyList`1" />
+          <AitFeature Name="System.Collections.Generic.ISet`1" />
+          <AitFeature Name="System.Collections.Generic.KeyNotFoundException" />
+          <AitFeature Name="System.Collections.Generic.KeyNotFoundException..ctor" />
+          <AitFeature Name="System.Collections.Generic.KeyValuePair`2" />
+          <AitFeature Name="System.Collections.Generic.List`1" />
+          <AitFeature Name="System.Collections.Generic.Queue`1" />
+          <AitFeature Name="System.Collections.Generic.Stack`1" />
+          <AitFeature Name="System.Collections.ICollection" />
+          <AitFeature Name="System.Collections.ICollection.CopyTo" />
+          <AitFeature Name="System.Collections.ICollection.get_Count" />
+          <AitFeature Name="System.Collections.ICollection.get_IsSynchronized" />
+          <AitFeature Name="System.Collections.ICollection.get_SyncRoot" />
+          <AitFeature Name="System.Collections.IDictionary" />
+          <AitFeature Name="System.Collections.IDictionary.Add" />
+          <AitFeature Name="System.Collections.IDictionary.Clear" />
+          <AitFeature Name="System.Collections.IDictionary.Contains" />
+          <AitFeature Name="System.Collections.IDictionary.GetEnumerator" />
+          <AitFeature Name="System.Collections.IDictionary.Remove" />
+          <AitFeature Name="System.Collections.IDictionary.get_IsFixedSize" />
+          <AitFeature Name="System.Collections.IDictionary.get_IsReadOnly" />
+          <AitFeature Name="System.Collections.IDictionary.get_Item" />
+          <AitFeature Name="System.Collections.IDictionary.get_Keys" />
+          <AitFeature Name="System.Collections.IDictionary.get_Values" />
+          <AitFeature Name="System.Collections.IDictionary.set_Item" />
+          <AitFeature Name="System.Collections.IDictionaryEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerable" />
+          <AitFeature Name="System.Collections.IEnumerable.GetEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerator.MoveNext" />
+          <AitFeature Name="System.Collections.IEnumerator.Reset" />
+          <AitFeature Name="System.Collections.IEnumerator.get_Current" />
+          <AitFeature Name="System.Collections.IList" />
+          <AitFeature Name="System.Collections.IList.Add" />
+          <AitFeature Name="System.Collections.IList.Clear" />
+          <AitFeature Name="System.Collections.IList.Contains" />
+          <AitFeature Name="System.Collections.IList.IndexOf" />
+          <AitFeature Name="System.Collections.IList.Insert" />
+          <AitFeature Name="System.Collections.IList.Remove" />
+          <AitFeature Name="System.Collections.IList.RemoveAt" />
+          <AitFeature Name="System.Collections.IList.get_IsFixedSize" />
+          <AitFeature Name="System.Collections.IList.get_IsReadOnly" />
+          <AitFeature Name="System.Collections.IList.get_Item" />
+          <AitFeature Name="System.Collections.IList.set_Item" />
+          <AitFeature Name="System.Collections.ObjectModel.Collection`1" />
+          <AitFeature Name="System.Collections.ObjectModel.KeyedCollection`2" />
+          <AitFeature Name="System.Collections.ObjectModel.ReadOnlyCollection`1" />
+          <AitFeature Name="System.Collections.ObjectModel.ReadOnlyDictionary`2" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedAction" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedEventArgs..ctor" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedEventHandler" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedEventHandler.Invoke" />
+          <AitFeature Name="System.ComponentModel.DefaultValueAttribute" />
+          <AitFeature Name="System.ComponentModel.DefaultValueAttribute.get_Value" />
+          <AitFeature Name="System.ComponentModel.INotifyPropertyChanged" />
+          <AitFeature Name="System.ComponentModel.PropertyChangedEventArgs" />
+          <AitFeature Name="System.ComponentModel.PropertyChangedEventArgs..ctor" />
+          <AitFeature Name="System.ComponentModel.PropertyChangedEventHandler" />
+          <AitFeature Name="System.ComponentModel.PropertyChangedEventHandler.Invoke" />
+          <AitFeature Name="System.Convert" />
+          <AitFeature Name="System.Convert.ChangeType" />
+          <AitFeature Name="System.Convert.FromBase64CharArray" />
+          <AitFeature Name="System.Convert.FromBase64String" />
+          <AitFeature Name="System.Convert.ToBase64CharArray" />
+          <AitFeature Name="System.Convert.ToBase64String" />
+          <AitFeature Name="System.Convert.ToBoolean" />
+          <AitFeature Name="System.Convert.ToByte" />
+          <AitFeature Name="System.Convert.ToChar" />
+          <AitFeature Name="System.Convert.ToDateTime" />
+          <AitFeature Name="System.Convert.ToDecimal" />
+          <AitFeature Name="System.Convert.ToDouble" />
+          <AitFeature Name="System.Convert.ToInt16" />
+          <AitFeature Name="System.Convert.ToInt32" />
+          <AitFeature Name="System.Convert.ToInt64" />
+          <AitFeature Name="System.Convert.ToSByte" />
+          <AitFeature Name="System.Convert.ToSingle" />
+          <AitFeature Name="System.Convert.ToString" />
+          <AitFeature Name="System.Convert.ToUInt16" />
+          <AitFeature Name="System.Convert.ToUInt32" />
+          <AitFeature Name="System.Convert.ToUInt64" />
+          <AitFeature Name="System.DateTime" />
+          <AitFeature Name="System.DateTime..ctor" />
+          <AitFeature Name="System.DateTime.Add" />
+          <AitFeature Name="System.DateTime.AddTicks" />
+          <AitFeature Name="System.DateTime.CompareTo" />
+          <AitFeature Name="System.DateTime.DaysInMonth" />
+          <AitFeature Name="System.DateTime.MaxValue" />
+          <AitFeature Name="System.DateTime.MinValue" />
+          <AitFeature Name="System.DateTime.Parse" />
+          <AitFeature Name="System.DateTime.ParseExact" />
+          <AitFeature Name="System.DateTime.SpecifyKind" />
+          <AitFeature Name="System.DateTime.ToLocalTime" />
+          <AitFeature Name="System.DateTime.ToString" />
+          <AitFeature Name="System.DateTime.ToUniversalTime" />
+          <AitFeature Name="System.DateTime.TryParse" />
+          <AitFeature Name="System.DateTime.TryParseExact" />
+          <AitFeature Name="System.DateTime.get_Hour" />
+          <AitFeature Name="System.DateTime.get_Kind" />
+          <AitFeature Name="System.DateTime.get_Minute" />
+          <AitFeature Name="System.DateTime.get_Now" />
+          <AitFeature Name="System.DateTime.get_Second" />
+          <AitFeature Name="System.DateTime.get_Ticks" />
+          <AitFeature Name="System.DateTime.op_Equality" />
+          <AitFeature Name="System.DateTime.op_Inequality" />
+          <AitFeature Name="System.DateTimeKind" />
+          <AitFeature Name="System.DateTimeOffset" />
+          <AitFeature Name="System.DateTimeOffset..ctor" />
+          <AitFeature Name="System.DateTimeOffset.CompareTo" />
+          <AitFeature Name="System.DateTimeOffset.Parse" />
+          <AitFeature Name="System.DateTimeOffset.ParseExact" />
+          <AitFeature Name="System.DateTimeOffset.ToString" />
+          <AitFeature Name="System.DateTimeOffset.ToUniversalTime" />
+          <AitFeature Name="System.DateTimeOffset.TryParse" />
+          <AitFeature Name="System.DateTimeOffset.TryParseExact" />
+          <AitFeature Name="System.DateTimeOffset.get_DateTime" />
+          <AitFeature Name="System.DateTimeOffset.get_Offset" />
+          <AitFeature Name="System.DateTimeOffset.get_UtcDateTime" />
+          <AitFeature Name="System.DateTimeOffset.op_Implicit" />
+          <AitFeature Name="System.Decimal" />
+          <AitFeature Name="System.Decimal..ctor" />
+          <AitFeature Name="System.Decimal.CompareTo" />
+          <AitFeature Name="System.Decimal.Equals" />
+          <AitFeature Name="System.Decimal.ToString" />
+          <AitFeature Name="System.Decimal.TryParse" />
+          <AitFeature Name="System.Decimal.op_Addition" />
+          <AitFeature Name="System.Decimal.op_Division" />
+          <AitFeature Name="System.Decimal.op_Implicit" />
+          <AitFeature Name="System.Decimal.op_Multiply" />
+          <AitFeature Name="System.Decimal.op_Subtraction" />
+          <AitFeature Name="System.Delegate" />
+          <AitFeature Name="System.Delegate.Combine" />
+          <AitFeature Name="System.Delegate.Remove" />
+          <AitFeature Name="System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" />
+          <AitFeature Name="System.Diagnostics.CodeAnalysis.SuppressMessageAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute..ctor" />
+          <AitFeature Name="System.Double" />
+          <AitFeature Name="System.Double.CompareTo" />
+          <AitFeature Name="System.Double.Equals" />
+          <AitFeature Name="System.Double.IsInfinity" />
+          <AitFeature Name="System.Double.IsNaN" />
+          <AitFeature Name="System.Double.ToString" />
+          <AitFeature Name="System.Double.TryParse" />
+          <AitFeature Name="System.Dynamic.BinaryOperationBinder" />
+          <AitFeature Name="System.Dynamic.BinaryOperationBinder.FallbackBinaryOperation" />
+          <AitFeature Name="System.Dynamic.BinaryOperationBinder.get_Operation" />
+          <AitFeature Name="System.Dynamic.BindingRestrictions" />
+          <AitFeature Name="System.Dynamic.BindingRestrictions.Empty" />
+          <AitFeature Name="System.Dynamic.BindingRestrictions.GetInstanceRestriction" />
+          <AitFeature Name="System.Dynamic.BindingRestrictions.GetTypeRestriction" />
+          <AitFeature Name="System.Dynamic.BindingRestrictions.Merge" />
+          <AitFeature Name="System.Dynamic.ConvertBinder" />
+          <AitFeature Name="System.Dynamic.ConvertBinder.FallbackConvert" />
+          <AitFeature Name="System.Dynamic.ConvertBinder.get_Type" />
+          <AitFeature Name="System.Dynamic.CreateInstanceBinder" />
+          <AitFeature Name="System.Dynamic.CreateInstanceBinder.FallbackCreateInstance" />
+          <AitFeature Name="System.Dynamic.DeleteIndexBinder" />
+          <AitFeature Name="System.Dynamic.DeleteIndexBinder.FallbackDeleteIndex" />
+          <AitFeature Name="System.Dynamic.DeleteMemberBinder" />
+          <AitFeature Name="System.Dynamic.DeleteMemberBinder.FallbackDeleteMember" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject..ctor" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindBinaryOperation" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindConvert" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindCreateInstance" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindDeleteIndex" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindDeleteMember" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindGetIndex" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindGetMember" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindInvoke" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindInvokeMember" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindSetIndex" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindSetMember" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.BindUnaryOperation" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.GetDynamicMemberNames" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.get_Expression" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.get_HasValue" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.get_LimitType" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.get_Restrictions" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObject.get_Value" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObjectBinder" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObjectBinder.Bind" />
+          <AitFeature Name="System.Dynamic.DynamicMetaObjectBinder.get_ReturnType" />
+          <AitFeature Name="System.Dynamic.ExpandoObject" />
+          <AitFeature Name="System.Dynamic.ExpandoObject..ctor" />
+          <AitFeature Name="System.Dynamic.GetIndexBinder" />
+          <AitFeature Name="System.Dynamic.GetIndexBinder.FallbackGetIndex" />
+          <AitFeature Name="System.Dynamic.GetMemberBinder" />
+          <AitFeature Name="System.Dynamic.GetMemberBinder..ctor" />
+          <AitFeature Name="System.Dynamic.GetMemberBinder.FallbackGetMember" />
+          <AitFeature Name="System.Dynamic.GetMemberBinder.get_IgnoreCase" />
+          <AitFeature Name="System.Dynamic.GetMemberBinder.get_Name" />
+          <AitFeature Name="System.Dynamic.IDynamicMetaObjectProvider" />
+          <AitFeature Name="System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject" />
+          <AitFeature Name="System.Dynamic.InvokeBinder" />
+          <AitFeature Name="System.Dynamic.InvokeBinder.FallbackInvoke" />
+          <AitFeature Name="System.Dynamic.InvokeMemberBinder" />
+          <AitFeature Name="System.Dynamic.InvokeMemberBinder.FallbackInvoke" />
+          <AitFeature Name="System.Dynamic.InvokeMemberBinder.FallbackInvokeMember" />
+          <AitFeature Name="System.Dynamic.InvokeMemberBinder.get_IgnoreCase" />
+          <AitFeature Name="System.Dynamic.InvokeMemberBinder.get_Name" />
+          <AitFeature Name="System.Dynamic.SetIndexBinder" />
+          <AitFeature Name="System.Dynamic.SetIndexBinder.FallbackSetIndex" />
+          <AitFeature Name="System.Dynamic.SetMemberBinder" />
+          <AitFeature Name="System.Dynamic.SetMemberBinder..ctor" />
+          <AitFeature Name="System.Dynamic.SetMemberBinder.FallbackSetMember" />
+          <AitFeature Name="System.Dynamic.SetMemberBinder.get_IgnoreCase" />
+          <AitFeature Name="System.Dynamic.SetMemberBinder.get_Name" />
+          <AitFeature Name="System.Dynamic.UnaryOperationBinder" />
+          <AitFeature Name="System.Dynamic.UnaryOperationBinder.FallbackUnaryOperation" />
+          <AitFeature Name="System.Enum" />
+          <AitFeature Name="System.Enum.GetUnderlyingType" />
+          <AitFeature Name="System.Enum.HasFlag" />
+          <AitFeature Name="System.Enum.IsDefined" />
+          <AitFeature Name="System.Enum.Parse" />
+          <AitFeature Name="System.Enum.ToObject" />
+          <AitFeature Name="System.Enum.ToString" />
+          <AitFeature Name="System.Environment" />
+          <AitFeature Name="System.Environment.get_CurrentManagedThreadId" />
+          <AitFeature Name="System.Environment.get_NewLine" />
+          <AitFeature Name="System.Environment.get_TickCount" />
+          <AitFeature Name="System.EventArgs" />
+          <AitFeature Name="System.EventArgs..ctor" />
+          <AitFeature Name="System.EventHandler`1" />
+          <AitFeature Name="System.Exception" />
+          <AitFeature Name="System.Exception..ctor" />
+          <AitFeature Name="System.Exception.get_Message" />
+          <AitFeature Name="System.FlagsAttribute" />
+          <AitFeature Name="System.FlagsAttribute..ctor" />
+          <AitFeature Name="System.Func`1" />
+          <AitFeature Name="System.Func`2" />
+          <AitFeature Name="System.Func`3" />
+          <AitFeature Name="System.Func`4" />
+          <AitFeature Name="System.Globalization.CultureInfo" />
+          <AitFeature Name="System.Globalization.CultureInfo.get_CurrentCulture" />
+          <AitFeature Name="System.Globalization.CultureInfo.get_InvariantCulture" />
+          <AitFeature Name="System.Globalization.DateTimeStyles" />
+          <AitFeature Name="System.Globalization.NumberFormatInfo" />
+          <AitFeature Name="System.Globalization.NumberFormatInfo.get_InvariantInfo" />
+          <AitFeature Name="System.Globalization.NumberStyles" />
+          <AitFeature Name="System.Guid" />
+          <AitFeature Name="System.Guid..ctor" />
+          <AitFeature Name="System.Guid.CompareTo" />
+          <AitFeature Name="System.Guid.NewGuid" />
+          <AitFeature Name="System.Guid.ToByteArray" />
+          <AitFeature Name="System.Guid.ToString" />
+          <AitFeature Name="System.Guid.TryParse" />
+          <AitFeature Name="System.IAsyncResult" />
+          <AitFeature Name="System.IComparable" />
+          <AitFeature Name="System.IComparable.CompareTo" />
+          <AitFeature Name="System.IComparable`1" />
+          <AitFeature Name="System.IDisposable" />
+          <AitFeature Name="System.IDisposable.Dispose" />
+          <AitFeature Name="System.IEquatable`1" />
+          <AitFeature Name="System.IFormatProvider" />
+          <AitFeature Name="System.IFormattable" />
+          <AitFeature Name="System.IFormattable.ToString" />
+          <AitFeature Name="System.IO.BinaryReader" />
+          <AitFeature Name="System.IO.BinaryReader..ctor" />
+          <AitFeature Name="System.IO.BinaryReader.Dispose" />
+          <AitFeature Name="System.IO.BinaryReader.Read" />
+          <AitFeature Name="System.IO.BinaryReader.ReadByte" />
+          <AitFeature Name="System.IO.BinaryReader.ReadBytes" />
+          <AitFeature Name="System.IO.BinaryReader.ReadDouble" />
+          <AitFeature Name="System.IO.BinaryReader.ReadInt32" />
+          <AitFeature Name="System.IO.BinaryReader.ReadInt64" />
+          <AitFeature Name="System.IO.BinaryReader.ReadSByte" />
+          <AitFeature Name="System.IO.BinaryWriter" />
+          <AitFeature Name="System.IO.BinaryWriter..ctor" />
+          <AitFeature Name="System.IO.BinaryWriter.Dispose" />
+          <AitFeature Name="System.IO.BinaryWriter.Flush" />
+          <AitFeature Name="System.IO.BinaryWriter.Write" />
+          <AitFeature Name="System.IO.EndOfStreamException" />
+          <AitFeature Name="System.IO.EndOfStreamException..ctor" />
+          <AitFeature Name="System.IO.Stream" />
+          <AitFeature Name="System.IO.StringReader" />
+          <AitFeature Name="System.IO.StringReader..ctor" />
+          <AitFeature Name="System.IO.StringWriter" />
+          <AitFeature Name="System.IO.StringWriter..ctor" />
+          <AitFeature Name="System.IO.TextReader" />
+          <AitFeature Name="System.IO.TextReader.Dispose" />
+          <AitFeature Name="System.IO.TextReader.Read" />
+          <AitFeature Name="System.IO.TextWriter" />
+          <AitFeature Name="System.IO.TextWriter.Dispose" />
+          <AitFeature Name="System.IO.TextWriter.Flush" />
+          <AitFeature Name="System.IO.TextWriter.Write" />
+          <AitFeature Name="System.IO.TextWriter.WriteLine" />
+          <AitFeature Name="System.Int16" />
+          <AitFeature Name="System.Int16.ToString" />
+          <AitFeature Name="System.Int32" />
+          <AitFeature Name="System.Int32.CompareTo" />
+          <AitFeature Name="System.Int32.GetHashCode" />
+          <AitFeature Name="System.Int32.Parse" />
+          <AitFeature Name="System.Int32.ToString" />
+          <AitFeature Name="System.Int32.TryParse" />
+          <AitFeature Name="System.Int64" />
+          <AitFeature Name="System.Int64.CompareTo" />
+          <AitFeature Name="System.Int64.ToString" />
+          <AitFeature Name="System.Int64.TryParse" />
+          <AitFeature Name="System.InvalidCastException" />
+          <AitFeature Name="System.InvalidCastException..ctor" />
+          <AitFeature Name="System.InvalidOperationException" />
+          <AitFeature Name="System.InvalidOperationException..ctor" />
+          <AitFeature Name="System.Linq.Enumerable" />
+          <AitFeature Name="System.Linq.Enumerable.All" />
+          <AitFeature Name="System.Linq.Enumerable.Any" />
+          <AitFeature Name="System.Linq.Enumerable.Cast" />
+          <AitFeature Name="System.Linq.Enumerable.Concat" />
+          <AitFeature Name="System.Linq.Enumerable.Contains" />
+          <AitFeature Name="System.Linq.Enumerable.Count" />
+          <AitFeature Name="System.Linq.Enumerable.Distinct" />
+          <AitFeature Name="System.Linq.Enumerable.Empty" />
+          <AitFeature Name="System.Linq.Enumerable.First" />
+          <AitFeature Name="System.Linq.Enumerable.FirstOrDefault" />
+          <AitFeature Name="System.Linq.Enumerable.GroupBy" />
+          <AitFeature Name="System.Linq.Enumerable.LastOrDefault" />
+          <AitFeature Name="System.Linq.Enumerable.OfType" />
+          <AitFeature Name="System.Linq.Enumerable.OrderBy" />
+          <AitFeature Name="System.Linq.Enumerable.Reverse" />
+          <AitFeature Name="System.Linq.Enumerable.Select" />
+          <AitFeature Name="System.Linq.Enumerable.SelectMany" />
+          <AitFeature Name="System.Linq.Enumerable.SequenceEqual" />
+          <AitFeature Name="System.Linq.Enumerable.Single" />
+          <AitFeature Name="System.Linq.Enumerable.SingleOrDefault" />
+          <AitFeature Name="System.Linq.Enumerable.ToArray" />
+          <AitFeature Name="System.Linq.Enumerable.ToDictionary" />
+          <AitFeature Name="System.Linq.Enumerable.ToList" />
+          <AitFeature Name="System.Linq.Enumerable.Union" />
+          <AitFeature Name="System.Linq.Enumerable.Where" />
+          <AitFeature Name="System.Linq.Expressions.BinaryExpression" />
+          <AitFeature Name="System.Linq.Expressions.BlockExpression" />
+          <AitFeature Name="System.Linq.Expressions.ConditionalExpression" />
+          <AitFeature Name="System.Linq.Expressions.ConditionalExpression.get_IfFalse" />
+          <AitFeature Name="System.Linq.Expressions.ConditionalExpression.get_IfTrue" />
+          <AitFeature Name="System.Linq.Expressions.ConditionalExpression.get_Test" />
+          <AitFeature Name="System.Linq.Expressions.ConstantExpression" />
+          <AitFeature Name="System.Linq.Expressions.DefaultExpression" />
+          <AitFeature Name="System.Linq.Expressions.Expression" />
+          <AitFeature Name="System.Linq.Expressions.Expression.ArrayIndex" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Assign" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Block" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Call" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Coalesce" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Condition" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Constant" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Convert" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Empty" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Field" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Lambda" />
+          <AitFeature Name="System.Linq.Expressions.Expression.MakeMemberAccess" />
+          <AitFeature Name="System.Linq.Expressions.Expression.New" />
+          <AitFeature Name="System.Linq.Expressions.Expression.NewArrayInit" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Parameter" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Variable" />
+          <AitFeature Name="System.Linq.Expressions.Expression.get_NodeType" />
+          <AitFeature Name="System.Linq.Expressions.Expression.get_Type" />
+          <AitFeature Name="System.Linq.Expressions.ExpressionType" />
+          <AitFeature Name="System.Linq.Expressions.ExpressionVisitor" />
+          <AitFeature Name="System.Linq.Expressions.ExpressionVisitor..ctor" />
+          <AitFeature Name="System.Linq.Expressions.ExpressionVisitor.Visit" />
+          <AitFeature Name="System.Linq.Expressions.ExpressionVisitor.VisitConditional" />
+          <AitFeature Name="System.Linq.Expressions.Expression`1" />
+          <AitFeature Name="System.Linq.Expressions.LambdaExpression" />
+          <AitFeature Name="System.Linq.Expressions.LambdaExpression.Compile" />
+          <AitFeature Name="System.Linq.Expressions.MemberExpression" />
+          <AitFeature Name="System.Linq.Expressions.MethodCallExpression" />
+          <AitFeature Name="System.Linq.Expressions.NewArrayExpression" />
+          <AitFeature Name="System.Linq.Expressions.NewExpression" />
+          <AitFeature Name="System.Linq.Expressions.ParameterExpression" />
+          <AitFeature Name="System.Linq.Expressions.UnaryExpression" />
+          <AitFeature Name="System.Linq.IGrouping`2" />
+          <AitFeature Name="System.Linq.IOrderedEnumerable`1" />
+          <AitFeature Name="System.Math" />
+          <AitFeature Name="System.Math.Abs" />
+          <AitFeature Name="System.Math.Floor" />
+          <AitFeature Name="System.Math.Max" />
+          <AitFeature Name="System.Math.Min" />
+          <AitFeature Name="System.Math.Truncate" />
+          <AitFeature Name="System.MulticastDelegate" />
+          <AitFeature Name="System.NotImplementedException" />
+          <AitFeature Name="System.NotImplementedException..ctor" />
+          <AitFeature Name="System.NotSupportedException" />
+          <AitFeature Name="System.NotSupportedException..ctor" />
+          <AitFeature Name="System.Nullable" />
+          <AitFeature Name="System.Nullable.GetUnderlyingType" />
+          <AitFeature Name="System.Nullable`1" />
+          <AitFeature Name="System.Numerics.BigInteger" />
+          <AitFeature Name="System.Numerics.BigInteger..ctor" />
+          <AitFeature Name="System.Numerics.BigInteger.CompareTo" />
+          <AitFeature Name="System.Numerics.BigInteger.Parse" />
+          <AitFeature Name="System.Numerics.BigInteger.ToByteArray" />
+          <AitFeature Name="System.Numerics.BigInteger.ToString" />
+          <AitFeature Name="System.Numerics.BigInteger.op_Addition" />
+          <AitFeature Name="System.Numerics.BigInteger.op_Division" />
+          <AitFeature Name="System.Numerics.BigInteger.op_Explicit" />
+          <AitFeature Name="System.Numerics.BigInteger.op_Inequality" />
+          <AitFeature Name="System.Numerics.BigInteger.op_Modulus" />
+          <AitFeature Name="System.Numerics.BigInteger.op_Multiply" />
+          <AitFeature Name="System.Numerics.BigInteger.op_Subtraction" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Object..ctor" />
+          <AitFeature Name="System.Object.Equals" />
+          <AitFeature Name="System.Object.GetHashCode" />
+          <AitFeature Name="System.Object.GetType" />
+          <AitFeature Name="System.Object.ReferenceEquals" />
+          <AitFeature Name="System.Object.ToString" />
+          <AitFeature Name="System.ObsoleteAttribute" />
+          <AitFeature Name="System.ObsoleteAttribute..ctor" />
+          <AitFeature Name="System.OverflowException" />
+          <AitFeature Name="System.ParamArrayAttribute" />
+          <AitFeature Name="System.ParamArrayAttribute..ctor" />
+          <AitFeature Name="System.Predicate`1" />
+          <AitFeature Name="System.Reflection.Assembly" />
+          <AitFeature Name="System.Reflection.Assembly.GetType" />
+          <AitFeature Name="System.Reflection.Assembly.Load" />
+          <AitFeature Name="System.Reflection.Assembly.get_FullName" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyName" />
+          <AitFeature Name="System.Reflection.AssemblyName..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.ConstructorInfo" />
+          <AitFeature Name="System.Reflection.ConstructorInfo.Invoke" />
+          <AitFeature Name="System.Reflection.CustomAttributeData" />
+          <AitFeature Name="System.Reflection.CustomAttributeData.get_AttributeType" />
+          <AitFeature Name="System.Reflection.CustomAttributeExtensions" />
+          <AitFeature Name="System.Reflection.CustomAttributeExtensions.GetCustomAttributes" />
+          <AitFeature Name="System.Reflection.CustomAttributeExtensions.IsDefined" />
+          <AitFeature Name="System.Reflection.DefaultMemberAttribute" />
+          <AitFeature Name="System.Reflection.DefaultMemberAttribute..ctor" />
+          <AitFeature Name="System.Reflection.EventInfo" />
+          <AitFeature Name="System.Reflection.EventInfo.get_EventHandlerType" />
+          <AitFeature Name="System.Reflection.FieldInfo" />
+          <AitFeature Name="System.Reflection.FieldInfo.GetValue" />
+          <AitFeature Name="System.Reflection.FieldInfo.SetValue" />
+          <AitFeature Name="System.Reflection.FieldInfo.get_FieldType" />
+          <AitFeature Name="System.Reflection.FieldInfo.get_IsInitOnly" />
+          <AitFeature Name="System.Reflection.FieldInfo.get_IsLiteral" />
+          <AitFeature Name="System.Reflection.FieldInfo.get_IsPublic" />
+          <AitFeature Name="System.Reflection.FieldInfo.get_IsStatic" />
+          <AitFeature Name="System.Reflection.IntrospectionExtensions" />
+          <AitFeature Name="System.Reflection.IntrospectionExtensions.GetTypeInfo" />
+          <AitFeature Name="System.Reflection.MemberInfo" />
+          <AitFeature Name="System.Reflection.MemberInfo.get_CustomAttributes" />
+          <AitFeature Name="System.Reflection.MemberInfo.get_DeclaringType" />
+          <AitFeature Name="System.Reflection.MemberInfo.get_Name" />
+          <AitFeature Name="System.Reflection.MethodBase" />
+          <AitFeature Name="System.Reflection.MethodBase.GetParameters" />
+          <AitFeature Name="System.Reflection.MethodBase.Invoke" />
+          <AitFeature Name="System.Reflection.MethodBase.get_ContainsGenericParameters" />
+          <AitFeature Name="System.Reflection.MethodBase.get_IsConstructor" />
+          <AitFeature Name="System.Reflection.MethodBase.get_IsPublic" />
+          <AitFeature Name="System.Reflection.MethodBase.get_IsStatic" />
+          <AitFeature Name="System.Reflection.MethodBase.get_IsVirtual" />
+          <AitFeature Name="System.Reflection.MethodInfo" />
+          <AitFeature Name="System.Reflection.MethodInfo.MakeGenericMethod" />
+          <AitFeature Name="System.Reflection.MethodInfo.get_ReturnType" />
+          <AitFeature Name="System.Reflection.Module" />
+          <AitFeature Name="System.Reflection.ParameterInfo" />
+          <AitFeature Name="System.Reflection.ParameterInfo.get_IsOut" />
+          <AitFeature Name="System.Reflection.ParameterInfo.get_Member" />
+          <AitFeature Name="System.Reflection.ParameterInfo.get_Name" />
+          <AitFeature Name="System.Reflection.ParameterInfo.get_ParameterType" />
+          <AitFeature Name="System.Reflection.PropertyInfo" />
+          <AitFeature Name="System.Reflection.PropertyInfo.GetIndexParameters" />
+          <AitFeature Name="System.Reflection.PropertyInfo.GetValue" />
+          <AitFeature Name="System.Reflection.PropertyInfo.SetValue" />
+          <AitFeature Name="System.Reflection.PropertyInfo.get_CanRead" />
+          <AitFeature Name="System.Reflection.PropertyInfo.get_CanWrite" />
+          <AitFeature Name="System.Reflection.PropertyInfo.get_GetMethod" />
+          <AitFeature Name="System.Reflection.PropertyInfo.get_PropertyType" />
+          <AitFeature Name="System.Reflection.PropertyInfo.get_SetMethod" />
+          <AitFeature Name="System.Reflection.RuntimeReflectionExtensions" />
+          <AitFeature Name="System.Reflection.RuntimeReflectionExtensions.GetMethodInfo" />
+          <AitFeature Name="System.Reflection.RuntimeReflectionExtensions.GetRuntimeBaseDefinition" />
+          <AitFeature Name="System.Reflection.TargetParameterCountException" />
+          <AitFeature Name="System.Reflection.TypeInfo" />
+          <AitFeature Name="System.Reflection.TypeInfo.GetDeclaredField" />
+          <AitFeature Name="System.Reflection.TypeInfo.GetDeclaredMethod" />
+          <AitFeature Name="System.Reflection.TypeInfo.GetDeclaredProperty" />
+          <AitFeature Name="System.Reflection.TypeInfo.IsAssignableFrom" />
+          <AitFeature Name="System.Reflection.TypeInfo.IsSubclassOf" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_Assembly" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_BaseType" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_ContainsGenericParameters" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_DeclaredConstructors" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_DeclaredFields" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_DeclaredMembers" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_DeclaredMethods" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_DeclaredProperties" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_GenericTypeArguments" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_ImplementedInterfaces" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsAbstract" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsClass" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsEnum" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsGenericType" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsGenericTypeDefinition" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsInterface" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsSealed" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsValueType" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_IsVisible" />
+          <AitFeature Name="System.Runtime.CompilerServices.CallSite" />
+          <AitFeature Name="System.Runtime.CompilerServices.CallSiteBinder" />
+          <AitFeature Name="System.Runtime.CompilerServices.CallSite`1" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.ExtensionAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.ExtensionAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.InternalsVisibleToAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.InternalsVisibleToAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.MethodImplAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.MethodImplAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.MethodImplOptions" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeHelpers" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeHelpers.InitializeArray" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.GuidAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.GuidAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.LayoutKind" />
+          <AitFeature Name="System.Runtime.InteropServices.OutAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.OutAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.StructLayoutAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.StructLayoutAttribute..ctor" />
+          <AitFeature Name="System.Runtime.Serialization.DataContractAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.DataContractAttribute.get_IsReference" />
+          <AitFeature Name="System.Runtime.Serialization.DataMemberAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.DataMemberAttribute.get_EmitDefaultValue" />
+          <AitFeature Name="System.Runtime.Serialization.DataMemberAttribute.get_IsRequired" />
+          <AitFeature Name="System.Runtime.Serialization.DataMemberAttribute.get_Name" />
+          <AitFeature Name="System.Runtime.Serialization.DataMemberAttribute.get_Order" />
+          <AitFeature Name="System.Runtime.Serialization.EnumMemberAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.EnumMemberAttribute.get_Value" />
+          <AitFeature Name="System.Runtime.Serialization.IgnoreDataMemberAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.OnDeserializedAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.OnDeserializingAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.OnSerializedAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.OnSerializingAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.StreamingContext" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+          <AitFeature Name="System.RuntimeFieldHandle" />
+          <AitFeature Name="System.RuntimeTypeHandle" />
+          <AitFeature Name="System.SByte" />
+          <AitFeature Name="System.SByte.ToString" />
+          <AitFeature Name="System.Single" />
+          <AitFeature Name="System.Single.ToString" />
+          <AitFeature Name="System.String" />
+          <AitFeature Name="System.String..ctor" />
+          <AitFeature Name="System.String.CompareOrdinal" />
+          <AitFeature Name="System.String.Concat" />
+          <AitFeature Name="System.String.CopyTo" />
+          <AitFeature Name="System.String.Empty" />
+          <AitFeature Name="System.String.EndsWith" />
+          <AitFeature Name="System.String.Equals" />
+          <AitFeature Name="System.String.Format" />
+          <AitFeature Name="System.String.IndexOf" />
+          <AitFeature Name="System.String.IndexOfAny" />
+          <AitFeature Name="System.String.IsNullOrEmpty" />
+          <AitFeature Name="System.String.Join" />
+          <AitFeature Name="System.String.LastIndexOf" />
+          <AitFeature Name="System.String.Replace" />
+          <AitFeature Name="System.String.Split" />
+          <AitFeature Name="System.String.StartsWith" />
+          <AitFeature Name="System.String.Substring" />
+          <AitFeature Name="System.String.ToCharArray" />
+          <AitFeature Name="System.String.Trim" />
+          <AitFeature Name="System.String.TrimEnd" />
+          <AitFeature Name="System.String.TrimStart" />
+          <AitFeature Name="System.String.get_Chars" />
+          <AitFeature Name="System.String.get_Length" />
+          <AitFeature Name="System.String.op_Equality" />
+          <AitFeature Name="System.String.op_Inequality" />
+          <AitFeature Name="System.StringComparer" />
+          <AitFeature Name="System.StringComparer.get_Ordinal" />
+          <AitFeature Name="System.StringComparer.get_OrdinalIgnoreCase" />
+          <AitFeature Name="System.StringComparison" />
+          <AitFeature Name="System.StringSplitOptions" />
+          <AitFeature Name="System.Text.Encoding" />
+          <AitFeature Name="System.Text.Encoding.GetByteCount" />
+          <AitFeature Name="System.Text.Encoding.GetBytes" />
+          <AitFeature Name="System.Text.Encoding.GetChars" />
+          <AitFeature Name="System.Text.Encoding.GetMaxCharCount" />
+          <AitFeature Name="System.Text.Encoding.get_UTF8" />
+          <AitFeature Name="System.Text.RegularExpressions.Regex" />
+          <AitFeature Name="System.Text.RegularExpressions.Regex..ctor" />
+          <AitFeature Name="System.Text.RegularExpressions.Regex.IsMatch" />
+          <AitFeature Name="System.Text.RegularExpressions.Regex.get_Options" />
+          <AitFeature Name="System.Text.RegularExpressions.RegexOptions" />
+          <AitFeature Name="System.Text.StringBuilder" />
+          <AitFeature Name="System.Text.StringBuilder..ctor" />
+          <AitFeature Name="System.Text.StringBuilder.Append" />
+          <AitFeature Name="System.Text.StringBuilder.AppendLine" />
+          <AitFeature Name="System.Text.StringBuilder.get_Length" />
+          <AitFeature Name="System.Text.UTF8Encoding" />
+          <AitFeature Name="System.Text.UTF8Encoding..ctor" />
+          <AitFeature Name="System.Threading.Interlocked" />
+          <AitFeature Name="System.Threading.Interlocked.CompareExchange" />
+          <AitFeature Name="System.Threading.Monitor" />
+          <AitFeature Name="System.Threading.Monitor.Enter" />
+          <AitFeature Name="System.Threading.Monitor.Exit" />
+          <AitFeature Name="System.Threading.Tasks.Task" />
+          <AitFeature Name="System.Threading.Tasks.Task.get_Factory" />
+          <AitFeature Name="System.Threading.Tasks.TaskFactory" />
+          <AitFeature Name="System.Threading.Tasks.TaskFactory.StartNew" />
+          <AitFeature Name="System.Threading.Tasks.Task`1" />
+          <AitFeature Name="System.TimeSpan" />
+          <AitFeature Name="System.TimeSpan..ctor" />
+          <AitFeature Name="System.TimeSpan.CompareTo" />
+          <AitFeature Name="System.TimeSpan.FromHours" />
+          <AitFeature Name="System.TimeSpan.FromMinutes" />
+          <AitFeature Name="System.TimeSpan.Negate" />
+          <AitFeature Name="System.TimeSpan.Parse" />
+          <AitFeature Name="System.TimeSpan.ToString" />
+          <AitFeature Name="System.TimeSpan.Zero" />
+          <AitFeature Name="System.TimeSpan.get_Hours" />
+          <AitFeature Name="System.TimeSpan.get_Minutes" />
+          <AitFeature Name="System.TimeSpan.get_Ticks" />
+          <AitFeature Name="System.TimeSpan.op_Addition" />
+          <AitFeature Name="System.TimeZoneInfo" />
+          <AitFeature Name="System.TimeZoneInfo.GetUtcOffset" />
+          <AitFeature Name="System.TimeZoneInfo.get_Local" />
+          <AitFeature Name="System.Type" />
+          <AitFeature Name="System.Type.GetArrayRank" />
+          <AitFeature Name="System.Type.GetElementType" />
+          <AitFeature Name="System.Type.GetGenericTypeDefinition" />
+          <AitFeature Name="System.Type.GetType" />
+          <AitFeature Name="System.Type.GetTypeFromHandle" />
+          <AitFeature Name="System.Type.MakeGenericType" />
+          <AitFeature Name="System.Type.get_AssemblyQualifiedName" />
+          <AitFeature Name="System.Type.get_FullName" />
+          <AitFeature Name="System.Type.get_IsArray" />
+          <AitFeature Name="System.Type.get_IsByRef" />
+          <AitFeature Name="System.Type.get_IsGenericParameter" />
+          <AitFeature Name="System.Type.get_Name" />
+          <AitFeature Name="System.Type.get_Namespace" />
+          <AitFeature Name="System.UInt16" />
+          <AitFeature Name="System.UInt16.ToString" />
+          <AitFeature Name="System.UInt32" />
+          <AitFeature Name="System.UInt32.ToString" />
+          <AitFeature Name="System.UInt64" />
+          <AitFeature Name="System.UInt64.ToString" />
+          <AitFeature Name="System.Uri" />
+          <AitFeature Name="System.Uri..ctor" />
+          <AitFeature Name="System.Uri.UnescapeDataString" />
+          <AitFeature Name="System.Uri.get_OriginalString" />
+          <AitFeature Name="System.Uri.op_Equality" />
+          <AitFeature Name="System.Uri.op_Inequality" />
+          <AitFeature Name="System.UriKind" />
+          <AitFeature Name="System.ValueType" />
+          <AitFeature Name="System.Version" />
+          <AitFeature Name="System.Version..ctor" />
+          <AitFeature Name="System.Void" />
+          <AitFeature Name="System.Xml.Linq.XAttribute" />
+          <AitFeature Name="System.Xml.Linq.XAttribute..ctor" />
+          <AitFeature Name="System.Xml.Linq.XAttribute.get_Name" />
+          <AitFeature Name="System.Xml.Linq.XAttribute.get_Value" />
+          <AitFeature Name="System.Xml.Linq.XAttribute.set_Value" />
+          <AitFeature Name="System.Xml.Linq.XCData" />
+          <AitFeature Name="System.Xml.Linq.XCData..ctor" />
+          <AitFeature Name="System.Xml.Linq.XComment" />
+          <AitFeature Name="System.Xml.Linq.XComment..ctor" />
+          <AitFeature Name="System.Xml.Linq.XComment.get_Value" />
+          <AitFeature Name="System.Xml.Linq.XComment.set_Value" />
+          <AitFeature Name="System.Xml.Linq.XContainer" />
+          <AitFeature Name="System.Xml.Linq.XContainer.Add" />
+          <AitFeature Name="System.Xml.Linq.XContainer.Nodes" />
+          <AitFeature Name="System.Xml.Linq.XDeclaration" />
+          <AitFeature Name="System.Xml.Linq.XDeclaration..ctor" />
+          <AitFeature Name="System.Xml.Linq.XDeclaration.get_Encoding" />
+          <AitFeature Name="System.Xml.Linq.XDeclaration.get_Standalone" />
+          <AitFeature Name="System.Xml.Linq.XDeclaration.get_Version" />
+          <AitFeature Name="System.Xml.Linq.XDeclaration.set_Encoding" />
+          <AitFeature Name="System.Xml.Linq.XDeclaration.set_Standalone" />
+          <AitFeature Name="System.Xml.Linq.XDocument" />
+          <AitFeature Name="System.Xml.Linq.XDocument..ctor" />
+          <AitFeature Name="System.Xml.Linq.XDocument.get_Declaration" />
+          <AitFeature Name="System.Xml.Linq.XDocument.get_Root" />
+          <AitFeature Name="System.Xml.Linq.XDocument.set_Declaration" />
+          <AitFeature Name="System.Xml.Linq.XDocumentType" />
+          <AitFeature Name="System.Xml.Linq.XDocumentType..ctor" />
+          <AitFeature Name="System.Xml.Linq.XDocumentType.get_InternalSubset" />
+          <AitFeature Name="System.Xml.Linq.XDocumentType.get_Name" />
+          <AitFeature Name="System.Xml.Linq.XDocumentType.get_PublicId" />
+          <AitFeature Name="System.Xml.Linq.XDocumentType.get_SystemId" />
+          <AitFeature Name="System.Xml.Linq.XElement" />
+          <AitFeature Name="System.Xml.Linq.XElement..ctor" />
+          <AitFeature Name="System.Xml.Linq.XElement.Attributes" />
+          <AitFeature Name="System.Xml.Linq.XElement.GetPrefixOfNamespace" />
+          <AitFeature Name="System.Xml.Linq.XElement.get_IsEmpty" />
+          <AitFeature Name="System.Xml.Linq.XElement.get_Name" />
+          <AitFeature Name="System.Xml.Linq.XElement.get_Value" />
+          <AitFeature Name="System.Xml.Linq.XElement.set_Value" />
+          <AitFeature Name="System.Xml.Linq.XName" />
+          <AitFeature Name="System.Xml.Linq.XName.Get" />
+          <AitFeature Name="System.Xml.Linq.XName.get_LocalName" />
+          <AitFeature Name="System.Xml.Linq.XName.get_NamespaceName" />
+          <AitFeature Name="System.Xml.Linq.XName.op_Implicit" />
+          <AitFeature Name="System.Xml.Linq.XNamespace" />
+          <AitFeature Name="System.Xml.Linq.XNamespace.op_Implicit" />
+          <AitFeature Name="System.Xml.Linq.XNode" />
+          <AitFeature Name="System.Xml.Linq.XNode.Remove" />
+          <AitFeature Name="System.Xml.Linq.XObject" />
+          <AitFeature Name="System.Xml.Linq.XObject.get_NodeType" />
+          <AitFeature Name="System.Xml.Linq.XObject.get_Parent" />
+          <AitFeature Name="System.Xml.Linq.XProcessingInstruction" />
+          <AitFeature Name="System.Xml.Linq.XProcessingInstruction..ctor" />
+          <AitFeature Name="System.Xml.Linq.XProcessingInstruction.get_Data" />
+          <AitFeature Name="System.Xml.Linq.XProcessingInstruction.get_Target" />
+          <AitFeature Name="System.Xml.Linq.XProcessingInstruction.set_Data" />
+          <AitFeature Name="System.Xml.Linq.XText" />
+          <AitFeature Name="System.Xml.Linq.XText..ctor" />
+          <AitFeature Name="System.Xml.Linq.XText.get_Value" />
+          <AitFeature Name="System.Xml.Linq.XText.set_Value" />
+          <AitFeature Name="System.Xml.NameTable" />
+          <AitFeature Name="System.Xml.NameTable..ctor" />
+          <AitFeature Name="System.Xml.XmlConvert" />
+          <AitFeature Name="System.Xml.XmlConvert.ToBoolean" />
+          <AitFeature Name="System.Xml.XmlConvert.ToString" />
+          <AitFeature Name="System.Xml.XmlNameTable" />
+          <AitFeature Name="System.Xml.XmlNamespaceManager" />
+          <AitFeature Name="System.Xml.XmlNamespaceManager..ctor" />
+          <AitFeature Name="System.Xml.XmlNamespaceManager.AddNamespace" />
+          <AitFeature Name="System.Xml.XmlNamespaceManager.LookupNamespace" />
+          <AitFeature Name="System.Xml.XmlNamespaceManager.LookupPrefix" />
+          <AitFeature Name="System.Xml.XmlNamespaceManager.PopScope" />
+          <AitFeature Name="System.Xml.XmlNamespaceManager.PushScope" />
+          <AitFeature Name="System.Xml.XmlNamespaceManager.RemoveNamespace" />
+          <AitFeature Name="System.Xml.XmlNamespaceManager.get_DefaultNamespace" />
+          <AitFeature Name="System.Xml.XmlNodeType" />
+        </AitCategory>
+        <AitCategory Id="DotNetWinRt">
+          <AitFeature Name="Windows.Data.Json.IJsonValue" />
+          <AitFeature Name="Windows.Data.Json.IJsonValue.GetArray" />
+          <AitFeature Name="Windows.Data.Json.IJsonValue.GetBoolean" />
+          <AitFeature Name="Windows.Data.Json.IJsonValue.GetNumber" />
+          <AitFeature Name="Windows.Data.Json.IJsonValue.GetObject" />
+          <AitFeature Name="Windows.Data.Json.IJsonValue.GetString" />
+          <AitFeature Name="Windows.Data.Json.IJsonValue.get_ValueType" />
+          <AitFeature Name="Windows.Data.Json.JsonArray" />
+          <AitFeature Name="Windows.Data.Json.JsonArray..ctor" />
+          <AitFeature Name="Windows.Data.Json.JsonObject" />
+          <AitFeature Name="Windows.Data.Json.JsonObject..ctor" />
+          <AitFeature Name="Windows.Data.Json.JsonValue" />
+          <AitFeature Name="Windows.Data.Json.JsonValue.CreateBooleanValue" />
+          <AitFeature Name="Windows.Data.Json.JsonValue.CreateNumberValue" />
+          <AitFeature Name="Windows.Data.Json.JsonValue.CreateStringValue" />
+          <AitFeature Name="Windows.Data.Json.JsonValue.Parse" />
+          <AitFeature Name="Windows.Data.Json.JsonValueType" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="MobileServices.js" Id="00008f1884f72a452a6b4965db5cfaa6e57897a52f6e">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.as" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="Windows.ApplicationModel.Package.current.id.architecture" />
+          <AitFeature Name="Windows.ApplicationModel.Package.current.id.name" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.Core.ResourceManager.current" />
+          <AitFeature Name="Windows.Foundation.Uri" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationBroker" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationOptions.none" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationStatus.success" />
+          <AitFeature Name="Windows.Storage.ApplicationData.current.localSettings" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="MobileServices.min.js" Id="0000a46fb95f64dda4a1d957b37e8c587b0885356e16">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.as" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="Windows.ApplicationModel.Package.current.id.architecture" />
+          <AitFeature Name="Windows.ApplicationModel.Package.current.id.name" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.Core.ResourceManager.current" />
+          <AitFeature Name="Windows.Foundation.Uri" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationBroker" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationOptions.none" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationStatus.success" />
+          <AitFeature Name="Windows.Storage.ApplicationData.current.localSettings" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="AttendanceMugd.Windows.exe" Id="0000aa22c9dd5c281aaafecea69fc8c0833b3aff57a5">
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="mscoree.dll!_CorExeMain" />
+        </AitCategory>
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Action`1" />
+          <AitFeature Name="System.ArgumentException" />
+          <AitFeature Name="System.ArgumentException..ctor" />
+          <AitFeature Name="System.AsyncCallback" />
+          <AitFeature Name="System.Boolean" />
+          <AitFeature Name="System.Char" />
+          <AitFeature Name="System.CodeDom.Compiler.GeneratedCodeAttribute" />
+          <AitFeature Name="System.CodeDom.Compiler.GeneratedCodeAttribute..ctor" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IEnumerator`1" />
+          <AitFeature Name="System.Collections.IEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerator.MoveNext" />
+          <AitFeature Name="System.Collections.ObjectModel.Collection`1" />
+          <AitFeature Name="System.Convert" />
+          <AitFeature Name="System.Convert.ToInt32" />
+          <AitFeature Name="System.DateTime" />
+          <AitFeature Name="System.DateTime.get_Today" />
+          <AitFeature Name="System.DateTime.op_Equality" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerNonUserCodeAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerNonUserCodeAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute..ctor" />
+          <AitFeature Name="System.Exception" />
+          <AitFeature Name="System.Exception..ctor" />
+          <AitFeature Name="System.FormatException" />
+          <AitFeature Name="System.Func`2" />
+          <AitFeature Name="System.IAsyncResult" />
+          <AitFeature Name="System.IDisposable" />
+          <AitFeature Name="System.IDisposable.Dispose" />
+          <AitFeature Name="System.Int32" />
+          <AitFeature Name="System.InvalidOperationException" />
+          <AitFeature Name="System.InvalidOperationException..ctor" />
+          <AitFeature Name="System.Linq.Expressions.BinaryExpression" />
+          <AitFeature Name="System.Linq.Expressions.ConstantExpression" />
+          <AitFeature Name="System.Linq.Expressions.Expression" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Constant" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Equal" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Field" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Lambda" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Parameter" />
+          <AitFeature Name="System.Linq.Expressions.Expression.Property" />
+          <AitFeature Name="System.Linq.Expressions.Expression`1" />
+          <AitFeature Name="System.Linq.Expressions.MemberExpression" />
+          <AitFeature Name="System.Linq.Expressions.ParameterExpression" />
+          <AitFeature Name="System.MulticastDelegate" />
+          <AitFeature Name="System.NotImplementedException" />
+          <AitFeature Name="System.NotImplementedException..ctor" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Object..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.FieldInfo" />
+          <AitFeature Name="System.Reflection.FieldInfo.GetFieldFromHandle" />
+          <AitFeature Name="System.Reflection.MethodBase" />
+          <AitFeature Name="System.Reflection.MethodBase.GetMethodFromHandle" />
+          <AitFeature Name="System.Reflection.MethodInfo" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeHelpers" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter.GetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter.get_IsCompleted" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter`1" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal.AddEventHandler" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+          <AitFeature Name="System.RuntimeFieldHandle" />
+          <AitFeature Name="System.RuntimeMethodHandle" />
+          <AitFeature Name="System.RuntimeTypeHandle" />
+          <AitFeature Name="System.String" />
+          <AitFeature Name="System.String.Compare" />
+          <AitFeature Name="System.String.CompareOrdinal" />
+          <AitFeature Name="System.String.Concat" />
+          <AitFeature Name="System.String.Format" />
+          <AitFeature Name="System.String.IsNullOrEmpty" />
+          <AitFeature Name="System.String.Split" />
+          <AitFeature Name="System.String.Trim" />
+          <AitFeature Name="System.String.op_Equality" />
+          <AitFeature Name="System.StringComparison" />
+          <AitFeature Name="System.Threading.Tasks.Task" />
+          <AitFeature Name="System.Threading.Tasks.Task.GetAwaiter" />
+          <AitFeature Name="System.Threading.Tasks.Task`1" />
+          <AitFeature Name="System.Type" />
+          <AitFeature Name="System.Type.GetTypeFromHandle" />
+          <AitFeature Name="System.Type.get_TypeHandle" />
+          <AitFeature Name="System.Uri" />
+          <AitFeature Name="System.Uri..ctor" />
+          <AitFeature Name="System.ValueType" />
+          <AitFeature Name="System.WindowsRuntimeSystemExtensions" />
+          <AitFeature Name="System.WindowsRuntimeSystemExtensions.GetAwaiter" />
+        </AitCategory>
+        <AitCategory Id="DotNetWinRt">
+          <AitFeature Name="Windows.ApplicationModel.Activation.ApplicationExecutionState" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.LaunchActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_Arguments" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_PreviousExecutionState" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingDeferral" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingDeferral.Complete" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingEventArgs.get_SuspendingOperation" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingOperation" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingOperation.GetDeferral" />
+          <AitFeature Name="Windows.Foundation.IAsyncOperation`1" />
+          <AitFeature Name="Windows.UI.Popups.IUICommand" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog..ctor" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog.ShowAsync" />
+          <AitFeature Name="Windows.UI.Xaml.Application" />
+          <AitFeature Name="Windows.UI.Xaml.Application..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.Application.LoadComponent" />
+          <AitFeature Name="Windows.UI.Xaml.Application.Start" />
+          <AitFeature Name="Windows.UI.Xaml.Application.add_Suspending" />
+          <AitFeature Name="Windows.UI.Xaml.Application.remove_Suspending" />
+          <AitFeature Name="Windows.UI.Xaml.ApplicationInitializationCallback" />
+          <AitFeature Name="Windows.UI.Xaml.ApplicationInitializationCallback..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.ApplicationInitializationCallbackParams" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Button" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ContentControl" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ContentControl.get_Content" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Frame" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Frame..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Frame.Navigate" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Frame.put_CacheSize" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Grid" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Image" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Page" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Page..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Page.get_Frame" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.PasswordBox" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.PasswordBox.add_PasswordChanged" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.PasswordBox.get_Password" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.PasswordBox.remove_PasswordChanged" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Primitives.ButtonBase" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Primitives.ButtonBase.add_Click" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Primitives.ButtonBase.remove_Click" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ProgressBar" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ProgressBar.put_IsIndeterminate" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.StackPanel" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.TextBox" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.TextBox.get_Text" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.TextChangedEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.UserControl" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.FindName" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IComponentConnector" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlMember" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlMetadataProvider" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlType" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlType.get_FullName" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlType.get_UnderlyingType" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.XmlnsDefinition" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventHandler..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.SuspendingEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.SuspendingEventHandler..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.UIElement" />
+          <AitFeature Name="Windows.UI.Xaml.UIElement.put_Visibility" />
+          <AitFeature Name="Windows.UI.Xaml.Visibility" />
+          <AitFeature Name="Windows.UI.Xaml.Window" />
+          <AitFeature Name="Windows.UI.Xaml.Window.Activate" />
+          <AitFeature Name="Windows.UI.Xaml.Window.get_Content" />
+          <AitFeature Name="Windows.UI.Xaml.Window.get_Current" />
+          <AitFeature Name="Windows.UI.Xaml.Window.put_Content" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="System.Net.Http.Primitives.dll" Id="0000e98c9b6c59aa2a58611679a6c220b9edece9199c">
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="mscoree.dll!_CorDllMain" />
+        </AitCategory>
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyInformationalVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyInformationalVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyMetadataAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyMetadataAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.GuidAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.GuidAttribute..ctor" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+        </AitCategory>
+      </AitFile>
+    </AitStaticAnalysis>
+  </DEPENDENCY_INFORMATION>
+</REPORT>

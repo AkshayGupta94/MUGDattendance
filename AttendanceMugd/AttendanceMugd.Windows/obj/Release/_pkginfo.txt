@@ -1,0 +1,1 @@
+C:\Users\Akshay\Documents\Visual Studio 2013\Projects\AttendanceMugd\AttendanceMugd\AttendanceMugd\AttendanceMugd.Windows\AppPackages\AttendanceMugd.Windows_1.2.0.4_AnyCPU_Test\AttendanceMugd.Windows_1.2.0.4_AnyCPU.appx

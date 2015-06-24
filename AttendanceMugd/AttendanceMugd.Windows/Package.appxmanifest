@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="49444AxeJulius.MUGDAttendance" Publisher="CN=EE61FA12-8AB0-48AE-AB5C-1AEEF089B9B9" Version="1.2.0.4" />
+  <Properties>
+    <DisplayName>MUGDAttendance</DisplayName>
+    <PublisherDisplayName>Axe Julius</PublisherDisplayName>
+    <Logo>Assets\50.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="AttendanceMugd.Windows.App">
+      <m2:VisualElements DisplayName="MUGDAttendance" Square150x150Logo="Assets\150x150.png" Square30x30Logo="Assets\30.png" Description="AttendanceMugd.Windows" ForegroundText="light" BackgroundColor="#464646">
+        <m2:SplashScreen Image="Assets/splash.jpg" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="webcam" />
+  </Capabilities>
+</Package>
