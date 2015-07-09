@@ -354,11 +354,28 @@
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
-    <MainPackageIdentityName>49444AxeJulius.AroundMeplus</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.AssasinsCreedInwallpapersHD</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.CompassHD</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.CompassHDPro</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.drachit</MainPackageIdentityName>
     <MainPackageIdentityName>49444AxeJulius.DragonAgeInwallpapersHD</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.dratchit</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.EliteSymbol</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.FarcrywallpapersHD</MainPackageIdentityName>
     <MainPackageIdentityName>49444AxeJulius.flickrpaper</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.ForzaHDWallPapers</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.MarksHackr</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.MugdAPP</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.NfswallpaperHD</MainPackageIdentityName>
     <MainPackageIdentityName>49444AxeJulius.PointMe</MainPackageIdentityName>
     <MainPackageIdentityName>49444AxeJulius.SoundBoardplus</MainPackageIdentityName>
+    <MainPackageIdentityName>49444AxeJulius.SunsetOverdriveHD</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/d66d76e2-2a92-497e-994d-a5ec274c4abd" />
+  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/d66d76e2-2a92-497e-994d-a5ec274c4abd">
+    <PackageInfo>
+      <OsMinVersion>6.3.0.0</OsMinVersion>
+      <PackageArchitecture>neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.2.0.4</PackageMaxArchitectureVersion>
+    </PackageInfo>
+  </PackageInfoList>
 </StoreAssociation>

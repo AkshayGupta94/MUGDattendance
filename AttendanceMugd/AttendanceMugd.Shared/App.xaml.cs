@@ -27,6 +27,13 @@ namespace AttendanceMugd
      
     public sealed partial class App : Application
     {
+#if WINDOWS_APP
+// http://go.microsoft.com/fwlink/?LinkId=290986&clcid=0x409
+public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient Mugd_appClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
+"https://mugd-app.azure-mobile.net/",
+"EEkrmAJgegNSaCsgIaRQDTAmbAqZRZ90");
+#endif
+
         public static MobileServiceClient MobileService = new MobileServiceClient(
      "https://mugd-app.azure-mobile.net/",
      "EEkrmAJgegNSaCsgIaRQDTAmbAqZRZ90"
@@ -109,6 +116,10 @@ namespace AttendanceMugd
 
             // Ensure the current window is active
             Window.Current.Activate();
+#if WINDOWS_APP
+// http://go.microsoft.com/fwlink/?LinkId=290986&clcid=0x409
+AttendanceMugd.Mugd_appPush.UploadChannel();
+#endif
         }
 
 #if WINDOWS_PHONE_APP

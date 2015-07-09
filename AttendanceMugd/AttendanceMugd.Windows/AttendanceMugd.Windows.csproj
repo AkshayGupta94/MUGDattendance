@@ -126,6 +126,9 @@
     <Compile Include="RegisterEvent.xaml.cs">
       <DependentUpon>RegisterEvent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\MobileServices\Mugd-app\push.register.cs">
+      <ConnectedServiceReference>Mugd-app</ConnectedServiceReference>
+    </Compile>
     <Compile Include="update.xaml.cs">
       <DependentUpon>update.xaml</DependentUpon>
     </Compile>
