@@ -157,6 +157,7 @@
       <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="AttendanceMugd.Register" />
+    <RootType FullName="AttendanceMugd.RegisterEvent" />
     <RootType FullName="AttendanceMugd.update" />
     <RootType FullName="AttendanceMugd.UserReg" />
   </Roots.RootTypes>

@@ -131,6 +131,18 @@ namespace AttendanceMugd
             temp.title = "Remove College";
             temp.desc = "Use this option to remove college";
             myList.Add(temp);
+            temp = new datamodel();
+            temp.back = "Blue";
+            temp.src = "/Assets/minus.png";
+            temp.title = "Add event";
+            temp.desc = "Use this option to remove college";
+            myList.Add(temp);
+            temp = new datamodel();
+            temp.back = "Blue";
+            temp.src = "/Assets/minus.png";
+            temp.title = "Add notice";
+            temp.desc = "Use this option to remove college";
+            myList.Add(temp);
             admin.DataContext = myList;
 
         }
@@ -216,6 +228,11 @@ namespace AttendanceMugd
             {
                 Frame.Navigate(typeof(Register));
             }
+            else if (lolol.title == "Add event")
+            {
+                Frame.Navigate(typeof(RegisterEvent));
+            }
+            
         }
 
         private void Core_ItemClick(object sender, ItemClickEventArgs e)
