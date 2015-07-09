@@ -287,3 +287,11 @@ C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Wi
 C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\RegisterEvent.xaml
 C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\RegisterEvent.xbf
 C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\RegisterEvent.xbf
+C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\Microsoft.WindowsAzure.Mobile\layout.resfiles
+C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\Microsoft.WindowsAzure.Mobile\layout.resfiles.intermediate
+C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\Microsoft.WindowsAzure.Mobile\Resources.resfiles
+C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\Microsoft.WindowsAzure.Mobile\Resources.resfiles.intermediate
+C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\Microsoft.WindowsAzure.Mobile\pri.resfiles
+C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\Microsoft.WindowsAzure.Mobile\pri.resfiles.intermediate
+C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\Microsoft.WindowsAzure.Mobile\priconfig.xml
+C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\Microsoft.WindowsAzure.Mobile\priconfig.xml.intermediate
