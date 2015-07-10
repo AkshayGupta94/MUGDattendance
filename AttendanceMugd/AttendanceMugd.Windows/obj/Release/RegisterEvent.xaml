@@ -33,20 +33,21 @@
             <TextBox x:Name="Namen" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="0" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Title" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
             <TextBox x:Name="Email" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="1" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Email ID" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
             <TextBox x:Name="Mobile" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="2" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Mobile No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
-            <TextBox x:Name="Roll" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="3" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Roll No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <Button x:ConnectionId='1' Grid.Row="3" Width="200" Height="80" Foreground="Black" Content="clickme" Grid.Column="1"                     />
+            <!--<TextBox x:Name="Roll" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="3" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Roll No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>-->
             <ComboBox x:Name="Coll" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding}">
                 <DataTemplate>
                     <TextBox Text="{Binding}" Height="65" FontSize="30" Width="auto"/>
                 </DataTemplate>
             </ComboBox>
-            <Button x:ConnectionId='1' x:Name="submit"
+            <Button x:ConnectionId='2' x:Name="submit"
                 Grid.ColumnSpan="1" Grid.Column="1" 
                     Grid.Row="5" Width="Auto" Margin="0,0,0,0" 
                     Height="80" Content="Submit" Foreground="White" FontSize="34"
                                          Background="#FF0808EA" HorizontalAlignment="Stretch">
 
             </Button>
-            <Button x:ConnectionId='2' x:Name="back"
+            <Button x:ConnectionId='3' x:Name="back"
                 Grid.Column="0" 
                     Grid.Row="5" Width="Auto" Margin="0,0,0,0" 
                     Height="80" Content="Back" Foreground="White" FontSize="34"
