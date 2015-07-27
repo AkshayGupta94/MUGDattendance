@@ -58,7 +58,9 @@ namespace AttendanceMugd
                 Mobile_no = Mobile.Text,
                 LastAttended = DateTime.Today,
                 college = Coll.SelectedItem as string,
-                dateLastUpdated = int.Parse(DateTime.Now.Day.ToString())
+                dateLastUpdated = int.Parse(DateTime.Now.Day.ToString()),
+                monthLastUpdated = int.Parse(DateTime.Now.Month.ToString())
+
             };
             myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Visible; 
             myProgressBar.IsIndeterminate = true;

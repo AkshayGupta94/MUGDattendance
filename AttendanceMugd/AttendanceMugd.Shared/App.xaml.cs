@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Microsoft.WindowsAzure.MobileServices;
+using Windows.Networking.PushNotifications;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -38,6 +39,7 @@ public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient Mugd_app
      "https://mugd-app.azure-mobile.net/",
      "EEkrmAJgegNSaCsgIaRQDTAmbAqZRZ90"
  );
+        public static PushNotificationChannel CurrentChannel { get; private set; }
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
@@ -58,7 +60,7 @@ public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient Mugd_app
         /// search results, and so forth.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -118,8 +120,16 @@ public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient Mugd_app
             Window.Current.Activate();
 #if WINDOWS_APP
 // http://go.microsoft.com/fwlink/?LinkId=290986&clcid=0x409
-AttendanceMugd.Mugd_appPush.UploadChannel();
+//AttendanceMugd.Mugd_appPush.UploadChannel();
 #endif
+
+            //CurrentChannel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+            //CurrentChannel.PushNotificationReceived += CurrentChannel_PushNotificationReceived;
+        }
+
+        void CurrentChannel_PushNotificationReceived(PushNotificationChannel sender, PushNotificationReceivedEventArgs args)
+        {
+          
         }
 
 #if WINDOWS_PHONE_APP

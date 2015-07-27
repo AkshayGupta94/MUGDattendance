@@ -53,6 +53,7 @@ namespace AttendanceMugd
             else
             {
                 a.Attendance++;
+                a.Consecutive++;
                 a.LastAttended = DateTime.Today;
                 a.dateLastUpdated = int.Parse(DateTime.Now.Day.ToString());
                 await Table.UpdateAsync(a);

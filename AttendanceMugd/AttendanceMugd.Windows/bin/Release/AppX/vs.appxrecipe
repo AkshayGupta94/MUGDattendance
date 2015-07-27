@@ -7,8 +7,8 @@
     <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>49444AxeJulius.MUGDAttendance</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>950BC2253A907441D8C96C1B09656047A0111BDDBEB4CB60188D9733450D3CEE</RegisteredManifestChecksum>
+    <IntermediateOutputPath>C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Release\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>A02C6C99C9160DB7AA8862FC301B3634D0D9C0BC80A6B8100A6A6600363D0DFC</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>49444AxeJulius.MUGDAttendance_1.2.0.4_neutral__2nh7c0d2m2w4p</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>49444AxeJulius.MUGDAttendance_2nh7c0d2m2w4p!App</RegisteredUserModeAppID>
     <RegisteredPackageID>49444AxeJulius.MUGDAttendance</RegisteredPackageID>
@@ -17,155 +17,279 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-07-09T18:01:22.069</Modified>
+      <Modified>2015-07-10T14:57:32.764</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\AttendanceMugd.Windows.exe">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\AttendanceMugd.Windows.exe">
       <PackagePath>AttendanceMugd.Windows.exe</PackagePath>
-      <Modified>2015-07-09T18:01:21.623</Modified>
+      <Modified>2015-07-12T06:31:16.686</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\packages\WindowsAzure.MobileServices.1.3.0\lib\netcore45\Microsoft.WindowsAzure.Mobile.dll">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.Edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\Microsoft.Data.Edm.dll">
+      <PackagePath>Microsoft.Data.Edm.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.201</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.OData.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\Microsoft.Data.OData.dll">
+      <PackagePath>Microsoft.Data.OData.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.932</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\WindowsAzure.MobileServices.1.3.0\lib\netcore45\Microsoft.WindowsAzure.Mobile.dll">
       <PackagePath>Microsoft.WindowsAzure.Mobile.dll</PackagePath>
-      <Modified>2015-03-18T15:33:54.143</Modified>
+      <Modified>2015-07-09T18:23:10.474</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\packages\WindowsAzure.MobileServices.1.3.0\lib\netcore45\Microsoft.WindowsAzure.Mobile.Ext.dll">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\WindowsAzure.MobileServices.1.3.0\lib\netcore45\Microsoft.WindowsAzure.Mobile.Ext.dll">
       <PackagePath>Microsoft.WindowsAzure.Mobile.Ext.dll</PackagePath>
-      <Modified>2015-03-18T15:33:54.174</Modified>
+      <Modified>2015-07-09T18:23:10.437</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\WindowsAzure.Storage.4.3.0\lib\win8\Microsoft.WindowsAzure.Storage.dll">
+      <PackagePath>Microsoft.WindowsAzure.Storage.dll</PackagePath>
+      <Modified>2015-07-10T14:48:08.805</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2015-03-18T15:33:52.475</Modified>
+      <Modified>2015-07-09T18:23:09.275</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
-      <Modified>2015-03-18T15:33:50.640</Modified>
+      <Modified>2015-07-09T18:23:08.102</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
-      <Modified>2015-03-18T15:33:50.703</Modified>
+      <Modified>2015-07-09T18:23:08.116</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\150x150.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\System.Spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\System.Spatial.dll">
+      <PackagePath>System.Spatial.dll</PackagePath>
+      <Modified>2015-07-10T14:48:05.726</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.Edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\de\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>de\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.083</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.Edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\es\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>es\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.100</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.Edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\fr\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>fr\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.112</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.Edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\it\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>it\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.126</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.Edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\ja\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>ja\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.140</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.Edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\ko\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>ko\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.175</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.Edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\ru\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>ru\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.Edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hans\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.243</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.Edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hant\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.Data.Edm.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.258</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.OData.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\de\Microsoft.Data.OData.resources.dll">
+      <PackagePath>de\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.655</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.OData.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\es\Microsoft.Data.OData.resources.dll">
+      <PackagePath>es\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.669</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.OData.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\fr\Microsoft.Data.OData.resources.dll">
+      <PackagePath>fr\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.682</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.OData.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\it\Microsoft.Data.OData.resources.dll">
+      <PackagePath>it\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.695</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.OData.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\ja\Microsoft.Data.OData.resources.dll">
+      <PackagePath>ja\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.707</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.OData.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\ko\Microsoft.Data.OData.resources.dll">
+      <PackagePath>ko\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:06.903</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.OData.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\ru\Microsoft.Data.OData.resources.dll">
+      <PackagePath>ru\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:07.007</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.OData.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hans\Microsoft.Data.OData.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:07.018</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\Microsoft.Data.OData.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hant\Microsoft.Data.OData.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.Data.OData.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:07.031</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\System.Spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\de\System.Spatial.resources.dll">
+      <PackagePath>de\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:05.645</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\System.Spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\es\System.Spatial.resources.dll">
+      <PackagePath>es\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:05.655</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\System.Spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\fr\System.Spatial.resources.dll">
+      <PackagePath>fr\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:05.664</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\System.Spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\it\System.Spatial.resources.dll">
+      <PackagePath>it\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:05.676</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\System.Spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\ja\System.Spatial.resources.dll">
+      <PackagePath>ja\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:05.686</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\System.Spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\ko\System.Spatial.resources.dll">
+      <PackagePath>ko\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:05.699</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\System.Spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\ru\System.Spatial.resources.dll">
+      <PackagePath>ru\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:05.708</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\System.Spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hans\System.Spatial.resources.dll">
+      <PackagePath>zh-Hans\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:05.748</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\packages\System.Spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\zh-Hant\System.Spatial.resources.dll">
+      <PackagePath>zh-Hant\System.Spatial.resources.dll</PackagePath>
+      <Modified>2015-07-10T14:48:05.760</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\150x150.png">
       <PackagePath>Assets\150x150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-03-18T15:33:11.442</Modified>
+      <Modified>2015-07-09T18:23:03.374</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\30.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\30.png">
       <PackagePath>Assets\30.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-03-18T15:33:11.442</Modified>
+      <Modified>2015-07-09T18:23:03.374</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\update.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\update.png">
       <PackagePath>Assets\update.png</PackagePath>
-      <Modified>2015-03-18T17:42:13.371</Modified>
+      <Modified>2015-07-09T18:23:03.423</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\50.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\50.png">
       <PackagePath>Assets\50.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-03-18T15:33:11.458</Modified>
+      <Modified>2015-07-09T18:23:03.375</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\BlueRegisterIcon.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\BlueRegisterIcon.png">
       <PackagePath>Assets\BlueRegisterIcon.png</PackagePath>
-      <Modified>2015-03-18T15:33:11.473</Modified>
+      <Modified>2015-07-09T18:23:03.379</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\fb5b958f.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\fb5b958f.png">
       <PackagePath>Assets\fb5b958f.png</PackagePath>
-      <Modified>2015-03-18T15:33:11.489</Modified>
+      <Modified>2015-07-09T18:23:03.416</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\Plus.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\Plus.png">
       <PackagePath>Assets\Plus.png</PackagePath>
-      <Modified>2015-03-18T15:33:11.552</Modified>
+      <Modified>2015-07-09T18:23:03.385</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
-      <Modified>2015-03-18T15:33:11.521</Modified>
+      <Modified>2015-07-09T18:23:03.380</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\minus.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\minus.png">
       <PackagePath>Assets\minus.png</PackagePath>
-      <Modified>2015-03-18T15:33:11.521</Modified>
+      <Modified>2015-07-09T18:23:03.417</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\register.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\register.png">
       <PackagePath>Assets\register.png</PackagePath>
-      <Modified>2015-03-18T15:33:11.552</Modified>
+      <Modified>2015-07-09T18:23:03.418</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\search.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\search.png">
       <PackagePath>Assets\search.png</PackagePath>
-      <Modified>2015-03-18T15:33:11.567</Modified>
+      <Modified>2015-07-09T18:23:03.419</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
-      <Modified>2015-03-18T15:33:11.567</Modified>
+      <Modified>2015-07-09T18:23:03.385</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
-      <Modified>2015-03-18T15:33:11.583</Modified>
+      <Modified>2015-07-09T18:23:03.386</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
-      <Modified>2015-03-18T15:33:11.599</Modified>
+      <Modified>2015-07-09T18:23:03.387</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\splash.jpg">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\splash.jpg">
       <PackagePath>Assets\splash.jpg</PackagePath>
-      <Modified>2015-03-18T15:33:11.583</Modified>
+      <Modified>2015-07-09T18:23:03.422</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\MUGD.jpg">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\Assets\MUGD.jpg">
       <PackagePath>Assets\MUGD.jpg</PackagePath>
-      <Modified>2015-03-18T15:33:11.536</Modified>
+      <Modified>2015-07-09T18:23:03.384</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\js\MobileServices.intellisense.js">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\js\MobileServices.intellisense.js">
       <PackagePath>js\MobileServices.intellisense.js</PackagePath>
-      <Modified>2015-03-18T15:33:13.880</Modified>
+      <Modified>2015-07-09T18:23:04.220</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\js\MobileServices.js">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\js\MobileServices.js">
       <PackagePath>js\MobileServices.js</PackagePath>
-      <Modified>2015-03-18T15:33:13.943</Modified>
+      <Modified>2015-07-09T18:23:04.251</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\js\MobileServices.min.js">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\js\MobileServices.min.js">
       <PackagePath>js\MobileServices.min.js</PackagePath>
-      <Modified>2015-03-18T15:33:13.990</Modified>
+      <Modified>2015-07-09T18:23:04.271</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2015-03-18T16:13:07.683</Modified>
+      <Modified>2015-07-09T18:27:49.741</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\Attendance.xbf">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\Attendance.xbf">
       <PackagePath>Attendance.xbf</PackagePath>
-      <Modified>2015-03-18T17:29:49.590</Modified>
+      <Modified>2015-07-09T18:27:49.741</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\CollegeMan.xbf">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\CollegeMan.xbf">
       <PackagePath>CollegeMan.xbf</PackagePath>
-      <Modified>2015-03-18T16:13:07.689</Modified>
+      <Modified>2015-07-09T18:27:49.741</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-03-18T16:13:07.691</Modified>
+      <Modified>2015-07-09T18:27:49.741</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\Register.xbf">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\Register.xbf">
       <PackagePath>Register.xbf</PackagePath>
-      <Modified>2015-03-18T17:38:40.969</Modified>
+      <Modified>2015-07-09T18:27:49.741</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\RegisterEvent.xbf">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\RegisterEvent.xbf">
       <PackagePath>RegisterEvent.xbf</PackagePath>
-      <Modified>2015-07-09T18:01:02.500</Modified>
+      <Modified>2015-07-10T14:57:27.380</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\update.xbf">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\update.xbf">
       <PackagePath>update.xbf</PackagePath>
-      <Modified>2015-03-18T17:54:15.788</Modified>
+      <Modified>2015-07-09T18:27:49.756</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\UserReg..xbf">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\UserReg..xbf">
       <PackagePath>UserReg..xbf</PackagePath>
-      <Modified>2015-03-18T16:13:07.694</Modified>
+      <Modified>2015-07-09T18:27:49.756</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\AttendanceMugd.Windows.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\AttendanceMugd.Windows.xr.xml">
       <PackagePath>AttendanceMugd.Windows.xr.xml</PackagePath>
-      <Modified>2015-07-09T18:01:02.259</Modified>
+      <Modified>2015-07-09T18:23:04.437</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Akshay\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Akshay\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-07-09T18:01:21.741</Modified>
+      <Modified>2015-07-11T17:21:40.989</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

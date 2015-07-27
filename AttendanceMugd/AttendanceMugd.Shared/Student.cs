@@ -11,6 +11,7 @@ namespace AttendanceMugd
         public string Roll_no { get; set; }
         public string FullName { get; set; }
         public int dateLastUpdated { get; set; }
+        public int monthLastUpdated { get; set; }
         public string Id { get; set; }
         public string Mobile_no { get; set; }
         public string EmailId { get; set; }

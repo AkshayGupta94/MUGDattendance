@@ -22,7 +22,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="AttendanceMugd.Windows.exe" EntryPoint="AttendanceMugd.Windows.App">
-      <m2:VisualElements DisplayName="MUGDAttendance" Square150x150Logo="Assets\150x150.png" Square30x30Logo="Assets\30.png" Description="AttendanceMugd.Windows" ForegroundText="light" BackgroundColor="#464646">
+      <m2:VisualElements DisplayName="MUGDAttendance" Square150x150Logo="Assets\150x150.png" Square30x30Logo="Assets\30.png" Description="AttendanceMugd.Windows" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
         <m2:SplashScreen Image="Assets/splash.jpg" />
       </m2:VisualElements>
     </Application>

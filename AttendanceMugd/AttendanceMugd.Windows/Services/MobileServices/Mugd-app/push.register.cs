@@ -20,8 +20,8 @@ namespace AttendanceMugd
             try
             {
                 await App.Mugd_appClient.GetPush().RegisterNativeAsync(channel.Uri);    
-                await App.Mugd_appClient.InvokeApiAsync("notifyAllUsers",
-                    new JObject(new JProperty("toast", "Sample Toast")));
+                //await App.Mugd_appClient.InvokeApiAsync("notifyAllUsers",
+                //    new JObject(new JProperty("toast", "Sample Toast")));
             }
             catch (Exception exception)
             {
