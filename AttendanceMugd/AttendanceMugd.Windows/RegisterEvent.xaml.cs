@@ -125,7 +125,7 @@ namespace AttendanceMugd
 
 
                 myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                MessageDialog msgbox = new MessageDialog("User has been added succesfully");
+                MessageDialog msgbox = new MessageDialog("Event has been added succesfully");
                 await msgbox.ShowAsync();
             }
         }

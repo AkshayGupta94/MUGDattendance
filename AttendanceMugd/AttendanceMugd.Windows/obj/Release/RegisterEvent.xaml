@@ -36,7 +36,7 @@
             <TextBox x:Name="Venue" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="1" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Venue" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
             <TextBox x:Name="Desc" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="2" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Description" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
             <DatePicker x:Name="date" Grid.Column="1" Grid.Row="3"  />
-            <TextBox x:Name="issued" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="5" FontSize="34" TextAlignment="Justify" PlaceholderText="issued by" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="issued" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="5" FontSize="34" TextAlignment="Justify" PlaceholderText="Issued By" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
 
             <Button x:ConnectionId='1' x:Name="img" Grid.Row="5" Grid.Column="0" Foreground="Black"  Content="{Binding}" FontSize="26" HorizontalAlignment="Center"                      />
             <!--<TextBox x:Name="Roll" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="3" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Roll No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>-->
