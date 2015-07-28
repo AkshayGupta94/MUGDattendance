@@ -34,67 +34,100 @@ namespace AttendanceMugd
         public RegisterEvent()
         {
             this.InitializeComponent();
+            img.Content = "Select Image";
           
         }
 
-      
+
         private async void submit_Click(object sender, RoutedEventArgs e)
         {
-            Events item = new Events
+            MessageDialog m = new MessageDialog("");
+            if (Title.Text.Length == 0)
             {
-
-                Title = Namen.Text,
-                Desc = "Dummy",
-                Date = DateTime.Today,
-               
-                type = "test",
-                issuedBy = "test",
-                college = "test"
-               
-            };
-            string errorString = string.Empty;
-
-            if (media != null)
-            {
-                // Set blob properties of TodoItem.
-                item.ContainerName = "eventImages";
-                item.ResourceName = media.Name;
+                m.Title = "enter title";
+                m.ShowAsync();
             }
-
-
-
-            myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            myProgressBar.IsIndeterminate = true;
-            await App.MobileService.GetTable<Events>().InsertAsync(item);
-            if (!string.IsNullOrEmpty(item.SasQueryString))
+            else if (Desc.Text.Length == 0)
             {
-                // Get the URI generated that contains the SAS 
-                // and extract the storage credentials.
-                StorageCredentials cred = new StorageCredentials(item.SasQueryString);
-                var imageUri = new Uri(item.ImageUri);
-
-                // Instantiate a Blob store container based on the info in the returned item.
-                CloudBlobContainer container = new CloudBlobContainer(
-                    new Uri(string.Format("https://{0}/{1}",
-                        imageUri.Host, item.ContainerName)), cred);
-
-                // Get the new image as a stream.
-                using (var fileStream = await media.OpenStreamForReadAsync())
+                m.Title = "enter description";
+                m.ShowAsync();
+            }
+            else if (issued.Text.Length == 0)
+            {
+                m.Title = "enter issued by";
+                m.ShowAsync();
+            }
+            else if (Venue.Text.Length == 0)
+            {
+                m.Title = "enter venue";
+                m.ShowAsync();
+            }
+            else if (type.SelectedValue==null)
+            {
+                m.Title = "select type";
+                m.ShowAsync();
+            }
+            else if(media==null)
+            {
+                m.Title = "select image";
+                m.ShowAsync();
+            }
+            else
+            {
+                Events item = new Events
                 {
-                    // Upload the new image as a BLOB from the stream.
-                    CloudBlockBlob blobFromSASCredential =
-                        container.GetBlockBlobReference(item.ResourceName);
-                    await blobFromSASCredential.UploadFromStreamAsync(fileStream.AsInputStream());
+                    Title = Title.Text,
+                    Desc = Desc.Text,
+                    Date = date.Date.DateTime,
+                    type = type.SelectedValue.ToString(),
+                    issuedBy = issued.Text,
+                    college = Venue.Text
+
+                };
+                string errorString = string.Empty;
+
+                if (media != null)
+                {
+                    // Set blob properties of TodoItem.
+                    item.ContainerName = "eventImages";
+                    item.ResourceName = media.Name;
                 }
 
-                // When you request an SAS at the container-level instead of the blob-level,
-                // you are able to upload multiple streams using the same container credentials.
+
+
+                myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                myProgressBar.IsIndeterminate = true;
+                await App.MobileService.GetTable<Events>().InsertAsync(item);
+                if (!string.IsNullOrEmpty(item.SasQueryString))
+                {
+                    // Get the URI generated that contains the SAS 
+                    // and extract the storage credentials.
+                    StorageCredentials cred = new StorageCredentials(item.SasQueryString);
+                    var imageUri = new Uri(item.ImageUri);
+
+                    // Instantiate a Blob store container based on the info in the returned item.
+                    CloudBlobContainer container = new CloudBlobContainer(
+                        new Uri(string.Format("https://{0}/{1}",
+                            imageUri.Host, item.ContainerName)), cred);
+
+                    // Get the new image as a stream.
+                    using (var fileStream = await media.OpenStreamForReadAsync())
+                    {
+                        // Upload the new image as a BLOB from the stream.
+                        CloudBlockBlob blobFromSASCredential =
+                            container.GetBlockBlobReference(item.ResourceName);
+                        await blobFromSASCredential.UploadFromStreamAsync(fileStream.AsInputStream());
+                    }
+
+                    // When you request an SAS at the container-level instead of the blob-level,
+                    // you are able to upload multiple streams using the same container credentials.
+                }
+
+
+                myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                MessageDialog msgbox = new MessageDialog("User has been added succesfully");
+                await msgbox.ShowAsync();
             }
-
-
-            myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            MessageDialog msgbox = new MessageDialog("User has been added succesfully");
-            await msgbox.ShowAsync();
         }
         private void back_Click(object sender, RoutedEventArgs e)
         {
@@ -110,6 +143,7 @@ namespace AttendanceMugd
             openPicker.FileTypeFilter.Add(".jpeg");
             openPicker.FileTypeFilter.Add(".png");
             media = await openPicker.PickSingleFileAsync();
+            img.Content = media.Name;
         }
     }
 }

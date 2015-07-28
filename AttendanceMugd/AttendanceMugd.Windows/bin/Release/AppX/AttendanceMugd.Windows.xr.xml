@@ -78,6 +78,7 @@
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Header" />
       <RootProperty Name="Text" />
+      <RootProperty Name="InputScope" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Width" />
@@ -148,6 +149,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="AttendanceMugd.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
@@ -157,6 +159,8 @@
       <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="AttendanceMugd.Register" />
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker" />
+    <RootType FullName="System.String" />
     <RootType FullName="AttendanceMugd.RegisterEvent" />
     <RootType FullName="AttendanceMugd.update" />
     <RootType FullName="AttendanceMugd.UserReg" />

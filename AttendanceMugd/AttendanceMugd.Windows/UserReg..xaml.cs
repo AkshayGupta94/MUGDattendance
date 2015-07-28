@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -55,7 +56,7 @@ namespace AttendanceMugd
             {
                name=Namen.Text,
                userName=Email.Text,
-               password=Mobile.Text,
+               password=Mobile.Password,
                type=Type.SelectedItem as string,
                college= Coll.SelectedItem as string
             };
@@ -69,7 +70,9 @@ namespace AttendanceMugd
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
+            
             this.Frame.Navigate(typeof(MainPage));
         }
+
     }
 }
