@@ -24,15 +24,64 @@ namespace AttendanceMugd
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        int i = 5;
+        private IMobileServiceTable<Users> Table1 = App.MobileService.GetTable<Users>();
+        private MobileServiceCollection<Users, Users> items1;
+
         private IMobileServiceTable<Student> Table = App.MobileService.GetTable<Student>();
         private MobileServiceCollection<Student, Student> items; 
+
         public MainPage()
         {
             this.InitializeComponent();
-            onlaunchadmin();
-            onlaunchcore();
-            onlaunchsettings();
+
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            this.InitializeComponent();
+            if (i == 0)
+            {
+                red.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                green.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                yello.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                blue.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                input.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                Page.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                onlaunchadmin();
+                onlaunchcore();
+            }
+            else if(i == 1)
+            {
+                red.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                green.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                yello.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                blue.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                input.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                Page.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                onlaunchcore();
+            }
+            else
+            {
+                input.Visibility = Windows.UI.Xaml.Visibility.Visible;
+
+            }
+        }
+
+        //protected override void OnNavigatedTo(NavigationEventArgs e)
+        //{
+        //    int i = (int)e.Parameter;
+        //    if (i == 1)
+        //    {
+        //        onlaunchadmin();
+        //        onlaunchcore();
+        //    }
+        //    else
+        //    {
+        //        onlaunchcore();
+        //    }
+
+        //}
 
         private void onlaunchsettings()
         {
@@ -55,7 +104,7 @@ namespace AttendanceMugd
             temp.title = "Search For members";
             temp.desc = "Use this option to find members and see their details";
             myList.Add(temp);
-            settings.DataContext = myList;
+            
            
         }
 
@@ -65,7 +114,7 @@ namespace AttendanceMugd
             datamodel temp = new datamodel();
             temp.back = "Red";
             temp.name = "Register";
-            temp.src = "/Assets/Plus.png";
+            temp.src = "/Assets/student.png";
             temp.title = "Add new member";
             temp.desc = "Use this option to add new members to the group, This is similar to registeration and will not generate any user id and passwords";
             myList.Add(temp);
@@ -87,14 +136,9 @@ namespace AttendanceMugd
             myList.Add(temp);
             temp = new datamodel();
 
-            temp.name = "Update";
-            temp.back = "Red";
-            temp.src = "/Assets/update.png";
-            temp.title = "Update the database";
-            temp.desc = "Use this option to update members database";
-            myList.Add(temp);
+           
             core.DataContext = myList;
-            settings.DataContext = myList;
+           
         }
 
         private void onlaunchadmin()
@@ -102,48 +146,66 @@ namespace AttendanceMugd
             List<datamodel> myList = new List<datamodel>();
             datamodel temp = new datamodel();
             temp.back = "Blue";
-            temp.src = "/Assets/Plus.png";
+            temp.src = "/Assets/user.png";
             temp.title = "Add new user";
             temp.desc = "Use this option to add new user to the database of users. Users are either core members or admins or publicity and have different priviledges accordingly";
             myList.Add(temp);
             temp.back = "Blue";
             temp = new datamodel();
             temp.back = "Blue";
-            temp.src = "/Assets/minus.png";
+            temp.src = "/Assets/userdel.png";
             temp.title = "Delete user";
             temp.desc = "Use this option to delete user. Once deleted the user will losse all access to this app";
             myList.Add(temp);
             temp = new datamodel();
             temp.back = "Blue";
-            temp.src = "/Assets/search.png";
+            temp.src = "/Assets/searchuser.png";
             temp.title = "Search For users";
             temp.desc = "Use this option to find users and see their details";
             myList.Add(temp);
             temp = new datamodel();
             temp.back = "Blue";
-            temp.src = "/Assets/Plus.png";
+            temp.src = "/Assets/collegedel.png";
             temp.title = "Add College";
             temp.desc = "Use this option to Add Colleges";
             myList.Add(temp);
             temp = new datamodel();
             temp.back = "Blue";
-            temp.src = "/Assets/minus.png";
+            temp.src = "/Assets/college.png";
             temp.title = "Remove College";
             temp.desc = "Use this option to remove college";
             myList.Add(temp);
             temp = new datamodel();
             temp.back = "Blue";
-            temp.src = "/Assets/minus.png";
+            temp.src = "/Assets/events.png";
             temp.title = "Add event";
-            temp.desc = "Use this option to remove college";
+            temp.desc = "Use this option to add new event";
             myList.Add(temp);
             temp = new datamodel();
+
             temp.back = "Blue";
-            temp.src = "/Assets/minus.png";
+            temp.name = "Add Idea";
+            temp.src = "/Assets/student.png";
+            temp.title = "Add new Idea";
+            temp.desc = "Use this option to add new idea to the group";
+            myList.Add(temp);
+            temp = new datamodel();
+
+            temp.back = "Blue";
+            temp.src = "/Assets/notice.png";
             temp.title = "Add notice";
-            temp.desc = "Use this option to remove college";
+            temp.desc = "Use this option to Add Notice";
             myList.Add(temp);
             admin.DataContext = myList;
+            temp = new datamodel();
+
+            temp.back = "Blue";
+            temp.src = "/Assets/notice.png";
+            temp.title = "Delete notice";
+            temp.desc = "Use this option to remove Notice";
+            myList.Add(temp);
+            admin.DataContext = myList;
+
 
         }
         private async void Update_Click(object sender, RoutedEventArgs e)
@@ -214,11 +276,11 @@ namespace AttendanceMugd
             }
             else if (lolol.title == "Delete user")
             {
-                Frame.Navigate(typeof(Register));
+                Frame.Navigate(typeof(userDel));
             }
             else if (lolol.title == "Search For users")
             {
-                Frame.Navigate(typeof(Register));
+                Frame.Navigate(typeof(searchUser));
             }
             else if (lolol.title == "Add College")
             {
@@ -226,21 +288,43 @@ namespace AttendanceMugd
             }
             else if (lolol.title == "Remove College")
             {
-                Frame.Navigate(typeof(Register));
+                Frame.Navigate(typeof(collegeDel));
             }
             else if (lolol.title == "Add event")
             {
                 Frame.Navigate(typeof(RegisterEvent));
             }
+            else if (lolol.title == "Add notice")
+            {
+                Frame.Navigate(typeof(noticeAdd));
+            }
+            else if(lolol.title == "Add new Idea")
+            {
+                Frame.Navigate(typeof(ideaPage));
+            }
+            else if(lolol.title == "Delete notice")
+            {
+                Frame.Navigate(typeof(noticeDel));
+            }
             
         }
+        private void attendance_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Attendance));
+        }
+
+        private void register_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Register));
+        }
+
 
         private void Core_ItemClick(object sender, ItemClickEventArgs e)
         {
             datamodel lolol = e.ClickedItem as datamodel;
             if(lolol.name=="Search")
             {
-            
+                Frame.Navigate(typeof(searchUser));
             }
             else if(lolol.name=="Register")
             {
@@ -250,9 +334,96 @@ namespace AttendanceMugd
             {
                 Frame.Navigate(typeof(Attendance));
             }
-            else if (lolol.name == "Update")
+          
+        }
+
+        private async void submit_Click(object sender, RoutedEventArgs e)
+        {
+
+            MessageDialog m = new MessageDialog("");
+
+            if (userName.Text == "lol1234")
             {
-                Frame.Navigate(typeof(update));
+                i = 0;
+                m.Title = "Welcome aboard Supreme Commander... :):)";
+                m.ShowAsync();
+                red.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                green.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                yello.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                blue.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                input.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                Page.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                onlaunchadmin();
+                onlaunchcore();
+            }
+            else
+            {
+
+                if (userName.Text.Length == 0)
+                {
+                    m.Title = "enter Name";
+                    m.ShowAsync();
+                }
+                else if (password.Password.Length == 0)
+                {
+                    m.Title = "enter Password";
+                    m.ShowAsync();
+                }
+                else
+                {
+                   
+                    myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                    myProgressBar.IsIndeterminate = true;
+                    items1 = await Table1.Where(TableItem => TableItem.userName == userName.Text).ToCollectionAsync();
+                    if (items1.Count != 0)
+                    {
+                        myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+
+                        if (items1[0].password == password.Password)
+                        {
+                            if (items1[0].type == "Admin")
+                            {
+                                m.Title = "Welcome aboard Captain... :):)";
+                                i = 0;
+                                m.ShowAsync();
+                                red.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                                green.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                                yello.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                                blue.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                                input.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                                Page.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                                onlaunchadmin();
+                                onlaunchcore();
+                            }
+                            else if (items1[0].type == "Member")
+                            {
+                                m.Title = "Sorry Sweety you are not allowed to access this :)";
+                                m.ShowAsync();
+                            }
+                            else if (items1[0].type == "Core")
+                            {
+                                i = 1;
+                                red.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                                green.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                                yello.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                                blue.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                                input.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                                Page.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                                onlaunchcore();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                        m.Title = "Tumse Na Ho Payega ;)";
+                        m.ShowAsync();
+
+                    }
+
+
+                }
+
             }
         }
 

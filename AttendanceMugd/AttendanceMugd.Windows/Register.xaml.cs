@@ -47,29 +47,57 @@ namespace AttendanceMugd
         }
         private async void submit_Click(object sender, RoutedEventArgs e)
         {
-            Student item = new Student
+            MessageDialog m = new MessageDialog("");
+            if (Namen.Text.Length == 0)
             {
-                Roll_no = Roll.Text,
-                Attendance = 1,
-                IsMember = false,
-                Consecutive = 1,
-                EmailId = Email.Text,
-                FullName = Namen.Text,
-                Mobile_no = Mobile.Text,
-                LastAttended = DateTime.Today,
-                college = Coll.SelectedItem as string,
-                dateLastUpdated = int.Parse(DateTime.Now.Day.ToString()),
-                monthLastUpdated = int.Parse(DateTime.Now.Month.ToString())
+                m.Title = "enter Name";
+                m.ShowAsync();
+            }
+            else if (Email.Text.Length == 0)
+            {
+                m.Title = "enter Email";
+                m.ShowAsync();
+            }
+            else if (Mobile.Text.Length == 0)
+            {
+                m.Title = "enter Mobile";
+                m.ShowAsync();
+            }
+            else if (Roll.Text.Length == 0)
+            {
+                m.Title = "enter Roll No.";
+                m.ShowAsync();
+            }
+            else if (Coll.SelectedValue == null)
+            {
+                m.Title = "select College";
+                m.ShowAsync();
+            }
+            else
+            {
+                Student item = new Student
+                {
+                    Roll_no = Roll.Text,
+                    Attendance = 1,
+                    IsMember = false,
+                    Consecutive = 1,
+                    EmailId = Email.Text,
+                    FullName = Namen.Text,
+                    Mobile_no = Mobile.Text,
+                    LastAttended = DateTime.Today,
+                    college = Coll.SelectedItem as string,
+                    dateLastUpdated = int.Parse(DateTime.Now.Day.ToString()),
+                    monthLastUpdated = int.Parse(DateTime.Now.Month.ToString())
 
-            };
-            myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Visible; 
-            myProgressBar.IsIndeterminate = true;
-            await App.MobileService.GetTable<Student>().InsertAsync(item);
-            myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            MessageDialog msgbox = new MessageDialog("User has been added succesfully");
-            await msgbox.ShowAsync();
+                };
+                myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                myProgressBar.IsIndeterminate = true;
+                await App.MobileService.GetTable<Student>().InsertAsync(item);
+                myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                MessageDialog msgbox = new MessageDialog("User has been added succesfully");
+                await msgbox.ShowAsync();
+            }
         }
-
         private void back_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));

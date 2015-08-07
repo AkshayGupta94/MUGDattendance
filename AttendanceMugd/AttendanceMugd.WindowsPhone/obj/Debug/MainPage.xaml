@@ -7,79 +7,118 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
+    <Page.Resources>
+        <DataTemplate x:Key="Standard310x260ItemTemplate">
+            <Grid Height="250" Width="250" Margin="5,10,5,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Background="{Binding back}" Height="150">
+                    <Image Source="{Binding src}" Stretch="Uniform" />
+                </Border>
+                <StackPanel Grid.Row="1" Margin="0,10,0,0">
+                    <TextBlock Text="{Binding title}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="NoWrap"/>
+                    <TextBlock Text="{Binding desc}" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap" MaxHeight="60" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
     <Grid Background="White">
-        <StackPanel Margin="19,0,-19,-25">
-            <Image HorizontalAlignment="Left" Height="93" 
-        		Margin="40,110,0,0" VerticalAlignment="Top" Width="300"
-        		x:Name="ImageBox" Source="Assets/MUGD.jpg"
-        		Stretch="UniformToFill"/>
-            <Button x:ConnectionId='1'                        Margin="40,0,0,0" x:Name="register" HorizontalAlignment="Left" Height="120" Width="300">
-                <Button.BorderBrush>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFF03911" Offset="0"/>
-                        <GradientStop Color="#FFEEEE1F" Offset="1"/>
-                        <GradientStop Color="#FF13640A" Offset="0.307"/>
-                        <GradientStop Color="#FF121A6C" Offset="0.593"/>
-                    </LinearGradientBrush>
-                </Button.BorderBrush>
-                <Grid Height="100" Width="300">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="200"/>
-                    </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Width="80" Height="80" Source="Assets/BlueRegisterIcon.png" Stretch="Uniform"/>
-                    <TextBlock Text="Register" Margin="0,14,0,6" FontStyle="Normal" Grid.Column="1" 
-        				Width="200" Height="80"
-        				FontSize="34" TextWrapping="Wrap" Foreground="#FF0E0101"
-                                />
-                </Grid>
-            </Button>
-            <Button x:ConnectionId='2' Margin="40,0,0,0"                          x:Name="attendance" HorizontalAlignment="Left" Height="120" Width="300">
-                <Button.BorderBrush>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFF03911" Offset="0"/>
-                        <GradientStop Color="#FFEEEE1F" Offset="1"/>
-                        <GradientStop Color="#FF13640A" Offset="0.307"/>
-                        <GradientStop Color="#FF121A6C" Offset="0.593"/>
-                    </LinearGradientBrush>
-                </Button.BorderBrush>
-                <Grid Height="100" Width="300">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="200"/>
-                    </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Width="80" Height="80" Source="Assets/fb5b958f.png" Stretch="Uniform"/>
-                    <TextBlock Text="Attendance" Margin="0,20,0,0" FontStyle="Normal" Grid.Column="1" 
-        				Width="200" Height="80"
-        				FontSize="30" TextWrapping="Wrap" Foreground="#FF0E0101"
-                                />
-                </Grid>
+        <Grid x:Name="Login" Background="White" Visibility="Collapsed" Margin="19,113,170,167">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
 
-            </Button>
-            <Button x:ConnectionId='3' Margin="40,0,0,0"                      x:Name="Update" HorizontalAlignment="Left" Height="100" Width="300">
-                <Button.BorderBrush>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFF03911" Offset="0"/>
-                        <GradientStop Color="#FFEEEE1F" Offset="1"/>
-                        <GradientStop Color="#FF13640A" Offset="0.307"/>
-                        <GradientStop Color="#FF121A6C" Offset="0.593"/>
-                    </LinearGradientBrush>
-                </Button.BorderBrush>
-                <Grid Height="100" Width="300">
+            </Grid.RowDefinitions>
+            <TextBox x:Name="UserName" Grid.Row="1" Height="auto" Foreground="Black" FontSize="34" 
+                     Background="White" PlaceholderText="Enter your user name" 
+                     Header="User Name" BorderThickness="0,0,0,4" BorderBrush="#FF666363"/>
+            <PasswordBox Grid.Row="2"  x:Name="PasswordBox" Header="Password"  PlaceholderText="Enter your password" Foreground="Black" 
+                         Background="White" FontSize="34" Height="auto" Width="Auto" 
+                         HorizontalAlignment="Stretch" BorderBrush="#FF666363" BorderThickness="0,0,0,4" />
+            <Button x:ConnectionId='3' Grid.Row="3" Height="74" Width="520"                     
+                    Background="#FF180EF0" BorderThickness="0" RequestedTheme="Light" VerticalAlignment="Bottom">
+                Submit
+
+
+                <!--<Grid Height="100" Width="300">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100"/>
                         <ColumnDefinition Width="200"/>
                     </Grid.ColumnDefinitions>
-                    <!--<Image Grid.Column="0" Width="80" Height="80" Source="Assets/fb5b958f.png" Stretch="Uniform"/>-->
-                    <TextBlock Text="Update" Margin="0,20,0,0" FontStyle="Normal" Grid.Column="1" 
+                    -->
+                <!--<Image Grid.Column="0" Width="80" Height="80" Source="Assets/fb5b958f.png" Stretch="Uniform"/>-->
+                <!--<TextBlock Text="Submit" Margin="0,20,0,0" FontStyle="Normal" Grid.Column="1" 
             			Width="200" Height="80"
-            			FontSize="30" TextWrapping="Wrap" Foreground="#FF0E0101"
-                                />
-                </Grid>
+            			FontSize="30" TextWrapping="Wrap" Foreground="White"
+                                />-->
+                <!--
+                </Grid>-->
 
             </Button>
-        </StackPanel>
+            <Button x:ConnectionId='4'                        RequestedTheme="Light" Content="Forget Password/ Request access" Background="Red" Grid.Row="4" Margin="0,90,0,0" Width="auto" Height="auto"/>
+        </Grid>
+        <Hub  RequestedTheme="Light" Header="MUGD Admin App" x:Name="Page" Visibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <!--<HubSection Width="180" Margin="0,0,80,0">
+                <HubSection.Background>
+                    <ImageBrush ImageSource="Assets/MUGD.jpg" Stretch="Fill"/>
+                </HubSection.Background>
+            </HubSection>-->
+            <HubSection x:Name="admin" Header="Admin Tasks" Width="550" Margin="0,0,80,0">
+
+                <DataTemplate>
+                    <GridView x:ConnectionId='2'
+                        x:Name="admin"
+                        ItemsSource="{Binding}"
+                        Margin="-9,-14,0,0"
+                                                   
+                        ItemTemplate="{StaticResource Standard310x260ItemTemplate}"
+                        SelectionMode="None"
+                        IsSwipeEnabled="false"
+                        IsItemClickEnabled="True"
+                      >
+                    </GridView>
+                </DataTemplate>
+            </HubSection>
+            <HubSection x:Name="core" Header="Core Tasks" Width="550" Margin="0,0,80,0">
+                <DataTemplate>
+                    <GridView x:ConnectionId='1'
+                        x:Name="Core"
+                        ItemsSource="{Binding}"
+                        Margin="-9,-14,0,0"
+                                                  
+                        ItemTemplate="{StaticResource Standard310x260ItemTemplate}"
+                        SelectionMode="None"
+                        IsSwipeEnabled="false"
+                        IsItemClickEnabled="True"
+                      >
+                    </GridView>
+                </DataTemplate>
+            </HubSection>
+            <HubSection x:Name="settings" Header="Settings" Width="550" Margin="0,0,80,0">
+                <DataTemplate>
+                    <GridView
+                        x:Name="Settings"
+                        ItemsSource="{Binding}"
+                        Margin="-9,-14,0,0"
+                        
+                        ItemTemplate="{StaticResource Standard310x260ItemTemplate}"
+                        SelectionMode="None"
+                        IsSwipeEnabled="false"
+                        IsItemClickEnabled="True"
+                      >
+                    </GridView>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+        <ProgressBar x:Name="myProgressBar" Visibility="Collapsed"  HorizontalAlignment="Left" Height="768" Margin="0,0,0,0" VerticalAlignment="Top" Width="1356" Foreground="#FF4E07F5" BorderBrush="#FFF70808" Background="#597E7070" />
+
     </Grid>
 </Page>
 

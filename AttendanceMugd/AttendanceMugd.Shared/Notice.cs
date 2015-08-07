@@ -10,6 +10,7 @@ namespace AttendanceMugd
         public DateTime Date { get; set; }
         public string Title { get; set; }
         public string Desc { get; set; }
+        public string time { get; set; }
         public string image { get; set; }
         public string type { get; set; }
         public string college { get; set; }

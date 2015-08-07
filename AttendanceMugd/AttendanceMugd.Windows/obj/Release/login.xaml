@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="AttendanceMugd.login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AttendanceMugd"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Background="White"/>
+
+        <Grid x:Name="red" Height="300" HorizontalAlignment="Left" Background="#f65314" VerticalAlignment="Top" Width="300"/>
+        <Grid x:Name="green" Height="300" HorizontalAlignment="Right" Background="#7cbb00" VerticalAlignment="Top" Width="300"/>
+        <Grid x:Name="blue" Height="300" HorizontalAlignment="Left" Background="#00a1f1" VerticalAlignment="Bottom" Width="300"/>
+        <Grid x:Name="yello" Height="300" HorizontalAlignment="Right" Background="#ffbb00" VerticalAlignment="Bottom" Width="300"/>
+        <Grid x:Name="input" Height="320" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="userName" PlaceholderText="Enter Useranme" FontSize="36" VerticalAlignment="Top" Height="100" Width="300"/>
+            <PasswordBox x:Name="password" PlaceholderText="Enter Password" Height="100" VerticalAlignment="Center" Width="300" FontSize="36"/>
+            <Button x:ConnectionId='1' x:Name="submit" Height="120" Width="200" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Submit" FontSize="36" Foreground="White"                      Background="#FF053CD1" BorderBrush="#FF25D8B8"/>
+        </Grid>
+        <ProgressBar x:Name="myProgressBar" Visibility="Collapsed"  HorizontalAlignment="Left" Height="768" Margin="0,0,0,0" VerticalAlignment="Top" Width="1356" Foreground="#FF4E07F5" BorderBrush="#FFF70808" Background="#597E7070" />
+
+    </Grid>
+</Page>
+

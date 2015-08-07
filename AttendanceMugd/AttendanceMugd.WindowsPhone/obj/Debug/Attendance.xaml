@@ -27,7 +27,7 @@
         </Button>
         <TextBox x:Name="Box" Background="AntiqueWhite"   HorizontalAlignment="Left" Margin="40,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="296" Height="69"/>
         <TextBlock Text="Enter Roll No" Foreground="Black" HorizontalAlignment="Left" Margin="40,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="251"/>
-
+        <ProgressBar x:Name="myProgressBar" Visibility="Collapsed"  HorizontalAlignment="Left" Height="768" Margin="0,0,0,0" VerticalAlignment="Top" Width="1356" Foreground="#FF4E07F5" BorderBrush="#FFF70808" Background="#597E7070" />
 
     </Grid>
 </Page>

@@ -52,6 +52,35 @@ namespace AttendanceMugd
         }
         private async void submit_Click(object sender, RoutedEventArgs e)
         {
+            MessageDialog m = new MessageDialog("");
+            if (Namen.Text.Length == 0)
+            {
+                m.Title = "enter name";
+                m.ShowAsync();
+            }
+            else if (Email.Text.Length == 0)
+            {
+                m.Title = "enter Email";
+                m.ShowAsync();
+            }
+            else if (Mobile.Password.Length == 0)
+            {
+                m.Title = "enter password/Mobile No.";
+                m.ShowAsync();
+            }
+            else if (Type.SelectedValue == null)
+            {
+                m.Title = "enter type";
+                m.ShowAsync();
+            }
+            else if (Coll.SelectedValue ==  null)
+            {
+                m.Title = "select college";
+                m.ShowAsync();
+            }
+           
+            else
+            {
             Users item = new Users
             {
                name=Namen.Text,
@@ -67,6 +96,7 @@ namespace AttendanceMugd
             MessageDialog msgbox = new MessageDialog("User has been added succesfully");
             await msgbox.ShowAsync();
         }
+    }
 
         private void back_Click(object sender, RoutedEventArgs e)
         {

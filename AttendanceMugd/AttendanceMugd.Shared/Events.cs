@@ -24,8 +24,15 @@ namespace AttendanceMugd
         public string ImageUri { get; set; } 
 
         public string type { get; set; }
+        public string time { get; set; }
+        public string url { get; set; }
+        public string cost { get; set; }
         public string college { get; set; }
         public string issuedBy { get; set; }
+        public string mobile { get; set; }
+        public string email { get; set; }
+
+
 
     }
 }

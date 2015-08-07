@@ -101,21 +101,6 @@
                     </GridView>
                 </DataTemplate>
             </HubSection>
-            <HubSection x:Name="settings" Header="Settings" Width="800" Margin="0,0,80,0">
-                <DataTemplate>
-                    <GridView
-                        x:Name="Settings"
-                        ItemsSource="{Binding}"
-                        Margin="-9,-14,0,0"
-                        
-                        ItemTemplate="{StaticResource Standard310x260ItemTemplate}"
-                        SelectionMode="None"
-                        IsSwipeEnabled="false"
-                        IsItemClickEnabled="True"
-                      >
-                    </GridView>
-                </DataTemplate>
-            </HubSection>
         </Hub>
         <ProgressBar x:Name="myProgressBar" Visibility="Collapsed"  HorizontalAlignment="Left" Height="768" Margin="0,0,0,0" VerticalAlignment="Top" Width="1356" Foreground="#FF4E07F5" BorderBrush="#FFF70808" Background="#597E7070" />
 

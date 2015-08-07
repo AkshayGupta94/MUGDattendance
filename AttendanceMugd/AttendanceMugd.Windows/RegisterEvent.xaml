@@ -21,24 +21,29 @@
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="85"/>
+               
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Title" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="0" FontSize="34" TextAlignment="Justify"/>
+            <!--<TextBlock Text="Title" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="0" FontSize="34" TextAlignment="Justify"/>
             <TextBlock Text="Venue" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="1" FontSize="34" TextAlignment="Justify"/>
             <TextBlock Text="Description" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="2" FontSize="34" TextAlignment="Justify"/>
-
             <TextBlock Text="Date" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="3" FontSize="34" TextAlignment="Justify"/>
-            <TextBlock Text="Type" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="4" FontSize="34" TextAlignment="Justify"/>
-            <TextBox x:Name="Title" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="0" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Title" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
-            <TextBox x:Name="Venue" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="1" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Venue" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
-            <TextBox x:Name="Desc" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="2" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Description" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBlock Text="Type" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="4" FontSize="34" TextAlignment="Justify"/>-->
+            <TextBox x:Name="Time" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="3"  FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Time" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="Url" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="2"  FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Url" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="Cost" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="2"  FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Cost" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="Title" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="0"  FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Title" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="Venue" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="0" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Venue" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <Button x:Name="Desc" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="1" FontSize="34" Click="Button_Click1" Content="{Binding}" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
             <DatePicker x:Name="date" Grid.Column="1" Grid.Row="3"  />
-            <TextBox x:Name="issued" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="5" FontSize="34" TextAlignment="Justify" PlaceholderText="Issued By" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="issued" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="1" FontSize="34" TextAlignment="Justify" PlaceholderText="Issued By" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="Contact" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="5" FontSize="34" TextAlignment="Justify" PlaceholderText="Mobile" BorderBrush="#FF0E0202" InputScope="Number" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="Email" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="5" FontSize="34" TextAlignment="Justify" PlaceholderText="Email" InputScope="EmailSmtpAddress" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
 
-            <Button x:Name="img" Grid.Row="5" Grid.Column="0" Foreground="Black"  Content="{Binding}" FontSize="26" HorizontalAlignment="Center" Click="Button_Click" />
+            <Button x:Name="img" Grid.Row="4" Grid.Column="0" Foreground="Black"  Content="{Binding}" FontSize="26" HorizontalAlignment="Center" Click="Button_Click" />
             <!--<TextBox x:Name="Roll" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="3" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Roll No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>-->
 
             <Button x:Name="submit"
@@ -55,7 +60,7 @@
                     Click="back_Click" Background="#FF0808EA" HorizontalAlignment="Stretch">
 
             </Button>
-            <ComboBox x:Name="type" Grid.Column="1" Grid.Row="4"  >
+            <ComboBox x:Name="type" Grid.Column="1" Grid.Row="4" PlaceholderText="Select Type" FontSize="34">
                 <x:String>Sponsored</x:String>
                 <x:String>MUGD</x:String>
             </ComboBox>

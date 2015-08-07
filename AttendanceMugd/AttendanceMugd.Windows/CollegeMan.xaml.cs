@@ -50,7 +50,7 @@ namespace AttendanceMugd
                 myProgressBar.IsIndeterminate = true;
                 await App.MobileService.GetTable<Colleges>().InsertAsync(item);
                 myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                MessageDialog msgbox = new MessageDialog("User has been added succesfully");
+                MessageDialog msgbox = new MessageDialog("College has been added succesfully");
                 await msgbox.ShowAsync();
             }
 

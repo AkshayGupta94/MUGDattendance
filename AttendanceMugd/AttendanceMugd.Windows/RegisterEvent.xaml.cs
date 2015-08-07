@@ -19,6 +19,7 @@ using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
 using Windows.Storage.Pickers;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace AttendanceMugd
@@ -35,9 +36,10 @@ namespace AttendanceMugd
         {
             this.InitializeComponent();
             img.Content = "Select Image";
+            Desc.Content = "Select about file";
           
         }
-
+        string about;
 
         private async void submit_Click(object sender, RoutedEventArgs e)
         {
@@ -47,7 +49,7 @@ namespace AttendanceMugd
                 m.Title = "enter title";
                 m.ShowAsync();
             }
-            else if (Desc.Text.Length == 0)
+            else if (about.Length == 0)
             {
                 m.Title = "enter description";
                 m.ShowAsync();
@@ -77,12 +79,16 @@ namespace AttendanceMugd
                 Events item = new Events
                 {
                     Title = Title.Text,
-                    Desc = Desc.Text,
+                    Desc = about,
                     Date = date.Date.DateTime,
                     type = type.SelectedValue.ToString(),
                     issuedBy = issued.Text,
-                    college = Venue.Text
-
+                    college = Venue.Text,
+                    time = Time.Text,
+                    url= Url.Text,
+                    cost= Cost.Text,
+                    mobile = Contact.Text,
+                    email = Email.Text
                 };
                 string errorString = string.Empty;
 
@@ -125,7 +131,7 @@ namespace AttendanceMugd
 
 
                 myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                MessageDialog msgbox = new MessageDialog("Event has been added succesfully");
+                MessageDialog msgbox = new MessageDialog("User has been added succesfully");
                 await msgbox.ShowAsync();
             }
         }
@@ -144,6 +150,16 @@ namespace AttendanceMugd
             openPicker.FileTypeFilter.Add(".png");
             media = await openPicker.PickSingleFileAsync();
             img.Content = media.Name;
+        }
+        private async void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            FileOpenPicker openPicker = new FileOpenPicker();
+            openPicker.ViewMode = PickerViewMode.Thumbnail;
+            openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            openPicker.FileTypeFilter.Add(".txt");
+            media = await openPicker.PickSingleFileAsync();
+            about = await Windows.Storage.FileIO.ReadTextAsync(media);
+            Desc.Content = media.Name;
         }
     }
 }

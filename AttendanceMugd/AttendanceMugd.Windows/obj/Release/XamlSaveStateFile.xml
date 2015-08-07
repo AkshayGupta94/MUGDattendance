@@ -1,14 +1,14 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
     <LocalAssembly PathName="c:\users\akshay\documents\visual studio 2013\projects\attendancemugd\attendancemugd\attendancemugd.windows\obj\release\intermediatexaml\attendancemugd.windows.exe" HashGuid="642bc207-0de5-710d-59db-642efb5da0e6" />
-    <ReferenceAssembly PathName="c:\users\akshay\documents\github\mugdattendance\packages\microsoft.data.edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\microsoft.data.edm.dll" HashGuid="652859ac-63b5-9ab0-7a6b-0cb8dfcd265f" />
-    <ReferenceAssembly PathName="c:\users\akshay\documents\github\mugdattendance\packages\microsoft.data.odata.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\microsoft.data.odata.dll" HashGuid="4e84b0db-d22a-61af-6343-dd7cc7f44046" />
-    <ReferenceAssembly PathName="c:\users\akshay\documents\github\mugdattendance\packages\windowsazure.mobileservices.1.3.0\lib\netcore45\microsoft.windowsazure.mobile.dll" HashGuid="9ab4b265-fb21-8752-5898-094f17593689" />
-    <ReferenceAssembly PathName="c:\users\akshay\documents\github\mugdattendance\packages\windowsazure.mobileservices.1.3.0\lib\netcore45\microsoft.windowsazure.mobile.ext.dll" HashGuid="c3fe55d4-dcfc-ac07-236d-f429b050553a" />
-    <ReferenceAssembly PathName="c:\users\akshay\documents\github\mugdattendance\packages\windowsazure.storage.4.3.0\lib\win8\microsoft.windowsazure.storage.dll" HashGuid="c2e996d2-878d-9e97-40f1-0c90d5f85eda" />
-    <ReferenceAssembly PathName="c:\users\akshay\documents\github\mugdattendance\packages\newtonsoft.json.6.0.8\lib\netcore45\newtonsoft.json.dll" HashGuid="fd3dfcab-cf69-c796-78a2-2423dadb814b" />
-    <ReferenceAssembly PathName="c:\users\akshay\documents\github\mugdattendance\packages\microsoft.net.http.2.2.28\lib\win8\system.net.http.extensions.dll" HashGuid="b50282f8-b9f8-4408-8d49-ba2efe301624" />
-    <ReferenceAssembly PathName="c:\users\akshay\documents\github\mugdattendance\packages\microsoft.net.http.2.2.28\lib\win8\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
-    <ReferenceAssembly PathName="c:\users\akshay\documents\github\mugdattendance\packages\system.spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\system.spatial.dll" HashGuid="4e779b7f-3e1d-55d1-cac0-694ae2344f0d" />
+    <ReferenceAssembly PathName="c:\users\garv\documents\visual studio 2013\projects\mugdattendance\packages\microsoft.data.edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\microsoft.data.edm.dll" HashGuid="652859ac-63b5-9ab0-7a6b-0cb8dfcd265f" />
+    <ReferenceAssembly PathName="c:\users\garv\documents\visual studio 2013\projects\mugdattendance\packages\microsoft.data.odata.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\microsoft.data.odata.dll" HashGuid="4e84b0db-d22a-61af-6343-dd7cc7f44046" />
+    <ReferenceAssembly PathName="c:\users\garv\documents\visual studio 2013\projects\mugdattendance\packages\windowsazure.mobileservices.1.3.0\lib\netcore45\microsoft.windowsazure.mobile.dll" HashGuid="9ab4b265-fb21-8752-5898-094f17593689" />
+    <ReferenceAssembly PathName="c:\users\garv\documents\visual studio 2013\projects\mugdattendance\packages\windowsazure.mobileservices.1.3.0\lib\netcore45\microsoft.windowsazure.mobile.ext.dll" HashGuid="c3fe55d4-dcfc-ac07-236d-f429b050553a" />
+    <ReferenceAssembly PathName="c:\users\garv\documents\visual studio 2013\projects\mugdattendance\packages\windowsazure.storage.4.3.0\lib\win8\microsoft.windowsazure.storage.dll" HashGuid="c2e996d2-878d-9e97-40f1-0c90d5f85eda" />
+    <ReferenceAssembly PathName="c:\users\garv\documents\visual studio 2013\projects\mugdattendance\packages\newtonsoft.json.6.0.8\lib\netcore45\newtonsoft.json.dll" HashGuid="fd3dfcab-cf69-c796-78a2-2423dadb814b" />
+    <ReferenceAssembly PathName="c:\users\garv\documents\visual studio 2013\projects\mugdattendance\packages\microsoft.net.http.2.2.28\lib\win8\system.net.http.extensions.dll" HashGuid="b50282f8-b9f8-4408-8d49-ba2efe301624" />
+    <ReferenceAssembly PathName="c:\users\garv\documents\visual studio 2013\projects\mugdattendance\packages\microsoft.net.http.2.2.28\lib\win8\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
+    <ReferenceAssembly PathName="c:\users\garv\documents\visual studio 2013\projects\mugdattendance\packages\system.spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\system.spatial.dll" HashGuid="4e779b7f-3e1d-55d1-cac0-694ae2344f0d" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

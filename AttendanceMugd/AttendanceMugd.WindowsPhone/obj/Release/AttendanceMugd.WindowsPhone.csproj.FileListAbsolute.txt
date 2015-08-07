@@ -232,14 +232,6 @@ C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMug
 C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\AttendanceMugd.WindowsPhone.pdb
 C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\Microsoft.WindowsAzure.Mobile\en-US\Microsoft.WindowsAzure.MobileServices.Resources.resw
 C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\AttendanceMugd.WindowsPhone.csproj.GenerateResource.Cache
-C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\Microsoft.WindowsAzure.Mobile\layout.resfiles
-C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\Microsoft.WindowsAzure.Mobile\layout.resfiles.intermediate
-C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\Microsoft.WindowsAzure.Mobile\Resources.resfiles
-C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\Microsoft.WindowsAzure.Mobile\Resources.resfiles.intermediate
-C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\Microsoft.WindowsAzure.Mobile\pri.resfiles
-C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\Microsoft.WindowsAzure.Mobile\pri.resfiles.intermediate
-C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\Microsoft.WindowsAzure.Mobile\priconfig.xml
-C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\Microsoft.WindowsAzure.Mobile\priconfig.xml.intermediate
 C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\Microsoft.WindowsAzure.Mobile.pri
 C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\Microsoft.WindowsAzure.Mobile\qualifiers.txt
 C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\priconfig.xml

@@ -25,46 +25,26 @@
     </Page.Resources>
 
     <Grid Background="White">
-        <Grid x:Name="Login" Background="White" Visibility="Collapsed" Margin="19,113,170,167">
+
+        <Grid x:Name="red" Height="300" HorizontalAlignment="Left" Background="#f65314" VerticalAlignment="Top" Visibility="{Binding}" Width="300"/>
+        <Grid x:Name="green" Height="300" HorizontalAlignment="Right" Background="#7cbb00" VerticalAlignment="Top" Visibility="{Binding}" Width="300"/>
+        <Grid x:Name="blue" Height="300" HorizontalAlignment="Left" Background="#00a1f1" VerticalAlignment="Bottom" Visibility="{Binding}" Width="300"/>
+        <Grid x:Name="yello" Height="300" HorizontalAlignment="Right" Background="#ffbb00" VerticalAlignment="Bottom" Visibility="{Binding}" Width="300"/>
+        <Grid x:Name="input" Height="420" Width="300" HorizontalAlignment="Center" Visibility="{Binding}" VerticalAlignment="Center">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="UserName" Grid.Row="1" Height="auto" Foreground="Black" FontSize="34" 
-                     Background="White" PlaceholderText="Enter your user name" 
-                     Header="User Name" BorderThickness="0,0,0,4" BorderBrush="#FF666363"/>
-            <PasswordBox Grid.Row="2"  x:Name="PasswordBox" Header="Password"  PlaceholderText="Enter your password" Foreground="Black" 
-                         Background="White" FontSize="34" Height="auto" Width="Auto" 
-                         HorizontalAlignment="Stretch" BorderBrush="#FF666363" BorderThickness="0,0,0,4" />
-            <Button Grid.Row="3" Height="74" Width="520" Click="Button_Click"
-                    Background="#FF180EF0" BorderThickness="0" RequestedTheme="Light" VerticalAlignment="Bottom">
-                Submit
-
-
-                <!--<Grid Height="100" Width="300">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="200"/>
-                    </Grid.ColumnDefinitions>
-                    -->
-                <!--<Image Grid.Column="0" Width="80" Height="80" Source="Assets/fb5b958f.png" Stretch="Uniform"/>-->
-                <!--<TextBlock Text="Submit" Margin="0,20,0,0" FontStyle="Normal" Grid.Column="1" 
-            			Width="200" Height="80"
-            			FontSize="30" TextWrapping="Wrap" Foreground="White"
-                                />-->
-                <!--
-                </Grid>-->
-
-            </Button>
-            <Button Click="Button_Click_1" RequestedTheme="Light" Content="Forget Password/ Request access" Background="Red" Grid.Row="4" Margin="0,90,0,0" Width="auto" Height="auto"/>
+            <TextBox x:Name="userName" PlaceholderText="Enter Useranme" FontSize="36" Grid.Row="0" VerticalAlignment="Center" Height="100" Width="300"/>
+            <PasswordBox x:Name="password" PlaceholderText="Enter Password" Height="100" Grid.Row="1" VerticalAlignment="Center" Width="300" FontSize="36"/>
+            <Button x:Name="submit" Height="100" Width="200" Grid.Row="2" HorizontalAlignment="Center" Content="Submit" FontSize="36" Foreground="White" Click="submit_Click" Background="#FF053CD1" BorderBrush="#FF25D8B8"/>
+            <Button Click="Button_Click_1" RequestedTheme="Light" Grid.Row="3" Content="Forget Password/ Request access" Background="Red" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="auto" Height="auto"/>
         </Grid>
-        <Hub RequestedTheme="Light" Header="MUGD Admin App" x:Name="Page" Visibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <HubSection Width="780" Margin="0,0,80,0">
+        <Hub Visibility="Collapsed" RequestedTheme="Light" Header="MUGD Admin App" x:Name="Page"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <HubSection Visibility="Collapsed" Width="780" Margin="0,0,80,0">
                 <HubSection.Background>
                     <ImageBrush ImageSource="Assets/MUGD.jpg" Stretch="None"/>
                 </HubSection.Background>
@@ -93,21 +73,6 @@
                         ItemsSource="{Binding}"
                         Margin="-9,-14,0,0"
                         ItemClick="Core_ItemClick"
-                        ItemTemplate="{StaticResource Standard310x260ItemTemplate}"
-                        SelectionMode="None"
-                        IsSwipeEnabled="false"
-                        IsItemClickEnabled="True"
-                      >
-                    </GridView>
-                </DataTemplate>
-            </HubSection>
-            <HubSection x:Name="settings" Header="Settings" Width="800" Margin="0,0,80,0">
-                <DataTemplate>
-                    <GridView
-                        x:Name="Settings"
-                        ItemsSource="{Binding}"
-                        Margin="-9,-14,0,0"
-                        
                         ItemTemplate="{StaticResource Standard310x260ItemTemplate}"
                         SelectionMode="None"
                         IsSwipeEnabled="false"

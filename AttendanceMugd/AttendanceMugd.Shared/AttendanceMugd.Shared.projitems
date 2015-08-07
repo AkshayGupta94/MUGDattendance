@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)colleges.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)datamodel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Events.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)idea.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Notice.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Student.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Users.cs" />

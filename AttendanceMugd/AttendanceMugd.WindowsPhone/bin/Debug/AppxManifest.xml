@@ -7,12 +7,12 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="bc183c9f-cf3c-4056-98a9-dcbc744b9733" Publisher="CN=AkshayKumar" Version="1.0.0.0" ProcessorArchitecture="neutral" />
-  <mp:PhoneIdentity PhoneProductId="bc183c9f-cf3c-4056-98a9-dcbc744b9733" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="49444AxeJulius.MUGDAttendance" Publisher="CN=EE61FA12-8AB0-48AE-AB5C-1AEEF089B9B9" Version="1.1.0.2" ProcessorArchitecture="neutral" />
+  <mp:PhoneIdentity PhoneProductId="b0eaef25-e864-4695-9016-406f299e5a53" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>AttendanceMugd.WindowsPhone</DisplayName>
-    <PublisherDisplayName>AkshayKumar</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <DisplayName>MUGDAttendance</DisplayName>
+    <PublisherDisplayName>Axe Julius</PublisherDisplayName>
+    <Logo>Assets\50.png</Logo>
   </Properties>
   <Prerequisites>
     <OSMinVersion>6.3.1</OSMinVersion>
@@ -23,9 +23,9 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="AttendanceMugd.WindowsPhone.exe" EntryPoint="AttendanceMugd.WindowsPhone.App">
-      <m3:VisualElements DisplayName="AttendanceMugd.WindowsPhone" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="AttendanceMugd.WindowsPhone" ForegroundText="light" BackgroundColor="transparent">
-        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"></m3:DefaultTile>
-        <m3:SplashScreen Image="Assets\SplashScreen.png" />
+      <m3:VisualElements DisplayName="MUGDAttendance" Square150x150Logo="Assets\150x150.png" Square44x44Logo="Assets\44.png" Description="AttendanceMugd.WindowsPhone" ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.jpg" Square71x71Logo="Assets\71.png"></m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\splash2.jpg" />
       </m3:VisualElements>
     </Application>
   </Applications>
