@@ -27,15 +27,13 @@ Attendance.xbf
 AttendanceMugd.Windows.xr.xml
 collegeDel.xbf
 CollegeMan.xbf
-login.xbf
+ideaPage.xbf
 MainPage.xbf
 noticeAdd.xbf
+noticeDel.xbf
 Register.xbf
 RegisterEvent.xbf
 searchUser.xbf
 userDel.xbf
 userDetail.xbf
 UserReg..xbf
-js\MobileServices.intellisense.js
-js\MobileServices.js
-js\MobileServices.min.js

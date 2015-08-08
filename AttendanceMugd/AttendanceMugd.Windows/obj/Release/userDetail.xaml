@@ -42,6 +42,7 @@
                                        Background="#FF0808EA">
 
             </Button>
+            
         </Grid>
         <ProgressBar x:Name="myProgressBar" Visibility="Collapsed"  HorizontalAlignment="Left" Height="768" Margin="0,0,0,0" VerticalAlignment="Top" Width="1356" Foreground="#FF4E07F5" BorderBrush="#FFF70808" Background="#597E7070" />
     </Grid>

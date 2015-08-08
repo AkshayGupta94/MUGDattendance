@@ -1,0 +1,1 @@
+C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\AppPackages\AttendanceMugd.Windows_1.2.0.5_AnyCPU_Debug_Test\AttendanceMugd.Windows_1.2.0.5_AnyCPU_Debug.appx

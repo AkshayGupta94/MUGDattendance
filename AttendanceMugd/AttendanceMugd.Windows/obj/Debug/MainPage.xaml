@@ -38,7 +38,7 @@
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="userName" PlaceholderText="Enter Useranme" FontSize="36" Grid.Row="0" VerticalAlignment="Center" Height="100" Width="300"/>
+            <TextBox x:Name="userName" PlaceholderText="Enter Username" FontSize="36" Grid.Row="0" VerticalAlignment="Center" Height="100" Width="300"/>
             <PasswordBox x:Name="password" PlaceholderText="Enter Password" Height="100" Grid.Row="1" VerticalAlignment="Center" Width="300" FontSize="36"/>
             <Button x:ConnectionId='3' x:Name="submit" Height="100" Width="200" Grid.Row="2" HorizontalAlignment="Center" Content="Submit" FontSize="36" Foreground="White"                      Background="#FF053CD1" BorderBrush="#FF25D8B8"/>
             <Button x:ConnectionId='4'                        RequestedTheme="Light" Grid.Row="3" Content="Forget Password/ Request access" Background="Red" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="auto" Height="auto"/>
