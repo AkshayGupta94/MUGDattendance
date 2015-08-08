@@ -160,7 +160,6 @@
     </AppxManifest>
     <None Include="AttendanceMugd.Windows_StoreKey.pfx" />
     <None Include="AttendanceMugd.Windows_TemporaryKey.pfx" />
-    <None Include="js\MobileServices.pri" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -188,9 +187,6 @@
     <Content Include="Assets\MUGD.jpg" />
     <Content Include="Assets\user.png" />
     <Content Include="Assets\userdel.png" />
-    <Content Include="js\MobileServices.intellisense.js" />
-    <Content Include="js\MobileServices.js" />
-    <Content Include="js\MobileServices.min.js" />
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>

@@ -1,1 +1,1 @@
-C:\Users\garv\Documents\Visual Studio 2013\Projects\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\AttendanceMugd.Windows.csproj;neutral
+C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\AttendanceMugd.Windows.csproj;neutral

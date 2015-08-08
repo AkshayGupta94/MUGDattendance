@@ -122,9 +122,6 @@
     <Content Include="Assets\StoreLogo.scale-240.png" />
     <Content Include="Assets\Wide310x150Logo.scale-240.jpg" />
     <Content Include="Assets\WideLogo.scale-240.png" />
-    <Content Include="js\MobileServices.intellisense.js" />
-    <Content Include="js\MobileServices.js" />
-    <Content Include="js\MobileServices.min.js" />
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -160,7 +157,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="js\MobileServices.pri" />
     <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
