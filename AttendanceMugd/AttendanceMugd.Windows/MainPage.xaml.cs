@@ -83,30 +83,7 @@ namespace AttendanceMugd
 
         //}
 
-        private void onlaunchsettings()
-        {
-            List<datamodel> myList = new List<datamodel>();
-            datamodel temp = new datamodel();
-            temp.back = "Green";
-            temp.src = "/Assets/Plus.png";
-            temp.title = "Add new member";
-            temp.desc = "Use this option to add new members to the group, This is similar to registeration and will not generate any user id and passwords";
-            myList.Add(temp);
-            temp = new datamodel();
-            temp.back = "Green";
-            temp.src = "/Assets/register.png";
-            temp.title = "Mark Attendance";
-            temp.desc = "Use this option to mark attendance of the members present at the event";
-            myList.Add(temp);
-            temp = new datamodel();
-            temp.back = "Green";
-            temp.src = "/Assets/search.png";
-            temp.title = "Search For members";
-            temp.desc = "Use this option to find members and see their details";
-            myList.Add(temp);
-            
-           
-        }
+       
 
         private void onlaunchcore()
         {
@@ -199,72 +176,18 @@ namespace AttendanceMugd
             admin.DataContext = myList;
             temp = new datamodel();
 
-            temp.back = "Blue";
-            temp.src = "/Assets/notice.png";
-            temp.title = "Delete notice";
-            temp.desc = "Use this option to remove Notice";
-            myList.Add(temp);
+           
             admin.DataContext = myList;
 
 
         }
-        private async void Update_Click(object sender, RoutedEventArgs e)
-        {
-            myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            myProgressBar.IsIndeterminate = true;
-            items = await Table
-                  .Where(Student => Student.IsMember == false)
-                   .ToCollectionAsync();
-            foreach (Student a in items)
-            { 
-               if(a.LastAttended==DateTime.Today)
-               {
-                   a.Consecutive++;
-                   if(a.Consecutive==3)
-                   {
-                       a.IsMember = true;
-                   }
+        
 
-               }
-               else
-               {
-                   a.Consecutive = 0;
-               }
-               await Table.UpdateAsync(a);
-               myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-               MessageDialog msgbox = new MessageDialog("Database has been updated succesfully");
-               await msgbox.ShowAsync();
-
-            }
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-           
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //if (PasswordBpx.Password == "WeWantToParty")
-            //{
-            //    Login.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            //    Page.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            //}
-
-        }
-
-        private void myTextBox_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            //if (myTextBox.Password == "WeWantToParty")
-            //{
-            //    Login.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            //    Page.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            //}
-        }
+      
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            //TODO add forgot password logic
         }
 
         private void admin_ItemClick(object sender, ItemClickEventArgs e)
@@ -302,21 +225,12 @@ namespace AttendanceMugd
             {
                 Frame.Navigate(typeof(ideaPage));
             }
-            else if(lolol.title == "Delete notice")
-            {
-                Frame.Navigate(typeof(noticeDel));
-            }
+            
             
         }
-        private void attendance_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Attendance));
-        }
+      
 
-        private void register_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Register));
-        }
+       
 
 
         private void Core_ItemClick(object sender, ItemClickEventArgs e)
@@ -346,7 +260,7 @@ namespace AttendanceMugd
             {
                 i = 0;
                 m.Title = "Welcome aboard Supreme Commander... :):)";
-                m.ShowAsync();
+                await m.ShowAsync();
                 red.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                 green.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                 yello.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
@@ -362,12 +276,12 @@ namespace AttendanceMugd
                 if (userName.Text.Length == 0)
                 {
                     m.Title = "enter Name";
-                    m.ShowAsync();
+                    await m.ShowAsync();
                 }
                 else if (password.Password.Length == 0)
                 {
                     m.Title = "enter Password";
-                    m.ShowAsync();
+                    await m.ShowAsync();
                 }
                 else
                 {
@@ -385,7 +299,7 @@ namespace AttendanceMugd
                             {
                                 m.Title = "Welcome aboard Captain... :):)";
                                 i = 0;
-                                m.ShowAsync();
+                                await m.ShowAsync();
                                 red.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                                 green.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                                 yello.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
@@ -398,7 +312,7 @@ namespace AttendanceMugd
                             else if (items1[0].type == "Member")
                             {
                                 m.Title = "Sorry Sweety you are not allowed to access this :)";
-                                m.ShowAsync();
+                                await m.ShowAsync();
                             }
                             else if (items1[0].type == "Core")
                             {
@@ -417,7 +331,7 @@ namespace AttendanceMugd
                     {
                         myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                         m.Title = "Tumse Na Ho Payega ;)";
-                        m.ShowAsync();
+                         await m.ShowAsync();
 
                     }
 

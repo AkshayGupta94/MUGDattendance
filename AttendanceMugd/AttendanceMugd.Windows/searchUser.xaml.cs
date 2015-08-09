@@ -40,7 +40,7 @@ namespace AttendanceMugd
             if (Namen.Text.Length == 0)
             {
                 m.Title = "enter Name";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
            
             else

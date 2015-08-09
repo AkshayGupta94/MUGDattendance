@@ -28,29 +28,29 @@ namespace AttendanceMugd
             this.InitializeComponent();
         }
 
-        private void submit_Click(object sender, RoutedEventArgs e)
+        private async void submit_Click(object sender, RoutedEventArgs e)
         {
             MessageDialog m = new MessageDialog("");
 
             if (title.Text.Length == 0)
             {
                 m.Title = "enter title";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (option_1.Text.Length == 0)
             {
                 m.Title = "enter description";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (option_2.Text.Length == 0)
             {
                 m.Title = "enter issued by";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (option_3.Text.Length == 0)
             {
                 m.Title = "enter venue";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else
             {
@@ -59,8 +59,13 @@ namespace AttendanceMugd
                 temp.option1 = option_1.Text;
                 temp.option2 = option_2.Text;
                 temp.option3 = option_3.Text;
-                // enter into azure
-
+                // entered into azure
+                myProgressBar.Visibility = Visibility.Visible;
+                myProgressBar.IsIndeterminate = true;
+                await App.MobileService.GetTable<idea>().InsertAsync(temp);
+                myProgressBar.Visibility = Visibility.Collapsed;
+                Windows.UI.Popups.MessageDialog messageBox = new MessageDialog("Idea has been added successfully");
+                await messageBox.ShowAsync();
 
             }
         }

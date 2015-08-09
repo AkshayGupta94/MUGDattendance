@@ -124,7 +124,7 @@ namespace AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[15];
+            _typeNameTable = new string[14];
             _typeNameTable[0] = "AttendanceMugd.Attendance";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -133,15 +133,14 @@ namespace AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo
             _typeNameTable[5] = "AttendanceMugd.ideaPage";
             _typeNameTable[6] = "AttendanceMugd.MainPage";
             _typeNameTable[7] = "AttendanceMugd.noticeAdd";
-            _typeNameTable[8] = "AttendanceMugd.noticeDel";
-            _typeNameTable[9] = "AttendanceMugd.Register";
-            _typeNameTable[10] = "AttendanceMugd.RegisterEvent";
-            _typeNameTable[11] = "AttendanceMugd.searchUser";
-            _typeNameTable[12] = "AttendanceMugd.userDel";
-            _typeNameTable[13] = "AttendanceMugd.userDetail";
-            _typeNameTable[14] = "AttendanceMugd.UserReg";
+            _typeNameTable[8] = "AttendanceMugd.Register";
+            _typeNameTable[9] = "AttendanceMugd.RegisterEvent";
+            _typeNameTable[10] = "AttendanceMugd.searchUser";
+            _typeNameTable[11] = "AttendanceMugd.userDel";
+            _typeNameTable[12] = "AttendanceMugd.userDetail";
+            _typeNameTable[13] = "AttendanceMugd.UserReg";
 
-            _typeTable = new global::System.Type[15];
+            _typeTable = new global::System.Type[14];
             _typeTable[0] = typeof(global::AttendanceMugd.Attendance);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -150,13 +149,12 @@ namespace AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo
             _typeTable[5] = typeof(global::AttendanceMugd.ideaPage);
             _typeTable[6] = typeof(global::AttendanceMugd.MainPage);
             _typeTable[7] = typeof(global::AttendanceMugd.noticeAdd);
-            _typeTable[8] = typeof(global::AttendanceMugd.noticeDel);
-            _typeTable[9] = typeof(global::AttendanceMugd.Register);
-            _typeTable[10] = typeof(global::AttendanceMugd.RegisterEvent);
-            _typeTable[11] = typeof(global::AttendanceMugd.searchUser);
-            _typeTable[12] = typeof(global::AttendanceMugd.userDel);
-            _typeTable[13] = typeof(global::AttendanceMugd.userDetail);
-            _typeTable[14] = typeof(global::AttendanceMugd.UserReg);
+            _typeTable[8] = typeof(global::AttendanceMugd.Register);
+            _typeTable[9] = typeof(global::AttendanceMugd.RegisterEvent);
+            _typeTable[10] = typeof(global::AttendanceMugd.searchUser);
+            _typeTable[11] = typeof(global::AttendanceMugd.userDel);
+            _typeTable[12] = typeof(global::AttendanceMugd.userDetail);
+            _typeTable[13] = typeof(global::AttendanceMugd.UserReg);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -197,13 +195,12 @@ namespace AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo
         private object Activate_5_ideaPage() { return new global::AttendanceMugd.ideaPage(); }
         private object Activate_6_MainPage() { return new global::AttendanceMugd.MainPage(); }
         private object Activate_7_noticeAdd() { return new global::AttendanceMugd.noticeAdd(); }
-        private object Activate_8_noticeDel() { return new global::AttendanceMugd.noticeDel(); }
-        private object Activate_9_Register() { return new global::AttendanceMugd.Register(); }
-        private object Activate_10_RegisterEvent() { return new global::AttendanceMugd.RegisterEvent(); }
-        private object Activate_11_searchUser() { return new global::AttendanceMugd.searchUser(); }
-        private object Activate_12_userDel() { return new global::AttendanceMugd.userDel(); }
-        private object Activate_13_userDetail() { return new global::AttendanceMugd.userDetail(); }
-        private object Activate_14_UserReg() { return new global::AttendanceMugd.UserReg(); }
+        private object Activate_8_Register() { return new global::AttendanceMugd.Register(); }
+        private object Activate_9_RegisterEvent() { return new global::AttendanceMugd.RegisterEvent(); }
+        private object Activate_10_searchUser() { return new global::AttendanceMugd.searchUser(); }
+        private object Activate_11_userDel() { return new global::AttendanceMugd.userDel(); }
+        private object Activate_12_userDetail() { return new global::AttendanceMugd.userDetail(); }
+        private object Activate_13_UserReg() { return new global::AttendanceMugd.UserReg(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -265,51 +262,44 @@ namespace AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 8:   //  AttendanceMugd.noticeDel
+            case 8:   //  AttendanceMugd.Register
                 userType = new global::AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_noticeDel;
+                userType.Activator = Activate_8_Register;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  AttendanceMugd.Register
+            case 9:   //  AttendanceMugd.RegisterEvent
                 userType = new global::AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_Register;
+                userType.Activator = Activate_9_RegisterEvent;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  AttendanceMugd.RegisterEvent
+            case 10:   //  AttendanceMugd.searchUser
                 userType = new global::AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_RegisterEvent;
+                userType.Activator = Activate_10_searchUser;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  AttendanceMugd.searchUser
+            case 11:   //  AttendanceMugd.userDel
                 userType = new global::AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_searchUser;
+                userType.Activator = Activate_11_userDel;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  AttendanceMugd.userDel
+            case 12:   //  AttendanceMugd.userDetail
                 userType = new global::AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_userDel;
+                userType.Activator = Activate_12_userDetail;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  AttendanceMugd.userDetail
+            case 13:   //  AttendanceMugd.UserReg
                 userType = new global::AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_userDetail;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 14:   //  AttendanceMugd.UserReg
-                userType = new global::AttendanceMugd.AttendanceMugd_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_UserReg;
+                userType.Activator = Activate_13_UserReg;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

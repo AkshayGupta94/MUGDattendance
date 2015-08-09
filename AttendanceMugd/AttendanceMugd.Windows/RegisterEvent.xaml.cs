@@ -47,32 +47,32 @@ namespace AttendanceMugd
             if (Title.Text.Length == 0)
             {
                 m.Title = "enter title";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (about.Length == 0)
             {
                 m.Title = "enter description";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (issued.Text.Length == 0)
             {
                 m.Title = "enter issued by";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (Venue.Text.Length == 0)
             {
                 m.Title = "enter venue";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (type.SelectedValue==null)
             {
                 m.Title = "select type";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if(media==null)
             {
                 m.Title = "select image";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else
             {

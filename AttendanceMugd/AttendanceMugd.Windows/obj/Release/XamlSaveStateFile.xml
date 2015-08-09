@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\akshay\documents\visual studio 2013\projects\attendancemugd\attendancemugd\attendancemugd.windows\obj\release\intermediatexaml\attendancemugd.windows.exe" HashGuid="642bc207-0de5-710d-59db-642efb5da0e6" />
+    <LocalAssembly PathName="c:\users\aksha\documents\github\mugdattendance\attendancemugd\attendancemugd.windows\obj\release\intermediatexaml\attendancemugd.windows.exe" HashGuid="95a50634-6d12-0226-43e1-7ef5e288477d" />
     <ReferenceAssembly PathName="c:\users\aksha\documents\github\mugdattendance\packages\microsoft.data.edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\microsoft.data.edm.dll" HashGuid="652859ac-63b5-9ab0-7a6b-0cb8dfcd265f" />
     <ReferenceAssembly PathName="c:\users\aksha\documents\github\mugdattendance\packages\microsoft.data.odata.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\microsoft.data.odata.dll" HashGuid="4e84b0db-d22a-61af-6343-dd7cc7f44046" />
     <ReferenceAssembly PathName="c:\users\aksha\documents\github\mugdattendance\packages\windowsazure.mobileservices.1.3.0\lib\netcore45\microsoft.windowsazure.mobile.dll" HashGuid="9ab4b265-fb21-8752-5898-094f17593689" />

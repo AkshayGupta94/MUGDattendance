@@ -56,27 +56,27 @@ namespace AttendanceMugd
             if (Namen.Text.Length == 0)
             {
                 m.Title = "enter name";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (Email.Text.Length == 0)
             {
                 m.Title = "enter Email";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (Mobile.Password.Length == 0)
             {
                 m.Title = "enter password/Mobile No.";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (Type.SelectedValue == null)
             {
                 m.Title = "enter type";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (Coll.SelectedValue ==  null)
             {
                 m.Title = "select college";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
            
             else

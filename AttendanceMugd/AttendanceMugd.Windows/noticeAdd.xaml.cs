@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.Storage.Auth;
+using Microsoft.WindowsAzure.Storage.Blob;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,7 +27,7 @@ namespace AttendanceMugd
     /// </summary>
     public sealed partial class noticeAdd : Page
     {
-        StorageFile median = null;
+        StorageFile media = null;
         public noticeAdd()
         {
             this.InitializeComponent();
@@ -40,32 +42,32 @@ namespace AttendanceMugd
             if (Titlen.Text.Length == 0)
             {
                 m.Title = "enter title";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (about.Length == 0)
             {
                 m.Title = "enter description";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (issuedn.Text.Length == 0)
             {
                 m.Title = "enter issued by";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (Venuen.Text.Length == 0)
             {
                 m.Title = "enter venue";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else if (typen.SelectedValue==null)
             {
                 m.Title = "select type";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
-            else if(median==null)
+            else if(media==null)
             {
                 m.Title = "select image";
-                m.ShowAsync();
+                await m.ShowAsync();
             }
             else
             {
@@ -92,38 +94,38 @@ namespace AttendanceMugd
 
 
 
-            //    myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            //    myProgressBar.IsIndeterminate = true;
-            //    await App.MobileService.GetTable<Events>().InsertAsync(item);
-            //    if (!string.IsNullOrEmpty(item.SasQueryString))
-            //    {
-            //        // Get the URI generated that contains the SAS 
-            //        // and extract the storage credentials.
-            //        StorageCredentials cred = new StorageCredentials(item.SasQueryString);
-            //        var imageUri = new Uri(item.ImageUri);
+              myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                myProgressBar.IsIndeterminate = true;
+               await App.MobileService.GetTable<Notice>().InsertAsync(item);
+                if (!string.IsNullOrEmpty(item.SasQueryString))
+                {
+                    // Get the URI generated that contains the SAS 
+                    // and extract the storage credentials.
+                    StorageCredentials cred = new StorageCredentials(item.SasQueryString);
+                    var imageUri = new Uri(item.ImageUri);
 
-            //        // Instantiate a Blob store container based on the info in the returned item.
-            //        CloudBlobContainer container = new CloudBlobContainer(
-            //            new Uri(string.Format("https://{0}/{1}",
-            //                imageUri.Host, item.ContainerName)), cred);
+                    // Instantiate a Blob store container based on the info in the returned item.
+                    CloudBlobContainer container = new CloudBlobContainer(
+                        new Uri(string.Format("https://{0}/{1}",
+                            imageUri.Host, item.ContainerName)), cred);
 
-            //        // Get the new image as a stream.
-            //        using (var fileStream = await media.OpenStreamForReadAsync())
-            //        {
-            //            // Upload the new image as a BLOB from the stream.
-            //            CloudBlockBlob blobFromSASCredential =
-            //                container.GetBlockBlobReference(item.ResourceName);
-            //            await blobFromSASCredential.UploadFromStreamAsync(fileStream.AsInputStream());
-            //        }
+                    // Get the new image as a stream.
+                    using (var fileStream = await media.OpenStreamForReadAsync())
+                    {
+                        // Upload the new image as a BLOB from the stream.
+                        CloudBlockBlob blobFromSASCredential =
+                            container.GetBlockBlobReference(item.ResourceName);
+                        await blobFromSASCredential.UploadFromStreamAsync(fileStream.AsInputStream());
+                    }
 
-            //        // When you request an SAS at the container-level instead of the blob-level,
-            //        // you are able to upload multiple streams using the same container credentials.
-            //    }
+                    // When you request an SAS at the container-level instead of the blob-level,
+                    // you are able to upload multiple streams using the same container credentials.
+                }
 
 
-            //    myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            //    MessageDialog msgbox = new MessageDialog("Event has been added succesfully");
-            //    await msgbox.ShowAsync();
+                myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                MessageDialog msgbox = new MessageDialog("Event has been added succesfully");
+                await msgbox.ShowAsync();
             }
         }
         private void back_Click(object sender, RoutedEventArgs e)
@@ -139,8 +141,8 @@ namespace AttendanceMugd
             openPicker.FileTypeFilter.Add(".jpg");
             openPicker.FileTypeFilter.Add(".jpeg");
             openPicker.FileTypeFilter.Add(".png");
-            median = await openPicker.PickSingleFileAsync();
-            imgn.Content = median.Name;
+            media = await openPicker.PickSingleFileAsync();
+            imgn.Content = media.Name;
         }
         private async void Button_Click1(object sender, RoutedEventArgs e)
         {
@@ -148,9 +150,9 @@ namespace AttendanceMugd
             openPicker.ViewMode = PickerViewMode.Thumbnail;
             openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
             openPicker.FileTypeFilter.Add(".txt");
-            median = await openPicker.PickSingleFileAsync();
-            about = await Windows.Storage.FileIO.ReadTextAsync(median);
-            Descn.Content = median.Name;
+            media = await openPicker.PickSingleFileAsync();
+            about = await Windows.Storage.FileIO.ReadTextAsync(media);
+            Descn.Content = media.Name;
         }
     }
   }
