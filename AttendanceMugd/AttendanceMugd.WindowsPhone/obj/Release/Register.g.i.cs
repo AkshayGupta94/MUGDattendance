@@ -27,7 +27,7 @@ namespace AttendanceMugd
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private global::Windows.UI.Xaml.Controls.TextBox Roll; 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
-        private global::Windows.UI.Xaml.Controls.TextBox College; 
+        private global::Windows.UI.Xaml.Controls.ComboBox Coll; 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private global::Windows.UI.Xaml.Controls.Button submit; 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
@@ -51,7 +51,7 @@ namespace AttendanceMugd
             Email = (global::Windows.UI.Xaml.Controls.TextBox)this.FindName("Email");
             Mobile = (global::Windows.UI.Xaml.Controls.TextBox)this.FindName("Mobile");
             Roll = (global::Windows.UI.Xaml.Controls.TextBox)this.FindName("Roll");
-            College = (global::Windows.UI.Xaml.Controls.TextBox)this.FindName("College");
+            Coll = (global::Windows.UI.Xaml.Controls.ComboBox)this.FindName("Coll");
             submit = (global::Windows.UI.Xaml.Controls.Button)this.FindName("submit");
             back = (global::Windows.UI.Xaml.Controls.Button)this.FindName("back");
         }

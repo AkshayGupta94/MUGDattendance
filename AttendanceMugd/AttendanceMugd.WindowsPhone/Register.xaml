@@ -9,33 +9,32 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid Background="White">
         <Image HorizontalAlignment="Center" Height="238" 
-        		Margin="22,0,10,0" VerticalAlignment="Top" Width="368"
+        		Margin="0,0,0,0" VerticalAlignment="Top" Width="497"
         		x:Name="ImageBox" Source="Assets/MUGD.jpg"
         		Stretch="Fill"/>
         <Grid Width="auto" Height="Auto" HorizontalAlignment="Center" Margin="0,238,0,30">
             <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
                 <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Name" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="0" FontSize="34" TextAlignment="Justify"/>
-            <TextBlock Text="Email ID" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="1" FontSize="34" TextAlignment="Justify"/>
-            <TextBlock Text="Mobile No." Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="2" FontSize="34" TextAlignment="Justify"/>
-            <TextBlock Text="Roll No." Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="3" FontSize="34" TextAlignment="Justify"/>
-            <TextBlock Text="College" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="4" FontSize="34" TextAlignment="Justify"/>
-            <TextBox x:Name="Namen" Width="auto" Background="White" Height="60" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="0" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Name" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
-            <TextBox x:Name="Email" Width="auto"  Background="White" Height="60" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="1" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Email ID" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
-            <TextBox x:Name="Mobile" Width="auto"  Background="White" Height="60" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="2" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Mobile No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
-            <TextBox x:Name="Roll" Width="auto"  Background="White" Height="60" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="3" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Roll No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
-            <TextBox x:Name="College" Width="auto"  Background="White" Height="60" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="4" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter College" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
 
+            <TextBox x:Name="Namen" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.ColumnSpan="2"  Grid.Row="0" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Name" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="Email" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.ColumnSpan="2"  Grid.Row="1" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Email ID" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="Mobile" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.ColumnSpan="2"  Grid.Row="2" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Mobile No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="Roll" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Roll No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <ComboBox x:Name="Coll" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding}">
+                <DataTemplate>
+                    <TextBox Text="{Binding}" Height="65" FontSize="30" Width="auto"/>
+                </DataTemplate>
+            </ComboBox>
             <Button x:Name="submit"
                 Grid.ColumnSpan="1" Grid.Column="1" 
                     Grid.Row="5" Width="Auto" Margin="0,0,0,0" 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,12 +24,27 @@ namespace AttendanceMugd
     /// </summary>
     public sealed partial class Register : Page
     {
+        private IMobileServiceTable<Users> Table = App.MobileService.GetTable<Users>();
+        private MobileServiceCollection<Users, Users> items;
+        private IMobileServiceTable<Colleges> Table2 = App.MobileService.GetTable<Colleges>();
+        private MobileServiceCollection<Colleges, Colleges> items2;
         public Register()
         {
             this.InitializeComponent();
             Windows.Phone.UI.Input.HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+            onlaunch();
         }
+        private async void onlaunch()
+        {
+            items2 = await Table2.ToCollectionAsync();
+            List<string> names = new List<string>();
+            foreach (Colleges c in items2)
+            {
+                names.Add(c.collegeName);
 
+            }
+            Coll.DataContext = names;
+        }
         private void HardwareButtons_BackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
         {
             if (Frame.CanGoBack == true)
@@ -39,27 +55,57 @@ namespace AttendanceMugd
 
         private async void submit_Click(object sender, RoutedEventArgs e)
         {
-            Student item = new Student
+            MessageDialog m = new MessageDialog("");
+            if (Namen.Text.Length == 0)
             {
-                Roll_no = Roll.Text,
-                Attendance = 1,
-                IsMember = false,
-                Consecutive = 1,
-                EmailId = Email.Text,
-                FullName = Namen.Text,
-                Mobile_no = Mobile.Text,
-                LastAttended = DateTime.Today,
-                college = "BVCOE",
-                dateLastUpdated = int.Parse(DateTime.Today.Date.ToString())
-            };
-            myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            myProgressBar.IsIndeterminate = true;
-            await App.MobileService.GetTable<Student>().InsertAsync(item);
-            myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            MessageDialog msgbox = new MessageDialog("User has been added succesfully");
-            await msgbox.ShowAsync();
-        }
+                m.Title = "enter Name";
+                await m.ShowAsync();
+            }
+            else if (Email.Text.Length == 0)
+            {
+                m.Title = "enter Email";
+                await m.ShowAsync();
+            }
+            else if (Mobile.Text.Length == 0)
+            {
+                m.Title = "enter Mobile";
+                await m.ShowAsync();
+            }
+            else if (Roll.Text.Length == 0)
+            {
+                m.Title = "enter Roll No.";
+                await m.ShowAsync();
+            }
+            else if (Coll.SelectedValue == null)
+            {
+                m.Title = "select College";
+                await m.ShowAsync();
+            }
+            else
+            {
+                Student item = new Student
+                {
+                    Roll_no = Roll.Text,
+                    Attendance = 1,
+                    IsMember = false,
+                    Consecutive = 1,
+                    EmailId = Email.Text,
+                    FullName = Namen.Text,
+                    Mobile_no = Mobile.Text,
+                    LastAttended = DateTime.Today,
+                    college = Coll.SelectedItem as string,
+                    dateLastUpdated = int.Parse(DateTime.Now.Day.ToString()),
+                    monthLastUpdated = int.Parse(DateTime.Now.Month.ToString())
 
+                };
+                myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                myProgressBar.IsIndeterminate = true;
+                await App.MobileService.GetTable<Student>().InsertAsync(item);
+                myProgressBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                MessageDialog msgbox = new MessageDialog("User has been added succesfully");
+                await msgbox.ShowAsync();
+            }
+        }
         private void back_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
