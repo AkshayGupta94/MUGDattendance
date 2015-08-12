@@ -27,18 +27,11 @@
             </Grid.ColumnDefinitions>
             <TextBlock Text="College Name" Foreground="Black" Margin="0,30,0,0" Grid.Column="0" Grid.Row="0" FontSize="34" TextAlignment="Justify"/>
             <TextBlock Text="University Name" Foreground="Black" Margin="0,30,0,0" Grid.Column="0" Grid.Row="1" FontSize="34" TextAlignment="Justify"/>
-            <!--<TextBlock Text="Password" Foreground="Black" Margin="0,30,0,0" Grid.Column="0" Grid.Row="2" FontSize="34" TextAlignment="Justify"/>
-            <TextBlock Text="College" Foreground="Black" Margin="0,30,0,0" Grid.Column="0" Grid.Row="3" FontSize="34" TextAlignment="Justify"/>
-            <TextBlock Text="Type" Foreground="Black" Margin="0,30,0,0" Grid.Column="0" Grid.Row="4" FontSize="34" TextAlignment="Justify"/>-->
-
+           
             <TextBox x:Name="Namen" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="0" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Name" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
 
             <TextBox x:Name="Email" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="1" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter University Name" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
-            <!--<TextBox x:Name="Mobile" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="2" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Password" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>-->
-
-            <!--<TextBox x:Name="Roll" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="3" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Roll No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
-            <TextBox x:Name="College" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="4" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter College" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>-->
-
+           
             <Button x:Name="submit"
                 Grid.ColumnSpan="1" Grid.Column="1" 
                     Grid.Row="3" Width="Auto" Margin="0,0,0,0" 
@@ -53,16 +46,7 @@
                     Click="back_Click" Background="#FF0808EA" HorizontalAlignment="Stretch">
 
             </Button>
-            <!--<ComboBox x:Name="Coll" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding}">
-                <DataTemplate>
-                    <TextBox Text="{Binding}" Height="65" FontSize="30" Width="auto"/>
-                </DataTemplate>
-            </ComboBox>
-            <ComboBox x:Name="Type" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding}">
-                <DataTemplate>
-                    <TextBox Text="{Binding}" Height="65" FontSize="30" Width="auto"/>
-                </DataTemplate>
-            </ComboBox>-->
+           
         </Grid>
         <ProgressBar x:Name="myProgressBar" Visibility="Collapsed"  HorizontalAlignment="Left" Height="768" Margin="0,0,0,0" VerticalAlignment="Top" Width="1356" Foreground="#FF4E07F5" BorderBrush="#FFF70808" Background="#597E7070" />
     </Grid>
