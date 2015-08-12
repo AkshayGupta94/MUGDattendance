@@ -113,6 +113,12 @@
     <Compile Include="userDel.xaml.cs">
       <DependentUpon>userDel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="userDetail.xaml.cs">
+      <DependentUpon>userDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserReg.xaml.cs">
+      <DependentUpon>UserReg.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -183,6 +189,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="userDel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserReg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
