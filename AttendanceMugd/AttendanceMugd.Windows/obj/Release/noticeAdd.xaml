@@ -25,12 +25,7 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <!--<TextBlock Text="Title" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="0" FontSize="34" TextAlignment="Justify"/>
-            <TextBlock Text="Venue" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="1" FontSize="34" TextAlignment="Justify"/>
-            <TextBlock Text="Description" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="2" FontSize="34" TextAlignment="Justify"/>
-            <TextBlock Text="Date" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="3" FontSize="34" TextAlignment="Justify"/>
-            <TextBlock Text="Type" Foreground="Black" Margin="0,15,0,0" Grid.Column="0" Grid.Row="4" FontSize="34" TextAlignment="Justify"/>-->
-            <TextBox x:Name="Timen" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="2"  FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Time" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+           <TextBox x:Name="Timen" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="2"  FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Time" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
             <TextBox x:Name="Titlen" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="0"  FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Title" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
             <TextBox x:Name="Venuen" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="0" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Venue" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
             <Button x:ConnectionId='1' x:Name="Descn" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="1" FontSize="34"                       Content="{Binding}" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
@@ -38,7 +33,6 @@
             <TextBox x:Name="issuedn" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" Grid.Row="1" FontSize="34" TextAlignment="Justify" PlaceholderText="Issued By" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
 
             <Button x:ConnectionId='2' x:Name="imgn" Grid.Row="3" Grid.Column="0" Foreground="Black"  Content="{Binding}" FontSize="26" HorizontalAlignment="Center"                      />
-            <!--<TextBox x:Name="Roll" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="3" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Roll No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>-->
 
             <Button x:ConnectionId='3' x:Name="submitn"
                 Grid.ColumnSpan="1" Grid.Column="1" 

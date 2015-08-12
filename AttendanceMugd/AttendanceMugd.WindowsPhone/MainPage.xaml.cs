@@ -172,6 +172,11 @@ namespace AttendanceMugd
             //TODO add forgot password logic
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO add forgot password logic
+        }
+
         private void admin_ItemClick(object sender, ItemClickEventArgs e)
         {
             datamodel lolol = e.ClickedItem as datamodel;
