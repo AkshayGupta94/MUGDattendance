@@ -7,27 +7,54 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Grid Background="White">
-        <Image HorizontalAlignment="Left" Height="108" 
-        		Margin="40,52,0,0" VerticalAlignment="Top" Width="305"
+    <ScrollViewer>
+        <Grid Background="White">
+      
+            <Image HorizontalAlignment="Center" Height="238" 
+        		Margin="0,0,0,0" VerticalAlignment="Top" Width="497"
         		x:Name="ImageBox" Source="Assets/MUGD.jpg"
-        		Stretch="UniformToFill"/>
-        <Button x:Name="submit"
-                    Width="209" Margin="96,376,0,189" 
-                    Height="75" Content="Submit" Foreground="Black" FontSize="34"
-                    Click="Button_Click"  RenderTransformOrigin="1.63,0.782">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFF03911" Offset="0"/>
-                    <GradientStop Color="#FFEEEE1F" Offset="1"/>
-                    <GradientStop Color="#FF13640A" Offset="0.307"/>
-                    <GradientStop Color="#FF121A6C" Offset="0.593"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <TextBox x:Name="Box" Background="AntiqueWhite"   HorizontalAlignment="Left" Margin="40,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="296" Height="69"/>
-        <TextBlock Text="Enter Roll No" Foreground="Black" HorizontalAlignment="Left" Margin="40,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="251"/>
-        <ProgressBar x:Name="myProgressBar" Visibility="Collapsed"  HorizontalAlignment="Left" Height="768" Margin="0,0,0,0" VerticalAlignment="Top" Width="1356" Foreground="#FF4E07F5" BorderBrush="#FFF70808" Background="#597E7070" />
+        		Stretch="Fill"/>
+        <Grid Width="auto" x:Name="lol"
+              
+               HorizontalAlignment="Center" VerticalAlignment="Center">
+            
+                <Grid.RowDefinitions>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="80*"/>
+               
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+        
+            <TextBlock Text="Roll No.    " Foreground="Black" Margin="0,30,0,0" Grid.Column="0" Grid.Row="1" FontSize="34" TextAlignment="Justify"/>
 
+
+            <TextBox x:Name="Email" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="1" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Roll No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+
+
+            <Button x:Name="submit"
+                Grid.ColumnSpan="1" Grid.Column="1" 
+                    Grid.Row="4" Width="Auto" Margin="0,0,0,0" 
+                    Height="80" Content="Submit" Foreground="White" FontSize="34"
+                    Click="Button_Click" Background="#FF0808EA" HorizontalAlignment="Stretch">
+
+            </Button>
+            <Button x:Name="back"
+                Grid.Column="0" 
+                    Grid.Row="4" Width="Auto" Margin="0,0,0,0" 
+                    Height="80" Content="Back" Foreground="White" FontSize="34"
+                    Click="back_Click" Background="#FF0808EA" HorizontalAlignment="Stretch">
+
+            </Button>
+    
     </Grid>
+        <ProgressBar x:Name="myProgressBar" Visibility="Collapsed"  HorizontalAlignment="Left" Height="768" Margin="0,0,0,0" VerticalAlignment="Top" Width="1356" Foreground="#FF4E07F5" BorderBrush="#FFF70808" Background="#597E7070" />
+       
+    </Grid>
+    </ScrollViewer>
 </Page>
