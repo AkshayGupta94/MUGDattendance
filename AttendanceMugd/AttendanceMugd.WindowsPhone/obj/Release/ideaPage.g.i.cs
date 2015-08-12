@@ -15,6 +15,22 @@ namespace AttendanceMugd
     partial class ideaPage : global::Windows.UI.Xaml.Controls.Page
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.Image ImageBox; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.ProgressBar myProgressBar; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.TextBox title; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.TextBox option_1; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.TextBox option_2; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.TextBox option_3; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.Button submit; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
+        private global::Windows.UI.Xaml.Controls.Button back; 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
         private bool _contentLoaded;
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 4.0.0.0")]
@@ -27,6 +43,14 @@ namespace AttendanceMugd
             _contentLoaded = true;
             global::Windows.UI.Xaml.Application.LoadComponent(this, new global::System.Uri("ms-appx:///ideaPage.xaml"), global::Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation.Application);
  
+            ImageBox = (global::Windows.UI.Xaml.Controls.Image)this.FindName("ImageBox");
+            myProgressBar = (global::Windows.UI.Xaml.Controls.ProgressBar)this.FindName("myProgressBar");
+            title = (global::Windows.UI.Xaml.Controls.TextBox)this.FindName("title");
+            option_1 = (global::Windows.UI.Xaml.Controls.TextBox)this.FindName("option_1");
+            option_2 = (global::Windows.UI.Xaml.Controls.TextBox)this.FindName("option_2");
+            option_3 = (global::Windows.UI.Xaml.Controls.TextBox)this.FindName("option_3");
+            submit = (global::Windows.UI.Xaml.Controls.Button)this.FindName("submit");
+            back = (global::Windows.UI.Xaml.Controls.Button)this.FindName("back");
         }
     }
 }
