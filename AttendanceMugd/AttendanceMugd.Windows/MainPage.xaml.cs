@@ -28,8 +28,7 @@ namespace AttendanceMugd
         private IMobileServiceTable<Users> Table1 = App.MobileService.GetTable<Users>();
         private MobileServiceCollection<Users, Users> items1;
 
-        private IMobileServiceTable<Student> Table = App.MobileService.GetTable<Student>();
-        private MobileServiceCollection<Student, Student> items; 
+       
 
         public MainPage()
         {
@@ -68,22 +67,7 @@ namespace AttendanceMugd
             }
         }
 
-        //protected override void OnNavigatedTo(NavigationEventArgs e)
-        //{
-        //    int i = (int)e.Parameter;
-        //    if (i == 1)
-        //    {
-        //        onlaunchadmin();
-        //        onlaunchcore();
-        //    }
-        //    else
-        //    {
-        //        onlaunchcore();
-        //    }
-
-        //}
-
-       
+     
 
         private void onlaunchcore()
         {

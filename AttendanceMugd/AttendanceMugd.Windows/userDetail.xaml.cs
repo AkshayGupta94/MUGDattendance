@@ -24,8 +24,7 @@ namespace AttendanceMugd
     /// </summary>
     public sealed partial class userDetail : Page
     {
-        private IMobileServiceTable<Users> Table = App.MobileService.GetTable<Users>();
-        private MobileServiceCollection<Users, Users> items;
+       
 
         public userDetail()
         {

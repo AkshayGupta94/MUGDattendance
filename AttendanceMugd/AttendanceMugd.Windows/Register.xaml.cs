@@ -24,8 +24,7 @@ namespace AttendanceMugd
     /// </summary>
     public sealed partial class Register : Page
     {
-        private IMobileServiceTable<Users> Table = App.MobileService.GetTable<Users>();
-        private MobileServiceCollection<Users, Users> items;
+    
         private IMobileServiceTable<Colleges> Table2 = App.MobileService.GetTable<Colleges>();
         private MobileServiceCollection<Colleges, Colleges> items2; 
         public Register()

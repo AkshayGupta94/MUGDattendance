@@ -24,8 +24,6 @@ namespace AttendanceMugd
     /// </summary>
     public sealed partial class CollegeMan : Page
     {
-            private IMobileServiceTable<Colleges> Table2 = App.MobileService.GetTable<Colleges>();
-            private MobileServiceCollection<Colleges, Colleges> items2;
             
         public CollegeMan()
         {

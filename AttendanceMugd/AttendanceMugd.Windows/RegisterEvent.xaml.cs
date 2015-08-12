@@ -30,8 +30,7 @@ namespace AttendanceMugd
     public sealed partial class RegisterEvent : Page
     {
         StorageFile media = null;
-        private IMobileServiceTable<Events> Table = App.MobileService.GetTable<Events>();
-        private MobileServiceCollection<Events, Events> items;
+        
         public RegisterEvent()
         {
             this.InitializeComponent();
