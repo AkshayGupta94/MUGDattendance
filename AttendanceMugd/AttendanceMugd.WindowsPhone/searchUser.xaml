@@ -8,7 +8,38 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="White">
+        <Image HorizontalAlignment="Center" Height="238" 
+        		Margin="0,0,0,0" VerticalAlignment="Top" Width="497"
+        		x:Name="ImageBox" Source="Assets/MUGD.jpg"
+        		Stretch="Fill"/>
+        <Grid Width="auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,238,0,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
 
+            <TextBox x:Name="Namen" Width="auto" Grid.ColumnSpan="2" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="0" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Name" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+
+
+            <Button x:Name="submit"
+                 Grid.Column="1" 
+                    Grid.Row="1" Width="Auto" Margin="0,0,0,0" 
+                    Height="80" Content="Submit" Foreground="White" FontSize="34"
+                    Click="submit_Click" Background="#FF0808EA" HorizontalAlignment="Stretch">
+
+            </Button>
+            <Button x:Name="back"
+                Grid.Column="0" 
+                    Grid.Row="1" Width="Auto" Margin="0,0,0,0" 
+                    Height="80" Content="Back" Foreground="White" FontSize="34"   
+                    Click="back_Click" Background="#FF0808EA" HorizontalAlignment="Stretch" />
+
+        </Grid>
+        <ProgressBar x:Name="myProgressBar" Visibility="Collapsed"  HorizontalAlignment="Left" Height="768" Margin="0,0,0,0" VerticalAlignment="Top" Width="1356" Foreground="#FF4E07F5" BorderBrush="#FFF70808" Background="#597E7070" />
     </Grid>
 </Page>
