@@ -8,7 +8,43 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="White">
+        <Image HorizontalAlignment="Center" Height="238" 
+        		Margin="0,0,0,0" VerticalAlignment="Top" Width="497"
+        		x:Name="ImageBox" Source="Assets/MUGD.jpg"
+        		Stretch="Fill"/>
+        <Grid Width="auto" Height="Auto" HorizontalAlignment="Center" Margin="0,238,0,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Name" Foreground="Black" Margin="0,30,0,0" Grid.Column="0" Grid.Row="0" FontSize="34" TextAlignment="Justify"/>
+            <TextBlock Text="Email ID" Foreground="Black" Margin="0,30,0,0" Grid.Column="0" Grid.Row="1" FontSize="34" TextAlignment="Justify"/>
+            <TextBlock Text="College" Foreground="Black" Margin="0,30,0,0" Grid.Column="0" Grid.Row="2" FontSize="34" TextAlignment="Justify"/>
+            <TextBlock Text="Type" Foreground="Black" Margin="0,30,0,0" Grid.Column="0" Grid.Row="3" FontSize="34" TextAlignment="Justify"/>
 
+            <TextBox x:Name="Namen" Width="auto" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="0" FontSize="34" TextAlignment="Justify" Text="{Binding}" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="userName" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="1" FontSize="34" TextAlignment="Justify" Text="{Binding}"  BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="Coll" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="2" FontSize="34" TextAlignment="Justify" Text="{Binding}" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+            <TextBox x:Name="Type" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="3" FontSize="34" TextAlignment="Justify" Text="{Binding}" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
+
+
+            <Button x:Name="back"
+                Grid.Column="0" 
+                    Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="auto" Margin="0,0,0,0" 
+                    Height="80" Content="Back" Foreground="White" FontSize="34"
+                    Click="back_Click" Background="#FF0808EA">
+
+            </Button>
+
+        </Grid>
+        <ProgressBar x:Name="myProgressBar" Visibility="Collapsed"  HorizontalAlignment="Left" Height="768" Margin="0,0,0,0" VerticalAlignment="Top" Width="1356" Foreground="#FF4E07F5" BorderBrush="#FFF70808" Background="#597E7070" />
     </Grid>
 </Page>

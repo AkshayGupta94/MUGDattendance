@@ -26,7 +26,22 @@ namespace AttendanceMugd
         {
             this.InitializeComponent();
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            Users info = new Users();
+            info = (Users)e.Parameter;
+            Namen.DataContext = info.name;
+            userName.DataContext = info.userName;
+            Coll.DataContext = info.college;
+            Type.DataContext = info.type;
 
+
+        }
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.Frame.Navigate(typeof(MainPage));
+        }
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
         /// </summary>
