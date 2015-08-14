@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources targetOsVersion="6.3.1" targetPlatform="WindowsPhone" majorVersion="1">
-  <index root="\" startIndexAt="obj\Release\Microsoft.Data.OData\layout.resfiles">
+  <index root="\" startIndexAt="obj\Release\Microsoft.WindowsAzure.Mobile\layout.resfiles">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />
@@ -14,7 +14,7 @@
     </default>
     <indexer-config type="RESFILES" qualifierDelimiter="." />
   </index>
-  <index root="\" startIndexAt="obj\Release\Microsoft.Data.OData\Resources.resfiles">
+  <index root="\" startIndexAt="obj\Release\Microsoft.WindowsAzure.Mobile\Resources.resfiles">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />
@@ -30,7 +30,7 @@
     <indexer-config type="RESJSON" />
     <indexer-config type="RESFILES" qualifierDelimiter="." />
   </index>
-  <index root="\" startIndexAt="obj\Release\Microsoft.Data.OData\pri.resfiles">
+  <index root="\" startIndexAt="obj\Release\Microsoft.WindowsAzure.Mobile\pri.resfiles">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />
