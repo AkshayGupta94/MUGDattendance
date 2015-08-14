@@ -1,0 +1,3 @@
+MainPackage=C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\bin\Release\AttendanceMugd.WindowsPhone_1.3.0.1_AnyCPU.appx
+SymbolPackage=C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\AppPackages\AttendanceMugd.WindowsPhone_1.3.0.1_Test\AttendanceMugd.WindowsPhone_1.3.0.1_AnyCPU.appxsym
+ResourcePack=C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\bin\Release\AttendanceMugd.WindowsPhone_1.3.0.1_scale-100.appx

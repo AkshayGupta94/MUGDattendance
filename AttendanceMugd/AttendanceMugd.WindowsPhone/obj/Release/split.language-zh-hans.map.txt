@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-zh-hans"
+"ResourceDimensions"		"language-zh-hans"
+
+[Files]
+"C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\split.language-zh-hans.pri"			"resources.pri"

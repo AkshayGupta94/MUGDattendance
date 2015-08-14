@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="49444AxeJulius.MUGDAttendance" Publisher="CN=EE61FA12-8AB0-48AE-AB5C-1AEEF089B9B9" Version="1.1.0.2" ProcessorArchitecture="neutral" />
+  <Identity Name="49444AxeJulius.MUGDAttendance" Publisher="CN=EE61FA12-8AB0-48AE-AB5C-1AEEF089B9B9" Version="1.3.0.1" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="b0eaef25-e864-4695-9016-406f299e5a53" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>MUGDAttendance</DisplayName>

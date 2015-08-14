@@ -1,0 +1,9 @@
+﻿[ResourceMetadata]
+"ResourceId"			"filemap.language-ru"
+"ResourceDimensions"		"language-ru"
+
+[Files]
+"C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\filemap.language-ru.pri"			"resources.pri"
+"C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\PackageLayout\ru\System.Spatial.resources.dll"			"ru\System.Spatial.resources.dll"
+"C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\PackageLayout\ru\Microsoft.Data.OData.resources.dll"			"ru\Microsoft.Data.OData.resources.dll"
+"C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.WindowsPhone\obj\Release\PackageLayout\ru\Microsoft.Data.Edm.resources.dll"			"ru\Microsoft.Data.Edm.resources.dll"

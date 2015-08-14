@@ -69,7 +69,6 @@
 "C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\ideaPage.xbf" "ideaPage.xbf"
 "C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\MainPage.xbf" "MainPage.xbf"
 "C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\noticeAdd.xbf" "noticeAdd.xbf"
-"C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\noticeDel.xbf" "noticeDel.xbf"
 "C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\Register.xbf" "Register.xbf"
 "C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\RegisterEvent.xbf" "RegisterEvent.xbf"
 "C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Release\searchUser.xbf" "searchUser.xbf"

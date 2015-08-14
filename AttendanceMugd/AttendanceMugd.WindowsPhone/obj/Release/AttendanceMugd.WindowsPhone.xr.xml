@@ -99,7 +99,6 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="BorderThickness" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="AttendanceMugd.Attendance" />
@@ -162,19 +161,15 @@
       <RootProperty Name="BorderThickness" />
     </RootType>
     <RootType FullName="AttendanceMugd.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Items" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ItemsSource" />
+      <RootProperty Name="Items" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="FontSize" />
     </RootType>
-    <RootType FullName="System.String" />
-    <RootType FullName="AttendanceMugd.noticeAdd" />
     <RootType FullName="AttendanceMugd.Register" />
-    <RootType FullName="AttendanceMugd.RegisterEvent" />
     <RootType FullName="AttendanceMugd.searchUser" />
     <RootType FullName="AttendanceMugd.userDel" />
     <RootType FullName="AttendanceMugd.userDetail" />

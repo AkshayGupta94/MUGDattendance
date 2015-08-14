@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="49444AxeJulius.MUGDAttendance" Publisher="CN=EE61FA12-8AB0-48AE-AB5C-1AEEF089B9B9" Version="1.3.0.0" ProcessorArchitecture="neutral" />
+  <Identity Name="49444AxeJulius.MUGDAttendance" Publisher="CN=EE61FA12-8AB0-48AE-AB5C-1AEEF089B9B9" Version="1.3.0.1" ProcessorArchitecture="neutral" />
   <Properties>
     <DisplayName>MUGDAttendance</DisplayName>
     <PublisherDisplayName>Axe Julius</PublisherDisplayName>

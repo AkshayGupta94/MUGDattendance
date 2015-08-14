@@ -1,1 +1,1 @@
-C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\AppPackages\AttendanceMugd.Windows_1.3.0.0_AnyCPU_Test\AttendanceMugd.Windows_1.3.0.0_AnyCPU.appx
+C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\AppPackages\AttendanceMugd.Windows_1.3.0.1_AnyCPU_Test\AttendanceMugd.Windows_1.3.0.1_AnyCPU.appx
