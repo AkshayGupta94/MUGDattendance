@@ -24,9 +24,7 @@
 
             <TextBox x:Name="Namen" Width="auto" Grid.ColumnSpan="2" Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="0" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Name" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
 
-            <!--<TextBox x:Name="Roll" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="3" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter Roll No." BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>
-            <TextBox x:Name="College" Width="auto"  Background="White" Height="80" Foreground="Black" Margin="0,0,0,0" Grid.Column="1" Grid.Row="4" FontSize="34" TextAlignment="Justify" PlaceholderText="Enter College" BorderBrush="#FF0E0202" BorderThickness="0,0,0,2"/>-->
-
+            
             <Button x:ConnectionId='1' x:Name="submit"
                  Grid.Column="1" 
                     Grid.Row="1" Width="Auto" Margin="0,0,0,0" 
