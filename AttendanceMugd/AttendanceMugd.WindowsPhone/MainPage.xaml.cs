@@ -140,19 +140,19 @@ namespace AttendanceMugd
             myList.Add(temp);
             temp = new datamodel();
 
-            temp.back = "Blue";
-            temp.name = "Add Idea";
-            temp.src = "/Assets/student.png";
-            temp.title = "Add new Idea";
-            temp.desc = "Use this option to add new idea to the group";
-            myList.Add(temp);
+            //temp.back = "Blue";
+            //temp.name = "Add Idea";
+            //temp.src = "/Assets/student.png";
+            //temp.title = "Add new Idea";
+            //temp.desc = "Use this option to add new idea to the group";
+            //myList.Add(temp);
             temp = new datamodel();
 
-            temp.back = "Blue";
-            temp.src = "/Assets/notice.png";
-            temp.title = "Add notice";
-            temp.desc = "Use this option to Add Notice";
-            myList.Add(temp);
+            //temp.back = "Blue";
+            //temp.src = "/Assets/notice.png";
+            //temp.title = "Add notice";
+            //temp.desc = "Use this option to Add Notice";
+            //myList.Add(temp);
             admin.DataContext = myList;
             temp = new datamodel();
 
@@ -198,14 +198,14 @@ namespace AttendanceMugd
             {
                 Frame.Navigate(typeof(collegeDel));
             }
-            else if (lolol.title == "Add event")
-            {
-                Frame.Navigate(typeof(RegisterEvent));
-            }
-            else if (lolol.title == "Add notice")
-            {
-                Frame.Navigate(typeof(noticeAdd));
-            }
+            //else if (lolol.title == "Add event")
+            //{
+            //    Frame.Navigate(typeof(RegisterEvent));
+            //}
+            //else if (lolol.title == "Add notice")
+            //{
+            //    Frame.Navigate(typeof(noticeAdd));
+            //}
             else if (lolol.title == "Add new Idea")
             {
                 Frame.Navigate(typeof(ideaPage));
@@ -241,22 +241,22 @@ namespace AttendanceMugd
 
             MessageDialog m = new MessageDialog("");
 
-            if (userName.Text == "lol1234")
-            {
-                i = 0;
-                m.Title = "Welcome aboard Supreme Commander... :):)";
-                await m.ShowAsync();
-                red.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                green.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                yello.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                blue.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                input.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                Page.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                onlaunchadmin();
-                onlaunchcore();
-            }
-            else
-            {
+            //if (userName.Text == "lol1234")
+            //{
+            //    i = 0;
+            //    m.Title = "Welcome aboard Supreme Commander... :):)";
+            //    await m.ShowAsync();
+            //    red.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //    green.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //    yello.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //    blue.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //    input.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //    Page.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            //    onlaunchadmin();
+            //    onlaunchcore();
+            //}
+            //else
+            //{
 
                 if (userName.Text.Length == 0)
                 {
@@ -323,7 +323,7 @@ namespace AttendanceMugd
 
                 }
 
-            }
+       
         }
 
 

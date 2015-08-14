@@ -168,7 +168,6 @@
     </RootType>
     <RootType FullName="System.String" />
     <RootType FullName="AttendanceMugd.noticeAdd" />
-    <RootType FullName="AttendanceMugd.noticeDel" />
     <RootType FullName="AttendanceMugd.Register" />
     <RootType FullName="AttendanceMugd.RegisterEvent" />
     <RootType FullName="AttendanceMugd.searchUser" />

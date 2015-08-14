@@ -10,25 +10,25 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>49444AxeJulius.MUGDAttendance</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\obj\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>0BB3E27DEA1B8B7547301B0C5E5ED0B60C61580D2FA3779589700F21B6D1D586</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>49444AxeJulius.MUGDAttendance_1.2.0.4_neutral__2nh7c0d2m2w4p</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>46363048EFB74E63EF7D40E4D0E48DEEED34A86D8EB4EA010B03C90F2A9E9A65</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>49444AxeJulius.MUGDAttendance_1.3.0.0_neutral__2nh7c0d2m2w4p</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>49444AxeJulius.MUGDAttendance_2nh7c0d2m2w4p!App</RegisteredUserModeAppID>
     <RegisteredPackageID>49444AxeJulius.MUGDAttendance</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=EE61FA12-8AB0-48AE-AB5C-1AEEF089B9B9</RegisteredPackagePublisher>
-    <RegisteredVersion>1.2.0.4</RegisteredVersion>
+    <RegisteredVersion>1.3.0.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-08T12:19:44.053</Modified>
+      <Modified>2015-08-14T19:15:31.998</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\AttendanceMugd.Windows.exe">
       <PackagePath>AttendanceMugd.Windows.exe</PackagePath>
-      <Modified>2015-08-08T12:19:41.420</Modified>
+      <Modified>2015-08-14T19:15:29.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\packages\Microsoft.Data.Edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\Microsoft.Data.Edm.dll">
       <PackagePath>Microsoft.Data.Edm.dll</PackagePath>
@@ -275,7 +275,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\AttendanceMugd.Windows.xr.xml">
       <PackagePath>AttendanceMugd.Windows.xr.xml</PackagePath>
-      <Modified>2015-08-08T12:16:46.304</Modified>
+      <Modified>2015-08-14T19:15:28.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
@@ -283,31 +283,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\Attendance.xbf">
       <PackagePath>Attendance.xbf</PackagePath>
-      <Modified>2015-08-08T12:19:41.170</Modified>
+      <Modified>2015-08-14T19:15:29.106</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\collegeDel.xbf">
       <PackagePath>collegeDel.xbf</PackagePath>
-      <Modified>2015-08-08T12:19:41.170</Modified>
+      <Modified>2015-08-14T19:15:29.109</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\CollegeMan.xbf">
       <PackagePath>CollegeMan.xbf</PackagePath>
-      <Modified>2015-08-08T12:19:41.170</Modified>
+      <Modified>2015-08-14T19:15:29.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\ideaPage.xbf">
       <PackagePath>ideaPage.xbf</PackagePath>
-      <Modified>2015-08-08T12:19:41.170</Modified>
+      <Modified>2015-08-14T19:15:29.114</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-08-08T12:19:41.170</Modified>
+      <Modified>2015-08-08T12:22:10.200</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\noticeAdd.xbf">
       <PackagePath>noticeAdd.xbf</PackagePath>
-      <Modified>2015-08-08T12:19:41.170</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\noticeDel.xbf">
-      <PackagePath>noticeDel.xbf</PackagePath>
-      <Modified>2015-08-08T12:19:41.170</Modified>
+      <Modified>2015-08-14T19:15:29.117</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\Register.xbf">
       <PackagePath>Register.xbf</PackagePath>
@@ -315,15 +311,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\RegisterEvent.xbf">
       <PackagePath>RegisterEvent.xbf</PackagePath>
-      <Modified>2015-08-08T12:19:41.170</Modified>
+      <Modified>2015-08-14T19:15:29.120</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\searchUser.xbf">
       <PackagePath>searchUser.xbf</PackagePath>
-      <Modified>2015-08-08T12:19:41.170</Modified>
+      <Modified>2015-08-14T19:15:29.121</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\userDel.xbf">
       <PackagePath>userDel.xbf</PackagePath>
-      <Modified>2015-08-08T12:19:41.170</Modified>
+      <Modified>2015-08-14T19:15:29.124</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\userDetail.xbf">
       <PackagePath>userDetail.xbf</PackagePath>
@@ -331,11 +327,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\UserReg..xbf">
       <PackagePath>UserReg..xbf</PackagePath>
-      <Modified>2015-08-08T12:19:41.170</Modified>
+      <Modified>2015-08-14T19:15:29.128</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-08-08T12:19:43.772</Modified>
+      <Modified>2015-08-14T19:15:31.513</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

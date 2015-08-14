@@ -45,16 +45,7 @@
                                        Background="#FF0808EA" HorizontalAlignment="Stretch">
 
             </Button>
-            <!--<ComboBox x:Name="Coll" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding}">
-                <DataTemplate>
-                    <TextBox Text="{Binding}" Height="65" FontSize="30" Width="auto"/>
-                </DataTemplate>
-            </ComboBox>-->
-            <!--<ComboBox x:Name="Type" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ItemsSource="{Binding}">
-                <DataTemplate>
-                    <TextBox Text="{Binding}" Height="65" FontSize="30" Width="auto"/>
-                </DataTemplate>
-            </ComboBox>-->
+            
         </Grid>
         <ProgressBar x:Name="myProgressBar" Visibility="Collapsed"  HorizontalAlignment="Left" Height="768" Margin="0,0,0,0" VerticalAlignment="Top" Width="1356" Foreground="#FF4E07F5" BorderBrush="#FFF70808" Background="#597E7070" />
     </Grid>

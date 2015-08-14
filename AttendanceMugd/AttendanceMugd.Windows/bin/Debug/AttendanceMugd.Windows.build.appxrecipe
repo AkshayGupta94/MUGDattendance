@@ -228,9 +228,6 @@
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\noticeAdd.xbf">
       <PackagePath>noticeAdd.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\noticeDel.xbf">
-      <PackagePath>noticeDel.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\aksha\Documents\GitHub\MUGDattendance\AttendanceMugd\AttendanceMugd.Windows\bin\Debug\Register.xbf">
       <PackagePath>Register.xbf</PackagePath>
     </AppxPackagedFile>

@@ -174,7 +174,7 @@ namespace AttendanceMugd
             //TODO add forgot password logic
         }
 
-        private void admin_ItemClick(object sender, ItemClickEventArgs e)
+        private async void admin_ItemClick(object sender, ItemClickEventArgs e)
         {
             datamodel lolol = e.ClickedItem as datamodel;
             if (lolol.title=="Add new user")
@@ -203,7 +203,8 @@ namespace AttendanceMugd
             }
             else if (lolol.title == "Add notice")
             {
-                Frame.Navigate(typeof(noticeAdd));
+                MessageDialog m = new MessageDialog("We are working on adding this in later uppdates!");
+                await m.ShowAsync();
             }
             else if(lolol.title == "Add new Idea")
             {
@@ -240,22 +241,22 @@ namespace AttendanceMugd
 
             MessageDialog m = new MessageDialog("");
 
-            if (userName.Text == "lol1234")
-            {
-                i = 0;
-                m.Title = "Welcome aboard Supreme Commander... :):)";
-                await m.ShowAsync();
-                red.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                green.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                yello.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                blue.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                input.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                Page.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                onlaunchadmin();
-                onlaunchcore();
-            }
-            else
-            {
+            //if (userName.Text == "lol1234")
+            //{
+            //    i = 0;
+            //    m.Title = "Welcome aboard Supreme Commander... :):)";
+            //    await m.ShowAsync();
+            //    red.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //    green.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //    yello.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //    blue.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //    input.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //    Page.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            //    onlaunchadmin();
+            //    onlaunchcore();
+            //}
+            //else
+            //{
 
                 if (userName.Text.Length == 0)
                 {
@@ -322,7 +323,7 @@ namespace AttendanceMugd
 
                 }
 
-            }
+            
         }
 
     }
